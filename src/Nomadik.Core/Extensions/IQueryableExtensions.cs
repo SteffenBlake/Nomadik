@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Nomadik.Core;
 
 namespace Nomadik.Extensions;
@@ -8,9 +7,7 @@ namespace Nomadik.Extensions;
 /// </summary>
 public static class IQueryableExtensions
 {
-    /// <inheritdoc 
-    ///     cref="CompiledSearchQuery{TIn, TOut}.SearchAsync(IQueryable{TIn})" 
-    /// />
+    /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.SearchAsync(IQueryable{T})" />
     public static Task<SearchQueryResult<TOut>> SearchAsync<TIn, TOut>(
         this IQueryable<TIn> data, 
         CompiledSearchQuery<TIn, TOut> query
@@ -19,9 +16,7 @@ public static class IQueryableExtensions
         return query.SearchAsync(data);
     }
 
-    /// <inheritdoc 
-    ///     cref="CompiledSearchQuery{TIn, TOut}.Where(IQueryable{TIn})" 
-    /// />
+    /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.Where(IQueryable{T})" />
     public static IQueryable<TIn> Where<TIn, TOut>(
         this IQueryable<TIn> data, 
         CompiledSearchQuery<TIn, TOut> query
@@ -30,9 +25,7 @@ public static class IQueryableExtensions
         return query.Where(data);
     }
 
-    /// <inheritdoc 
-    ///     cref="CompiledSearchQuery{TIn, TOut}.OrderBy(IQueryable{TIn})" 
-    /// />
+    /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.OrderBy(IQueryable{T})" />
     public static IQueryable<TIn> OrderBy<TIn, TOut>(
         this IQueryable<TIn> data, 
         CompiledSearchQuery<TIn, TOut> query
@@ -41,9 +34,7 @@ public static class IQueryableExtensions
         return query.OrderBy(data);
     }
 
-    /// <inheritdoc 
-    ///     cref="CompiledSearchQuery{TIn, TOut}.Page(IQueryable{TIn})" 
-    /// />
+    /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.Page(IQueryable{T})" />
     public static IQueryable<TIn> Page<TIn, TOut>(
         this IQueryable<TIn> data, 
         CompiledSearchQuery<TIn, TOut> query
@@ -52,9 +43,7 @@ public static class IQueryableExtensions
         return query.Page(data);
     }
 
-    /// <inheritdoc 
-    ///     cref="CompiledSearchQuery{TIn, TOut}.Select(IQueryable{TIn})" 
-    /// />
+    /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.Select(IQueryable{T})" />
     public static IQueryable<TOut> Select<TIn, TOut>(
         this IQueryable<TIn> data, 
         CompiledSearchQuery<TIn, TOut> query

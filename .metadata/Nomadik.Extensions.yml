@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Nomadik.Extensions
+  commentId: N:Nomadik.Extensions
+  id: Nomadik.Extensions
+  children:
+  - Nomadik.Extensions.IQueryableExtensions
+  langs:
+  - csharp
+  - vb
+  name: Nomadik.Extensions
+  nameWithType: Nomadik.Extensions
+  fullName: Nomadik.Extensions
+  type: Namespace
+  assemblies:
+  - Nomadik.Core
+references:
+- uid: Nomadik.Extensions.IQueryableExtensions
+  commentId: T:Nomadik.Extensions.IQueryableExtensions
+  href: Nomadik.Extensions.IQueryableExtensions.html
+  name: IQueryableExtensions
+  nameWithType: IQueryableExtensions
+  fullName: Nomadik.Extensions.IQueryableExtensions

@@ -3,12 +3,13 @@ using System.Linq.Expressions;
 namespace Nomadik.Core;
 
 /// <summary>
-/// Implementation of <see cref="SearchFilter{T}"/> that chains
+/// Implementation of <see cref="SearchFilter"/> that chains
 /// All passed in child SearchFilters in logical OR operators
 /// </summary>
 public class SearchFilterOr : SearchFilter
 {
     public required List<SearchFilter> Or { get; init; }
+
     /// <inheritdoc/>
     public override Expression Compile(IReadOnlyDictionary<string, Expression> ctx)
     {

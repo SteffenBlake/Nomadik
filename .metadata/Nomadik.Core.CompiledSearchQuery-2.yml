@@ -1,0 +1,1110 @@
+### YamlMime:ManagedReference
+items:
+- uid: Nomadik.Core.CompiledSearchQuery`2
+  commentId: T:Nomadik.Core.CompiledSearchQuery`2
+  id: CompiledSearchQuery`2
+  parent: Nomadik.Core
+  children:
+  - Nomadik.Core.CompiledSearchQuery`2.#ctor(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{`0,`1}})
+  - Nomadik.Core.CompiledSearchQuery`2.OrderBy(System.Linq.IQueryable{`0})
+  - Nomadik.Core.CompiledSearchQuery`2.Page(System.Linq.IQueryable{`0})
+  - Nomadik.Core.CompiledSearchQuery`2.SearchAsync(System.Linq.IQueryable{`0})
+  - Nomadik.Core.CompiledSearchQuery`2.Select(System.Linq.IQueryable{`0})
+  - Nomadik.Core.CompiledSearchQuery`2.Where(System.Linq.IQueryable{`0})
+  langs:
+  - csharp
+  - vb
+  name: CompiledSearchQuery<TIn, TOut>
+  nameWithType: CompiledSearchQuery<TIn, TOut>
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>
+  type: Class
+  source:
+    remote:
+      path: src/Nomadik.Core/CompiledSearchQuery.cs
+      branch: main
+      repo: https://github.com/SteffenBlake/Nomadik.git
+    id: CompiledSearchQuery
+    path: src/Nomadik.Core/CompiledSearchQuery.cs
+    startLine: 11
+  assemblies:
+  - Nomadik.Core
+  namespace: Nomadik.Core
+  summary: >-
+    Represents a <xref href="Nomadik.Core.SearchQuery" data-throw-if-not-resolved="false"></xref> that has been compiled against
+
+    A given Expression InitMember Mapper, binding it to a hard type
+
+    And caching the Expression Mappings for compiling Filter/Search Queries
+  example: []
+  syntax:
+    content: public class CompiledSearchQuery<TIn, TOut>
+    typeParameters:
+    - id: TIn
+    - id: TOut
+    content.vb: Public Class CompiledSearchQuery(Of TIn, TOut)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut)
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut)
+  name.vb: CompiledSearchQuery(Of TIn, TOut)
+- uid: Nomadik.Core.CompiledSearchQuery`2.#ctor(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{`0,`1}})
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.#ctor(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{`0,`1}})
+  id: '#ctor(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{`0,`1}})'
+  parent: Nomadik.Core.CompiledSearchQuery`2
+  langs:
+  - csharp
+  - vb
+  name: CompiledSearchQuery(SearchQuery, Expression<Func<TIn, TOut>>)
+  nameWithType: CompiledSearchQuery<TIn, TOut>.CompiledSearchQuery(SearchQuery, Expression<Func<TIn, TOut>>)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.CompiledSearchQuery(Nomadik.Core.SearchQuery, System.Linq.Expressions.Expression<System.Func<TIn, TOut>>)
+  type: Constructor
+  source:
+    remote:
+      path: src/Nomadik.Core/CompiledSearchQuery.cs
+      branch: main
+      repo: https://github.com/SteffenBlake/Nomadik.git
+    id: .ctor
+    path: src/Nomadik.Core/CompiledSearchQuery.cs
+    startLine: 11
+  assemblies:
+  - Nomadik.Core
+  namespace: Nomadik.Core
+  summary: >-
+    Represents a <xref href="Nomadik.Core.SearchQuery" data-throw-if-not-resolved="false"></xref> that has been compiled against
+
+    A given Expression InitMember Mapper, binding it to a hard type
+
+    And caching the Expression Mappings for compiling Filter/Search Queries
+  example: []
+  syntax:
+    content: public CompiledSearchQuery(SearchQuery query, Expression<Func<TIn, TOut>> mapper)
+    parameters:
+    - id: query
+      type: Nomadik.Core.SearchQuery
+    - id: mapper
+      type: System.Linq.Expressions.Expression{System.Func{{TIn},{TOut}}}
+    content.vb: Public Sub New(query As SearchQuery, mapper As Expression(Of Func(Of TIn, TOut)))
+  overload: Nomadik.Core.CompiledSearchQuery`2.#ctor*
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).New(SearchQuery, Expression(Of Func(Of TIn, TOut)))
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).New(Nomadik.Core.SearchQuery, System.Linq.Expressions.Expression(Of System.Func(Of TIn, TOut)))
+  name.vb: New(SearchQuery, Expression(Of Func(Of TIn, TOut)))
+- uid: Nomadik.Core.CompiledSearchQuery`2.SearchAsync(System.Linq.IQueryable{`0})
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.SearchAsync(System.Linq.IQueryable{`0})
+  id: SearchAsync(System.Linq.IQueryable{`0})
+  parent: Nomadik.Core.CompiledSearchQuery`2
+  langs:
+  - csharp
+  - vb
+  name: SearchAsync(IQueryable<TIn>)
+  nameWithType: CompiledSearchQuery<TIn, TOut>.SearchAsync(IQueryable<TIn>)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.SearchAsync(System.Linq.IQueryable<TIn>)
+  type: Method
+  source:
+    remote:
+      path: src/Nomadik.Core/CompiledSearchQuery.cs
+      branch: main
+      repo: https://github.com/SteffenBlake/Nomadik.git
+    id: SearchAsync
+    path: src/Nomadik.Core/CompiledSearchQuery.cs
+    startLine: 38
+  assemblies:
+  - Nomadik.Core
+  namespace: Nomadik.Core
+  summary: >-
+    Runs 
+
+    <xref href="Nomadik.Core.CompiledSearchQuery%602.Where(System.Linq.IQueryable%7b%600%7d)" data-throw-if-not-resolved="false"></xref>,
+
+    then 
+
+    <xref href="Nomadik.Core.CompiledSearchQuery%602.OrderBy(System.Linq.IQueryable%7b%600%7d)" data-throw-if-not-resolved="false"></xref>,
+
+    and finally
+
+    <xref href="Nomadik.Core.CompiledSearchQuery%602.Page(System.Linq.IQueryable%7b%600%7d)" data-throw-if-not-resolved="false"></xref>
+
+    back to back.
+
+    If Pagination is enabled, the total count of unpaged items is
+
+    simultaneously async queried to populate the 
+
+    <xref href="Nomadik.Core.SearchQueryResult%601.Of" data-throw-if-not-resolved="false"></xref> Property.
+  example: []
+  syntax:
+    content: public Task<SearchQueryResult<TOut>> SearchAsync(IQueryable<TIn> data)
+    parameters:
+    - id: data
+      type: System.Linq.IQueryable{{TIn}}
+    return:
+      type: System.Threading.Tasks.Task{Nomadik.Core.SearchQueryResult{{TOut}}}
+    content.vb: Public Function SearchAsync(data As IQueryable(Of TIn)) As Task(Of SearchQueryResult(Of TOut))
+  overload: Nomadik.Core.CompiledSearchQuery`2.SearchAsync*
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).SearchAsync(IQueryable(Of TIn))
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).SearchAsync(System.Linq.IQueryable(Of TIn))
+  name.vb: SearchAsync(IQueryable(Of TIn))
+- uid: Nomadik.Core.CompiledSearchQuery`2.Where(System.Linq.IQueryable{`0})
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.Where(System.Linq.IQueryable{`0})
+  id: Where(System.Linq.IQueryable{`0})
+  parent: Nomadik.Core.CompiledSearchQuery`2
+  langs:
+  - csharp
+  - vb
+  name: Where(IQueryable<TIn>)
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Where(IQueryable<TIn>)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Where(System.Linq.IQueryable<TIn>)
+  type: Method
+  source:
+    remote:
+      path: src/Nomadik.Core/CompiledSearchQuery.cs
+      branch: main
+      repo: https://github.com/SteffenBlake/Nomadik.git
+    id: Where
+    path: src/Nomadik.Core/CompiledSearchQuery.cs
+    startLine: 75
+  assemblies:
+  - Nomadik.Core
+  namespace: Nomadik.Core
+  summary: >-
+    Uses the bound <xref href="Nomadik.Core.SearchQuery.Filter" data-throw-if-not-resolved="false"></xref> to filter
+
+    a mapped <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> of matching bound 
+
+    <code class="typeparamref">TIn</code>. If the Filter is null it will
+
+    just return the same unmodified <code class="paramref">data</code>
+  example: []
+  syntax:
+    content: public IQueryable<TIn> Where(IQueryable<TIn> data)
+    parameters:
+    - id: data
+      type: System.Linq.IQueryable{{TIn}}
+    return:
+      type: System.Linq.IQueryable{{TIn}}
+    content.vb: Public Function Where(data As IQueryable(Of TIn)) As IQueryable(Of TIn)
+  overload: Nomadik.Core.CompiledSearchQuery`2.Where*
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Where(IQueryable(Of TIn))
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Where(System.Linq.IQueryable(Of TIn))
+  name.vb: Where(IQueryable(Of TIn))
+- uid: Nomadik.Core.CompiledSearchQuery`2.OrderBy(System.Linq.IQueryable{`0})
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.OrderBy(System.Linq.IQueryable{`0})
+  id: OrderBy(System.Linq.IQueryable{`0})
+  parent: Nomadik.Core.CompiledSearchQuery`2
+  langs:
+  - csharp
+  - vb
+  name: OrderBy(IQueryable<TIn>)
+  nameWithType: CompiledSearchQuery<TIn, TOut>.OrderBy(IQueryable<TIn>)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.OrderBy(System.Linq.IQueryable<TIn>)
+  type: Method
+  source:
+    remote:
+      path: src/Nomadik.Core/CompiledSearchQuery.cs
+      branch: main
+      repo: https://github.com/SteffenBlake/Nomadik.git
+    id: OrderBy
+    path: src/Nomadik.Core/CompiledSearchQuery.cs
+    startLine: 98
+  assemblies:
+  - Nomadik.Core
+  namespace: Nomadik.Core
+  summary: >-
+    Uses the bound <xref href="Nomadik.Core.SearchQuery.Order" data-throw-if-not-resolved="false"></xref> to sort
+
+    a mapped <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> of matching bound 
+
+    <code class="typeparamref">TIn</code>. If the Order is null it will
+
+    just return the same unmodified <code class="paramref">data</code>
+  example: []
+  syntax:
+    content: public IQueryable<TIn> OrderBy(IQueryable<TIn> data)
+    parameters:
+    - id: data
+      type: System.Linq.IQueryable{{TIn}}
+    return:
+      type: System.Linq.IQueryable{{TIn}}
+    content.vb: Public Function OrderBy(data As IQueryable(Of TIn)) As IQueryable(Of TIn)
+  overload: Nomadik.Core.CompiledSearchQuery`2.OrderBy*
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).OrderBy(IQueryable(Of TIn))
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).OrderBy(System.Linq.IQueryable(Of TIn))
+  name.vb: OrderBy(IQueryable(Of TIn))
+- uid: Nomadik.Core.CompiledSearchQuery`2.Page(System.Linq.IQueryable{`0})
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.Page(System.Linq.IQueryable{`0})
+  id: Page(System.Linq.IQueryable{`0})
+  parent: Nomadik.Core.CompiledSearchQuery`2
+  langs:
+  - csharp
+  - vb
+  name: Page(IQueryable<TIn>)
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Page(IQueryable<TIn>)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Page(System.Linq.IQueryable<TIn>)
+  type: Method
+  source:
+    remote:
+      path: src/Nomadik.Core/CompiledSearchQuery.cs
+      branch: main
+      repo: https://github.com/SteffenBlake/Nomadik.git
+    id: Page
+    path: src/Nomadik.Core/CompiledSearchQuery.cs
+    startLine: 127
+  assemblies:
+  - Nomadik.Core
+  namespace: Nomadik.Core
+  summary: >-
+    Uses the bound <xref href="Nomadik.Core.SearchQuery.Page" data-throw-if-not-resolved="false"></xref> to Paginate
+
+    a mapped <xref href="System.Linq.IQueryable%601" data-throw-if-not-resolved="false"></xref> of matching bound 
+
+    <code class="typeparamref">TIn</code>. If the Page is null it will
+
+    just return the same unmodified <code class="paramref">data</code>
+  example: []
+  syntax:
+    content: public IQueryable<TIn> Page(IQueryable<TIn> data)
+    parameters:
+    - id: data
+      type: System.Linq.IQueryable{{TIn}}
+    return:
+      type: System.Linq.IQueryable{{TIn}}
+    content.vb: Public Function Page(data As IQueryable(Of TIn)) As IQueryable(Of TIn)
+  overload: Nomadik.Core.CompiledSearchQuery`2.Page*
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Page(IQueryable(Of TIn))
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Page(System.Linq.IQueryable(Of TIn))
+  name.vb: Page(IQueryable(Of TIn))
+- uid: Nomadik.Core.CompiledSearchQuery`2.Select(System.Linq.IQueryable{`0})
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.Select(System.Linq.IQueryable{`0})
+  id: Select(System.Linq.IQueryable{`0})
+  parent: Nomadik.Core.CompiledSearchQuery`2
+  langs:
+  - csharp
+  - vb
+  name: Select(IQueryable<TIn>)
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Select(IQueryable<TIn>)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Select(System.Linq.IQueryable<TIn>)
+  type: Method
+  source:
+    remote:
+      path: src/Nomadik.Core/CompiledSearchQuery.cs
+      branch: main
+      repo: https://github.com/SteffenBlake/Nomadik.git
+    id: Select
+    path: src/Nomadik.Core/CompiledSearchQuery.cs
+    startLine: 150
+  assemblies:
+  - Nomadik.Core
+  namespace: Nomadik.Core
+  summary: >-
+    Leverages a Search's bound MemberInit Expression to perform a
+
+    LINQ Select Operation on a Query
+  example: []
+  syntax:
+    content: public IQueryable<TOut> Select(IQueryable<TIn> data)
+    parameters:
+    - id: data
+      type: System.Linq.IQueryable{{TIn}}
+    return:
+      type: System.Linq.IQueryable{{TOut}}
+    content.vb: Public Function [Select](data As IQueryable(Of TIn)) As IQueryable(Of TOut)
+  overload: Nomadik.Core.CompiledSearchQuery`2.Select*
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Select(IQueryable(Of TIn))
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Select(System.Linq.IQueryable(Of TIn))
+  name.vb: Select(IQueryable(Of TIn))
+references:
+- uid: Nomadik.Core.SearchQuery
+  commentId: T:Nomadik.Core.SearchQuery
+  parent: Nomadik.Core
+  href: Nomadik.Core.SearchQuery.html
+  name: SearchQuery
+  nameWithType: SearchQuery
+  fullName: Nomadik.Core.SearchQuery
+- uid: Nomadik.Core
+  commentId: N:Nomadik.Core
+  href: Nomadik.html
+  name: Nomadik.Core
+  nameWithType: Nomadik.Core
+  fullName: Nomadik.Core
+  spec.csharp:
+  - uid: Nomadik
+    name: Nomadik
+    href: Nomadik.html
+  - name: .
+  - uid: Nomadik.Core
+    name: Core
+    href: Nomadik.Core.html
+  spec.vb:
+  - uid: Nomadik
+    name: Nomadik
+    href: Nomadik.html
+  - name: .
+  - uid: Nomadik.Core
+    name: Core
+    href: Nomadik.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Nomadik.Core.CompiledSearchQuery`2.#ctor*
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.#ctor
+  href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2__ctor_Nomadik_Core_SearchQuery_System_Linq_Expressions_Expression_System_Func__0__1___
+  name: CompiledSearchQuery
+  nameWithType: CompiledSearchQuery<TIn, TOut>.CompiledSearchQuery
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.CompiledSearchQuery
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).New
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).New
+  name.vb: New
+- uid: System.Linq.Expressions.Expression{System.Func{{TIn},{TOut}}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,`1}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<TIn, TOut>>
+  nameWithType: Expression<Func<TIn, TOut>>
+  fullName: System.Linq.Expressions.Expression<System.Func<TIn, TOut>>
+  nameWithType.vb: Expression(Of Func(Of TIn, TOut))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of TIn, TOut))
+  name.vb: Expression(Of Func(Of TIn, TOut))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TIn
+  - name: ','
+  - name: " "
+  - name: TOut
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TIn
+  - name: ','
+  - name: " "
+  - name: TOut
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: Nomadik.Core.CompiledSearchQuery`2.Where(System.Linq.IQueryable{`0})
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.Where(System.Linq.IQueryable{`0})
+  isExternal: true
+  href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Where_System_Linq_IQueryable__0__
+  name: Where(IQueryable<TIn>)
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Where(IQueryable<TIn>)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Where(System.Linq.IQueryable<TIn>)
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Where(IQueryable(Of TIn))
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Where(System.Linq.IQueryable(Of TIn))
+  name.vb: Where(IQueryable(Of TIn))
+  spec.csharp:
+  - uid: Nomadik.Core.CompiledSearchQuery`2.Where(System.Linq.IQueryable{`0})
+    name: Where
+    href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Where_System_Linq_IQueryable__0__
+  - name: (
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TIn
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Nomadik.Core.CompiledSearchQuery`2.Where(System.Linq.IQueryable{`0})
+    name: Where
+    href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Where_System_Linq_IQueryable__0__
+  - name: (
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TIn
+  - name: )
+  - name: )
+- uid: Nomadik.Core.CompiledSearchQuery`2.OrderBy(System.Linq.IQueryable{`0})
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.OrderBy(System.Linq.IQueryable{`0})
+  isExternal: true
+  href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_OrderBy_System_Linq_IQueryable__0__
+  name: OrderBy(IQueryable<TIn>)
+  nameWithType: CompiledSearchQuery<TIn, TOut>.OrderBy(IQueryable<TIn>)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.OrderBy(System.Linq.IQueryable<TIn>)
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).OrderBy(IQueryable(Of TIn))
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).OrderBy(System.Linq.IQueryable(Of TIn))
+  name.vb: OrderBy(IQueryable(Of TIn))
+  spec.csharp:
+  - uid: Nomadik.Core.CompiledSearchQuery`2.OrderBy(System.Linq.IQueryable{`0})
+    name: OrderBy
+    href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_OrderBy_System_Linq_IQueryable__0__
+  - name: (
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TIn
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Nomadik.Core.CompiledSearchQuery`2.OrderBy(System.Linq.IQueryable{`0})
+    name: OrderBy
+    href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_OrderBy_System_Linq_IQueryable__0__
+  - name: (
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TIn
+  - name: )
+  - name: )
+- uid: Nomadik.Core.CompiledSearchQuery`2.Page(System.Linq.IQueryable{`0})
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.Page(System.Linq.IQueryable{`0})
+  isExternal: true
+  href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Page_System_Linq_IQueryable__0__
+  name: Page(IQueryable<TIn>)
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Page(IQueryable<TIn>)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Page(System.Linq.IQueryable<TIn>)
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Page(IQueryable(Of TIn))
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Page(System.Linq.IQueryable(Of TIn))
+  name.vb: Page(IQueryable(Of TIn))
+  spec.csharp:
+  - uid: Nomadik.Core.CompiledSearchQuery`2.Page(System.Linq.IQueryable{`0})
+    name: Page
+    href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Page_System_Linq_IQueryable__0__
+  - name: (
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TIn
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Nomadik.Core.CompiledSearchQuery`2.Page(System.Linq.IQueryable{`0})
+    name: Page
+    href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Page_System_Linq_IQueryable__0__
+  - name: (
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TIn
+  - name: )
+  - name: )
+- uid: Nomadik.Core.SearchQueryResult`1.Of
+  commentId: P:Nomadik.Core.SearchQueryResult`1.Of
+  href: Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1_Of
+  name: Of
+  nameWithType: SearchQueryResult<T>.Of
+  fullName: Nomadik.Core.SearchQueryResult<T>.Of
+  nameWithType.vb: SearchQueryResult(Of T).Of
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).Of
+- uid: Nomadik.Core.CompiledSearchQuery`2.SearchAsync*
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.SearchAsync
+  href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_SearchAsync_System_Linq_IQueryable__0__
+  name: SearchAsync
+  nameWithType: CompiledSearchQuery<TIn, TOut>.SearchAsync
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.SearchAsync
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).SearchAsync
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).SearchAsync
+- uid: System.Linq.IQueryable{{TIn}}
+  commentId: T:System.Linq.IQueryable{`0}
+  parent: System.Linq
+  definition: System.Linq.IQueryable`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  name: IQueryable<TIn>
+  nameWithType: IQueryable<TIn>
+  fullName: System.Linq.IQueryable<TIn>
+  nameWithType.vb: IQueryable(Of TIn)
+  fullName.vb: System.Linq.IQueryable(Of TIn)
+  name.vb: IQueryable(Of TIn)
+  spec.csharp:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TIn
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TIn
+  - name: )
+- uid: System.Threading.Tasks.Task{Nomadik.Core.SearchQueryResult{{TOut}}}
+  commentId: T:System.Threading.Tasks.Task{Nomadik.Core.SearchQueryResult{`1}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SearchQueryResult<TOut>>
+  nameWithType: Task<SearchQueryResult<TOut>>
+  fullName: System.Threading.Tasks.Task<Nomadik.Core.SearchQueryResult<TOut>>
+  nameWithType.vb: Task(Of SearchQueryResult(Of TOut))
+  fullName.vb: System.Threading.Tasks.Task(Of Nomadik.Core.SearchQueryResult(Of TOut))
+  name.vb: Task(Of SearchQueryResult(Of TOut))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Nomadik.Core.SearchQueryResult`1
+    name: SearchQueryResult
+    href: Nomadik.Core.SearchQueryResult-1.html
+  - name: <
+  - name: TOut
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Nomadik.Core.SearchQueryResult`1
+    name: SearchQueryResult
+    href: Nomadik.Core.SearchQueryResult-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOut
+  - name: )
+  - name: )
+- uid: System.Linq.IQueryable`1
+  commentId: T:System.Linq.IQueryable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  name: IQueryable<T>
+  nameWithType: IQueryable<T>
+  fullName: System.Linq.IQueryable<T>
+  nameWithType.vb: IQueryable(Of T)
+  fullName.vb: System.Linq.IQueryable(Of T)
+  name.vb: IQueryable(Of T)
+  spec.csharp:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Linq
+  commentId: N:System.Linq
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq
+  nameWithType: System.Linq
+  fullName: System.Linq
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Nomadik.Core.SearchQuery.Filter
+  commentId: P:Nomadik.Core.SearchQuery.Filter
+  href: Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Filter
+  name: Filter
+  nameWithType: SearchQuery.Filter
+  fullName: Nomadik.Core.SearchQuery.Filter
+- uid: Nomadik.Core.CompiledSearchQuery`2.Where*
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.Where
+  href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Where_System_Linq_IQueryable__0__
+  name: Where
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Where
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Where
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Where
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Where
+- uid: Nomadik.Core.SearchQuery.Order
+  commentId: P:Nomadik.Core.SearchQuery.Order
+  href: Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Order
+  name: Order
+  nameWithType: SearchQuery.Order
+  fullName: Nomadik.Core.SearchQuery.Order
+- uid: Nomadik.Core.CompiledSearchQuery`2.OrderBy*
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.OrderBy
+  href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_OrderBy_System_Linq_IQueryable__0__
+  name: OrderBy
+  nameWithType: CompiledSearchQuery<TIn, TOut>.OrderBy
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.OrderBy
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).OrderBy
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).OrderBy
+- uid: Nomadik.Core.SearchQuery.Page
+  commentId: P:Nomadik.Core.SearchQuery.Page
+  href: Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Page
+  name: Page
+  nameWithType: SearchQuery.Page
+  fullName: Nomadik.Core.SearchQuery.Page
+- uid: Nomadik.Core.CompiledSearchQuery`2.Page*
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.Page
+  href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Page_System_Linq_IQueryable__0__
+  name: Page
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Page
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Page
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Page
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Page
+- uid: Nomadik.Core.CompiledSearchQuery`2.Select*
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.Select
+  href: Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Select_System_Linq_IQueryable__0__
+  name: Select
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Select
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Select
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Select
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Select
+- uid: System.Linq.IQueryable{{TOut}}
+  commentId: T:System.Linq.IQueryable{`1}
+  parent: System.Linq
+  definition: System.Linq.IQueryable`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  name: IQueryable<TOut>
+  nameWithType: IQueryable<TOut>
+  fullName: System.Linq.IQueryable<TOut>
+  nameWithType.vb: IQueryable(Of TOut)
+  fullName.vb: System.Linq.IQueryable(Of TOut)
+  name.vb: IQueryable(Of TOut)
+  spec.csharp:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: <
+  - name: TOut
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.iqueryable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOut
+  - name: )

@@ -26,11 +26,11 @@ public class CompiledSearchQuery<TIn, TOut>(
 
     /// <summary>
     /// Runs 
-    /// <see cref="Where(IQueryable{TIn})"/>,
+    /// <see cref="CompiledSearchQuery{TIn, TOut}.Where(IQueryable{TIn})"/>,
     /// then 
-    /// <see cref="Orderby(IQueryable{TIn})"/>,
+    /// <see cref="CompiledSearchQuery{TIn, TOut}.OrderBy(IQueryable{TIn})"/>,
     /// and finally
-    /// <see cref="Page(IQueryable{TIn})"/>
+    /// <see cref="CompiledSearchQuery{TIn, TOut}.Page(IQueryable{TIn})"/>
     /// back to back.
     /// If Pagination is enabled, the total count of unpaged items is
     /// simultaneously async queried to populate the 

@@ -2,7 +2,7 @@ namespace Nomadik.Core;
 
 /// <summary>
 /// Set of supported Operations for serialization of filter expressions
-/// </summar>
+/// </summary>
 public enum Operator 
 {
     /// <summary>Equals</summary>

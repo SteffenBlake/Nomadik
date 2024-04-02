@@ -3,8 +3,8 @@ using System.Linq.Expressions;
 namespace Nomadik.Core;
 
 /// <summary>
-/// "Leaf" Implementation of <see cref="SearchFilter{T}"/>
-/// That terminates the recursive chain on a <see cref="SearchOperation{T}"/>
+/// "Leaf" Implementation of <see cref="SearchFilter"/>
+/// That terminates the recursive chain on a <see cref="SearchOperation"/>
 /// </summary>
 public class SearchFilterWhere : SearchFilter
 {

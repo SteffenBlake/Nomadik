@@ -1,0 +1,930 @@
+### YamlMime:ManagedReference
+items:
+- uid: Nomadik.Extensions.Swagger.SearchOperationSchema
+  commentId: T:Nomadik.Extensions.Swagger.SearchOperationSchema
+  id: SearchOperationSchema
+  parent: Nomadik.Extensions.Swagger
+  children:
+  - Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: SearchOperationSchema
+  nameWithType: SearchOperationSchema
+  fullName: Nomadik.Extensions.Swagger.SearchOperationSchema
+  type: Class
+  source:
+    remote:
+      path: src/Nomadik.Extensions.Swagger/SearchOperationSchema.cs
+      branch: main
+      repo: https://github.com/SteffenBlake/Nomadik.git
+    id: SearchOperationSchema
+    path: src/Nomadik.Extensions.Swagger/SearchOperationSchema.cs
+    startLine: 4
+  assemblies:
+  - Nomadik.Extensions.Swagger
+  namespace: Nomadik.Extensions.Swagger
+  syntax:
+    content: 'public class SearchOperationSchema : OpenApiSchema, IOpenApiReferenceable, IOpenApiSerializable, IOpenApiExtensible, IOpenApiElement'
+    content.vb: Public Class SearchOperationSchema Inherits OpenApiSchema Implements IOpenApiReferenceable, IOpenApiSerializable, IOpenApiExtensible, IOpenApiElement
+  inheritance:
+  - System.Object
+  - Microsoft.OpenApi.Models.OpenApiSchema
+  implements:
+  - Microsoft.OpenApi.Interfaces.IOpenApiReferenceable
+  - Microsoft.OpenApi.Interfaces.IOpenApiSerializable
+  - Microsoft.OpenApi.Interfaces.IOpenApiExtensible
+  - Microsoft.OpenApi.Interfaces.IOpenApiElement
+  inheritedMembers:
+  - Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  - Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  - Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  - Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  - Microsoft.OpenApi.Models.OpenApiSchema.Title
+  - Microsoft.OpenApi.Models.OpenApiSchema.Type
+  - Microsoft.OpenApi.Models.OpenApiSchema.Format
+  - Microsoft.OpenApi.Models.OpenApiSchema.Description
+  - Microsoft.OpenApi.Models.OpenApiSchema.Maximum
+  - Microsoft.OpenApi.Models.OpenApiSchema.ExclusiveMaximum
+  - Microsoft.OpenApi.Models.OpenApiSchema.Minimum
+  - Microsoft.OpenApi.Models.OpenApiSchema.ExclusiveMinimum
+  - Microsoft.OpenApi.Models.OpenApiSchema.MaxLength
+  - Microsoft.OpenApi.Models.OpenApiSchema.MinLength
+  - Microsoft.OpenApi.Models.OpenApiSchema.Pattern
+  - Microsoft.OpenApi.Models.OpenApiSchema.MultipleOf
+  - Microsoft.OpenApi.Models.OpenApiSchema.Default
+  - Microsoft.OpenApi.Models.OpenApiSchema.ReadOnly
+  - Microsoft.OpenApi.Models.OpenApiSchema.WriteOnly
+  - Microsoft.OpenApi.Models.OpenApiSchema.AllOf
+  - Microsoft.OpenApi.Models.OpenApiSchema.OneOf
+  - Microsoft.OpenApi.Models.OpenApiSchema.AnyOf
+  - Microsoft.OpenApi.Models.OpenApiSchema.Not
+  - Microsoft.OpenApi.Models.OpenApiSchema.Required
+  - Microsoft.OpenApi.Models.OpenApiSchema.Items
+  - Microsoft.OpenApi.Models.OpenApiSchema.MaxItems
+  - Microsoft.OpenApi.Models.OpenApiSchema.MinItems
+  - Microsoft.OpenApi.Models.OpenApiSchema.UniqueItems
+  - Microsoft.OpenApi.Models.OpenApiSchema.Properties
+  - Microsoft.OpenApi.Models.OpenApiSchema.MaxProperties
+  - Microsoft.OpenApi.Models.OpenApiSchema.MinProperties
+  - Microsoft.OpenApi.Models.OpenApiSchema.AdditionalPropertiesAllowed
+  - Microsoft.OpenApi.Models.OpenApiSchema.AdditionalProperties
+  - Microsoft.OpenApi.Models.OpenApiSchema.Discriminator
+  - Microsoft.OpenApi.Models.OpenApiSchema.Example
+  - Microsoft.OpenApi.Models.OpenApiSchema.Enum
+  - Microsoft.OpenApi.Models.OpenApiSchema.Nullable
+  - Microsoft.OpenApi.Models.OpenApiSchema.ExternalDocs
+  - Microsoft.OpenApi.Models.OpenApiSchema.Deprecated
+  - Microsoft.OpenApi.Models.OpenApiSchema.Xml
+  - Microsoft.OpenApi.Models.OpenApiSchema.Extensions
+  - Microsoft.OpenApi.Models.OpenApiSchema.UnresolvedReference
+  - Microsoft.OpenApi.Models.OpenApiSchema.Reference
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor(System.String,System.String)
+  commentId: M:Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Nomadik.Extensions.Swagger.SearchOperationSchema
+  langs:
+  - csharp
+  - vb
+  name: SearchOperationSchema(string, string)
+  nameWithType: SearchOperationSchema.SearchOperationSchema(string, string)
+  fullName: Nomadik.Extensions.Swagger.SearchOperationSchema.SearchOperationSchema(string, string)
+  type: Constructor
+  source:
+    remote:
+      path: src/Nomadik.Extensions.Swagger/SearchOperationSchema.cs
+      branch: main
+      repo: https://github.com/SteffenBlake/Nomadik.git
+    id: .ctor
+    path: src/Nomadik.Extensions.Swagger/SearchOperationSchema.cs
+    startLine: 6
+  assemblies:
+  - Nomadik.Extensions.Swagger
+  namespace: Nomadik.Extensions.Swagger
+  syntax:
+    content: public SearchOperationSchema(string operatorId, string keyId)
+    parameters:
+    - id: operatorId
+      type: System.String
+    - id: keyId
+      type: System.String
+    content.vb: Public Sub New(operatorId As String, keyId As String)
+  overload: Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor*
+  nameWithType.vb: SearchOperationSchema.New(String, String)
+  fullName.vb: Nomadik.Extensions.Swagger.SearchOperationSchema.New(String, String)
+  name.vb: New(String, String)
+references:
+- uid: Nomadik.Extensions.Swagger
+  commentId: N:Nomadik.Extensions.Swagger
+  href: Nomadik.html
+  name: Nomadik.Extensions.Swagger
+  nameWithType: Nomadik.Extensions.Swagger
+  fullName: Nomadik.Extensions.Swagger
+  spec.csharp:
+  - uid: Nomadik
+    name: Nomadik
+    href: Nomadik.html
+  - name: .
+  - uid: Nomadik.Extensions
+    name: Extensions
+    href: Nomadik.Extensions.html
+  - name: .
+  - uid: Nomadik.Extensions.Swagger
+    name: Swagger
+    href: Nomadik.Extensions.Swagger.html
+  spec.vb:
+  - uid: Nomadik
+    name: Nomadik
+    href: Nomadik.html
+  - name: .
+  - uid: Nomadik.Extensions
+    name: Extensions
+    href: Nomadik.Extensions.html
+  - name: .
+  - uid: Nomadik.Extensions.Swagger
+    name: Swagger
+    href: Nomadik.Extensions.Swagger.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.OpenApi.Models.OpenApiSchema
+  commentId: T:Microsoft.OpenApi.Models.OpenApiSchema
+  parent: Microsoft.OpenApi.Models
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: OpenApiSchema
+  nameWithType: OpenApiSchema
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema
+- uid: Microsoft.OpenApi.Interfaces.IOpenApiReferenceable
+  commentId: T:Microsoft.OpenApi.Interfaces.IOpenApiReferenceable
+  parent: Microsoft.OpenApi.Interfaces
+  isExternal: true
+  name: IOpenApiReferenceable
+  nameWithType: IOpenApiReferenceable
+  fullName: Microsoft.OpenApi.Interfaces.IOpenApiReferenceable
+- uid: Microsoft.OpenApi.Interfaces.IOpenApiSerializable
+  commentId: T:Microsoft.OpenApi.Interfaces.IOpenApiSerializable
+  parent: Microsoft.OpenApi.Interfaces
+  isExternal: true
+  name: IOpenApiSerializable
+  nameWithType: IOpenApiSerializable
+  fullName: Microsoft.OpenApi.Interfaces.IOpenApiSerializable
+- uid: Microsoft.OpenApi.Interfaces.IOpenApiExtensible
+  commentId: T:Microsoft.OpenApi.Interfaces.IOpenApiExtensible
+  parent: Microsoft.OpenApi.Interfaces
+  isExternal: true
+  name: IOpenApiExtensible
+  nameWithType: IOpenApiExtensible
+  fullName: Microsoft.OpenApi.Interfaces.IOpenApiExtensible
+- uid: Microsoft.OpenApi.Interfaces.IOpenApiElement
+  commentId: T:Microsoft.OpenApi.Interfaces.IOpenApiElement
+  parent: Microsoft.OpenApi.Interfaces
+  isExternal: true
+  name: IOpenApiElement
+  nameWithType: IOpenApiElement
+  fullName: Microsoft.OpenApi.Interfaces.IOpenApiElement
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  commentId: M:Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: SerializeAsV3(IOpenApiWriter)
+  nameWithType: OpenApiSchema.SerializeAsV3(IOpenApiWriter)
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  spec.csharp:
+  - uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3(Microsoft.OpenApi.Writers.IOpenApiWriter)
+    name: SerializeAsV3
+    isExternal: true
+    href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  - name: (
+  - uid: Microsoft.OpenApi.Writers.IOpenApiWriter
+    name: IOpenApiWriter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3(Microsoft.OpenApi.Writers.IOpenApiWriter)
+    name: SerializeAsV3
+    isExternal: true
+    href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  - name: (
+  - uid: Microsoft.OpenApi.Writers.IOpenApiWriter
+    name: IOpenApiWriter
+    isExternal: true
+  - name: )
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  commentId: M:Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: SerializeAsV3WithoutReference(IOpenApiWriter)
+  nameWithType: OpenApiSchema.SerializeAsV3WithoutReference(IOpenApiWriter)
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  spec.csharp:
+  - uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+    name: SerializeAsV3WithoutReference
+    isExternal: true
+    href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  - name: (
+  - uid: Microsoft.OpenApi.Writers.IOpenApiWriter
+    name: IOpenApiWriter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV3WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+    name: SerializeAsV3WithoutReference
+    isExternal: true
+    href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  - name: (
+  - uid: Microsoft.OpenApi.Writers.IOpenApiWriter
+    name: IOpenApiWriter
+    isExternal: true
+  - name: )
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  commentId: M:Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: SerializeAsV2(IOpenApiWriter)
+  nameWithType: OpenApiSchema.SerializeAsV2(IOpenApiWriter)
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  spec.csharp:
+  - uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2(Microsoft.OpenApi.Writers.IOpenApiWriter)
+    name: SerializeAsV2
+    isExternal: true
+    href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  - name: (
+  - uid: Microsoft.OpenApi.Writers.IOpenApiWriter
+    name: IOpenApiWriter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2(Microsoft.OpenApi.Writers.IOpenApiWriter)
+    name: SerializeAsV2
+    isExternal: true
+    href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  - name: (
+  - uid: Microsoft.OpenApi.Writers.IOpenApiWriter
+    name: IOpenApiWriter
+    isExternal: true
+  - name: )
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  commentId: M:Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: SerializeAsV2WithoutReference(IOpenApiWriter)
+  nameWithType: OpenApiSchema.SerializeAsV2WithoutReference(IOpenApiWriter)
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+  spec.csharp:
+  - uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+    name: SerializeAsV2WithoutReference
+    isExternal: true
+    href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  - name: (
+  - uid: Microsoft.OpenApi.Writers.IOpenApiWriter
+    name: IOpenApiWriter
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Microsoft.OpenApi.Models.OpenApiSchema.SerializeAsV2WithoutReference(Microsoft.OpenApi.Writers.IOpenApiWriter)
+    name: SerializeAsV2WithoutReference
+    isExternal: true
+    href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  - name: (
+  - uid: Microsoft.OpenApi.Writers.IOpenApiWriter
+    name: IOpenApiWriter
+    isExternal: true
+  - name: )
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Title
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Title
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Title
+  nameWithType: OpenApiSchema.Title
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Title
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Type
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Type
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Type
+  nameWithType: OpenApiSchema.Type
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Type
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Format
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Format
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Format
+  nameWithType: OpenApiSchema.Format
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Format
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Description
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Description
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Description
+  nameWithType: OpenApiSchema.Description
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Description
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Maximum
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Maximum
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Maximum
+  nameWithType: OpenApiSchema.Maximum
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Maximum
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.ExclusiveMaximum
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.ExclusiveMaximum
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: ExclusiveMaximum
+  nameWithType: OpenApiSchema.ExclusiveMaximum
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.ExclusiveMaximum
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Minimum
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Minimum
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Minimum
+  nameWithType: OpenApiSchema.Minimum
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Minimum
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.ExclusiveMinimum
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.ExclusiveMinimum
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: ExclusiveMinimum
+  nameWithType: OpenApiSchema.ExclusiveMinimum
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.ExclusiveMinimum
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.MaxLength
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.MaxLength
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: MaxLength
+  nameWithType: OpenApiSchema.MaxLength
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.MaxLength
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.MinLength
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.MinLength
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: MinLength
+  nameWithType: OpenApiSchema.MinLength
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.MinLength
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Pattern
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Pattern
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Pattern
+  nameWithType: OpenApiSchema.Pattern
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Pattern
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.MultipleOf
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.MultipleOf
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: MultipleOf
+  nameWithType: OpenApiSchema.MultipleOf
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.MultipleOf
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Default
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Default
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Default
+  nameWithType: OpenApiSchema.Default
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Default
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.ReadOnly
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.ReadOnly
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: ReadOnly
+  nameWithType: OpenApiSchema.ReadOnly
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.ReadOnly
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.WriteOnly
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.WriteOnly
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: WriteOnly
+  nameWithType: OpenApiSchema.WriteOnly
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.WriteOnly
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.AllOf
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.AllOf
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: AllOf
+  nameWithType: OpenApiSchema.AllOf
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.AllOf
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.OneOf
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.OneOf
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: OneOf
+  nameWithType: OpenApiSchema.OneOf
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.OneOf
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.AnyOf
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.AnyOf
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: AnyOf
+  nameWithType: OpenApiSchema.AnyOf
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.AnyOf
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Not
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Not
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Not
+  nameWithType: OpenApiSchema.Not
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Not
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Required
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Required
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Required
+  nameWithType: OpenApiSchema.Required
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Required
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Items
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Items
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Items
+  nameWithType: OpenApiSchema.Items
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Items
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.MaxItems
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.MaxItems
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: MaxItems
+  nameWithType: OpenApiSchema.MaxItems
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.MaxItems
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.MinItems
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.MinItems
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: MinItems
+  nameWithType: OpenApiSchema.MinItems
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.MinItems
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.UniqueItems
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.UniqueItems
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: UniqueItems
+  nameWithType: OpenApiSchema.UniqueItems
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.UniqueItems
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Properties
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Properties
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Properties
+  nameWithType: OpenApiSchema.Properties
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Properties
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.MaxProperties
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.MaxProperties
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: MaxProperties
+  nameWithType: OpenApiSchema.MaxProperties
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.MaxProperties
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.MinProperties
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.MinProperties
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: MinProperties
+  nameWithType: OpenApiSchema.MinProperties
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.MinProperties
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.AdditionalPropertiesAllowed
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.AdditionalPropertiesAllowed
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: AdditionalPropertiesAllowed
+  nameWithType: OpenApiSchema.AdditionalPropertiesAllowed
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.AdditionalPropertiesAllowed
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.AdditionalProperties
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.AdditionalProperties
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: AdditionalProperties
+  nameWithType: OpenApiSchema.AdditionalProperties
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.AdditionalProperties
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Discriminator
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Discriminator
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Discriminator
+  nameWithType: OpenApiSchema.Discriminator
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Discriminator
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Example
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Example
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Example
+  nameWithType: OpenApiSchema.Example
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Example
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Enum
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Enum
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Enum
+  nameWithType: OpenApiSchema.Enum
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Enum
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Nullable
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Nullable
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Nullable
+  nameWithType: OpenApiSchema.Nullable
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Nullable
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.ExternalDocs
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.ExternalDocs
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: ExternalDocs
+  nameWithType: OpenApiSchema.ExternalDocs
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.ExternalDocs
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Deprecated
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Deprecated
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Deprecated
+  nameWithType: OpenApiSchema.Deprecated
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Deprecated
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Xml
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Xml
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Xml
+  nameWithType: OpenApiSchema.Xml
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Xml
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Extensions
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Extensions
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Extensions
+  nameWithType: OpenApiSchema.Extensions
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Extensions
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.UnresolvedReference
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.UnresolvedReference
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: UnresolvedReference
+  nameWithType: OpenApiSchema.UnresolvedReference
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.UnresolvedReference
+- uid: Microsoft.OpenApi.Models.OpenApiSchema.Reference
+  commentId: P:Microsoft.OpenApi.Models.OpenApiSchema.Reference
+  parent: Microsoft.OpenApi.Models.OpenApiSchema
+  isExternal: true
+  href: https://github.com/microsoft/OpenAPI.NET/blob/553061a69b2d8b8b1653f172707409a16f2a9579/src/Microsoft.OpenApi/Models/OpenApiSchema.cs
+  name: Reference
+  nameWithType: OpenApiSchema.Reference
+  fullName: Microsoft.OpenApi.Models.OpenApiSchema.Reference
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.OpenApi.Models
+  commentId: N:Microsoft.OpenApi.Models
+  isExternal: true
+  name: Microsoft.OpenApi.Models
+  nameWithType: Microsoft.OpenApi.Models
+  fullName: Microsoft.OpenApi.Models
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.OpenApi
+    name: OpenApi
+    isExternal: true
+  - name: .
+  - uid: Microsoft.OpenApi.Models
+    name: Models
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.OpenApi
+    name: OpenApi
+    isExternal: true
+  - name: .
+  - uid: Microsoft.OpenApi.Models
+    name: Models
+    isExternal: true
+- uid: Microsoft.OpenApi.Interfaces
+  commentId: N:Microsoft.OpenApi.Interfaces
+  isExternal: true
+  name: Microsoft.OpenApi.Interfaces
+  nameWithType: Microsoft.OpenApi.Interfaces
+  fullName: Microsoft.OpenApi.Interfaces
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.OpenApi
+    name: OpenApi
+    isExternal: true
+  - name: .
+  - uid: Microsoft.OpenApi.Interfaces
+    name: Interfaces
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.OpenApi
+    name: OpenApi
+    isExternal: true
+  - name: .
+  - uid: Microsoft.OpenApi.Interfaces
+    name: Interfaces
+    isExternal: true
+- uid: Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor*
+  commentId: Overload:Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor
+  href: Nomadik.Extensions.Swagger.SearchOperationSchema.html#Nomadik_Extensions_Swagger_SearchOperationSchema__ctor_System_String_System_String_
+  name: SearchOperationSchema
+  nameWithType: SearchOperationSchema.SearchOperationSchema
+  fullName: Nomadik.Extensions.Swagger.SearchOperationSchema.SearchOperationSchema
+  nameWithType.vb: SearchOperationSchema.New
+  fullName.vb: Nomadik.Extensions.Swagger.SearchOperationSchema.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

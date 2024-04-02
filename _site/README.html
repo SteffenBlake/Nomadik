@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Nomadik | Nomadik </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Nomadik | Nomadik ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/SteffenBlake/Nomadik/blob/main/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="Nomadik">
+            Nomadik
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="nomadik">Nomadik</h1>
+
+<p>Nomadik is a set of dotnet libraries aimed at solving a very common problem that is encountered in the problem space of Object Relational Mappers and standard CRUD APIs / Applications.</p>
+<p>The problem space is as follows:</p>
+<ol>
+<li>We have defined a given mechanism by which to map a Database Entity <code>E</code> to an ViewModel <code>M</code> (Typically in the form of an <code>Expression&lt;Func&lt;E, M&gt;&gt;</code>)</li>
+<li>Our API needs the ability to have a form of Queryable, Searchable, Filterable, Sortable, Pageable endpoint for the above mapping</li>
+<li>We want the ability to perform the above &quot;Search&quot; operations *with respect to the properties on the ViewModel <code>M</code></li>
+<li><em>However</em>, most ORMs support functionality to run those very &quot;Search&quot; operations on the database itself (Typically in the form of an <code>Expression&lt;Func&lt;E, bool&gt;&gt;</code></li>
+<li><em>But</em> the fields for <code>M</code> may be complex derived properties that come from operations performed on fields from <code>E</code></li>
+</ol>
+<p><strong>The common solution often results in having to effectively define all these mappings in two directions</strong>, once for mapping <code>E</code> -&gt; <code>M</code> for the &quot;read&quot; operation, and a <em>second</em> time for mapping <code>M</code> properties and &quot;translating&quot; them into boolean &quot;search&quot; operations.</p>
+<p>Which of course is a huge pain and adds a <em>lot</em> of extra boilerplate code, and furthermore introduces the pain point of having two sources of truth for the same operations.</p>
+<p>If you modify how you map <code>E.SomeField</code> to <code>M.SomeOtherField</code>, you <em>also</em> need to remember to update the matching logic over in serializing your <code>SearchForM.SomeOtherField</code> DTO field into that <code>Expression&lt;Func&lt;M, bool&gt;&gt;</code>.</p>
+<p>So, the question is as such:</p>
+<ol>
+<li>Given:
+a. An existing defined <code>Expression&lt;Func&lt;E, M&gt;&gt;</code> that performs complex operations to derive &quot;compound&quot; or &quot;complex&quot; fields from E -&gt; M
+b. A &quot;Search&quot; DTO that searches on the above given properties of <code>M</code></li>
+<li>Can we deconstruct the <code>Expression&lt;Func&lt;E, M&gt;&gt;</code> mapping expression tree, and reconstruct it into a <code>Expression&lt;Func&lt;E, bool&gt;&gt;</code> via the &quot;Search&quot; DTO</li>
+</ol>
+<p><strong>The answer, it turns out, is Yes!</strong></p>
+<h1 id="what-does-it-look-like">What does it look like?</h1>
+<p>Heres an example chunk of code below that will demonstrate the library in action:</p>
+<p>Given the below:</p>
+<pre><code>public class Teacher 
+{
+    public int TeacherId { get; set; }
+    public required string FirstName { get; set; }
+    public required string LastName { get; set; }
+}
+
+public class TeacherDTO
+{
+    public required int Id { get; init; }
+    public required string FullName { get; init; }
+}
+</code></pre>
+<p>Assuming we have an existing <code>IQueryable&lt;Teacher&gt; teachers</code> from our preferred ORM, and a <code>SearchQuery</code> passed in from some form of source (serializable POCO, you can accept it as a param on your API Endpoint(s) for example)</p>
+<pre><code>SearchQuery query = ...;
+IQueryable&lt;Teacher&gt; teachers = ...;
+
+Expression&lt;Func&lt;Teacher, TeacherDTO&gt;&gt; mapper = t =&gt; new ()
+{
+    Id = t.TeacherId,
+    FullName = t.FirstName + &quot; &quot; + t.LastName
+};
+
+var compiledQuery = query.Compile(mapper);
+var result = await teachers.SearchAsync(compiledQuery);
+
+// 1 based inclusive index of the first item of the paged result (will just be 1 if no pagination was requested)
+Console.WriteLine(result.From);
+// 1 based inclusive index of the last item of the paged result (will be equal to &quot;Of&quot; if no pagination was requested)
+Console.WriteLine(result.To);
+// Total count of records after the search query filters but before pagination
+Console.WriteLine(result.Of);
+
+foreach (TeacherDTO dto in result.Results)
+{
+   ...
+}
+</code></pre>
+<h1 id="how-to-install-it">How to install it</h1>
+<pre><code>dotnet add package Nomadik.Core
+</code></pre>
+<h1 id="swagger-support">Swagger Support</h1>
+<p>Due to the complicated nature of the <code>SearchQuery</code> object, at this time Dotnet's Swagger OpenAPI generation struggles with serializing it to an OpenAPI spec, even though it is technically viable to serialize.</p>
+<p>To this end I have added in a secondary nuget package <code>Nomadike.Extensions.Swagger</code> which you can install via:</p>
+<pre><code>dotnet add package Nomadik.Extensions.Swagger
+</code></pre>
+<p>You can then enable Swagger support via adding the following to your <code>Program.cs</code>, which will register the appropriate Document Filters for Nomadik to parse SearchQueries:</p>
+<pre><code>builder.Services.AddSwaggerGen(options =&gt;
+{
+    ...
+
+    options.AddNomadik();
+
+    ...
+});
+</code></pre>
+<p>Then, to register a given endpoint to have its documentation generated properly:</p>
+<pre><code>[NomadikSearch(typeof(YourDto))]
+public async Task&lt;SearchQueryResult&lt;YourDto&gt;&gt; Index(
+    [FromBody]
+    SearchQuery query,
+)
+{
+    ...
+}
+</code></pre>
+<p>Where <code>YourDto</code> represents the <em>output</em> object that will be returned to the front end, with it's fields that are Searchable/Filterable/Pageable/etc.</p>
+<p>By default, all *<em>Public exposed Properties with a Getter</em> will be serialized as valid fields to search/filter/sort on. This will then generate a suite of bespoke <code>YourDTOSearch...</code> Schemas on the OpenAPi schema <strong>that have a special enum defined for each of the fields</strong></p>
+<p><strong>Currently at this time, due to the recursive and complex nature of the SearchQuery object, OpenAPI does not play nice with supporting it as a param in anywhere other than the Body</strong></p>
+<p>To that end, you are tightly coupled to largely only supporting SearchQuery endpoints as <code>POST</code>.</p>
+<p>If you don't care about OpenAPI support though, then it should work fine (and you can probably ignore this entire section of the documentation, why are you even reading this far anyways?)</p>
+<h1 id="api">API</h1>
+<p><a href="https://github.com/SteffenBlake/Nomadik/wiki">See the Wiki for details on the application's API</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/SteffenBlake/Nomadik/blob/main/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

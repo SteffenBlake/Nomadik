@@ -1,11 +1,9 @@
 using System.Linq.Expressions;
-using System.Text.Json.Serialization;
-using Nomadik.Core.Converters;
 
 namespace Nomadik.Core;
 
 /// <summary>
-/// Implementation of <see cref="SearchFilter{T}"/> that chains
+/// Implementation of <see cref="SearchFilter"/> that chains
 /// All passed in child SearchFilters in logical AND operators
 /// </summary>
 public class SearchFilterAnd : SearchFilter

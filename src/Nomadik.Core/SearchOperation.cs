@@ -6,7 +6,7 @@ using Nomadik.Core.Extensions;
 namespace Nomadik.Core;
 
 /// <summary>
-/// Logical Leaf terminated operation of a <see cref="SearchFilter{T}"/>
+/// Logical Leaf terminated operation of a <see cref="SearchFilter"/>
 /// That handles a WHERE filter of the data, based on a Key, Operator, 
 /// and compared Value
 /// </summary>

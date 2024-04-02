@@ -1,0 +1,1140 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Nomadik.Core
+  name: Nomadik.Core
+  href: api/Nomadik.Core.html
+  commentId: N:Nomadik.Core
+  fullName: Nomadik.Core
+  nameWithType: Nomadik.Core
+- uid: Nomadik.Core.CompiledSearchQuery`2
+  name: CompiledSearchQuery<TIn, TOut>
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html
+  commentId: T:Nomadik.Core.CompiledSearchQuery`2
+  name.vb: CompiledSearchQuery(Of TIn, TOut)
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut)
+  nameWithType: CompiledSearchQuery<TIn, TOut>
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut)
+- uid: Nomadik.Core.CompiledSearchQuery`2.#ctor(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{`0,`1}})
+  name: CompiledSearchQuery(SearchQuery, Expression<Func<TIn, TOut>>)
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2__ctor_Nomadik_Core_SearchQuery_System_Linq_Expressions_Expression_System_Func__0__1___
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.#ctor(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{`0,`1}})
+  name.vb: New(SearchQuery, Expression(Of Func(Of TIn, TOut)))
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.CompiledSearchQuery(Nomadik.Core.SearchQuery, System.Linq.Expressions.Expression<System.Func<TIn, TOut>>)
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).New(Nomadik.Core.SearchQuery, System.Linq.Expressions.Expression(Of System.Func(Of TIn, TOut)))
+  nameWithType: CompiledSearchQuery<TIn, TOut>.CompiledSearchQuery(SearchQuery, Expression<Func<TIn, TOut>>)
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).New(SearchQuery, Expression(Of Func(Of TIn, TOut)))
+- uid: Nomadik.Core.CompiledSearchQuery`2.#ctor*
+  name: CompiledSearchQuery
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2__ctor_
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.CompiledSearchQuery
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).New
+  nameWithType: CompiledSearchQuery<TIn, TOut>.CompiledSearchQuery
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).New
+- uid: Nomadik.Core.CompiledSearchQuery`2.OrderBy(System.Linq.IQueryable{`0})
+  name: OrderBy(IQueryable<TIn>)
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_OrderBy_System_Linq_IQueryable__0__
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.OrderBy(System.Linq.IQueryable{`0})
+  name.vb: OrderBy(IQueryable(Of TIn))
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.OrderBy(System.Linq.IQueryable<TIn>)
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).OrderBy(System.Linq.IQueryable(Of TIn))
+  nameWithType: CompiledSearchQuery<TIn, TOut>.OrderBy(IQueryable<TIn>)
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).OrderBy(IQueryable(Of TIn))
+- uid: Nomadik.Core.CompiledSearchQuery`2.OrderBy*
+  name: OrderBy
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_OrderBy_
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.OrderBy
+  isSpec: "True"
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.OrderBy
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).OrderBy
+  nameWithType: CompiledSearchQuery<TIn, TOut>.OrderBy
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).OrderBy
+- uid: Nomadik.Core.CompiledSearchQuery`2.Page(System.Linq.IQueryable{`0})
+  name: Page(IQueryable<TIn>)
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Page_System_Linq_IQueryable__0__
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.Page(System.Linq.IQueryable{`0})
+  name.vb: Page(IQueryable(Of TIn))
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Page(System.Linq.IQueryable<TIn>)
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Page(System.Linq.IQueryable(Of TIn))
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Page(IQueryable<TIn>)
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Page(IQueryable(Of TIn))
+- uid: Nomadik.Core.CompiledSearchQuery`2.Page*
+  name: Page
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Page_
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.Page
+  isSpec: "True"
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Page
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Page
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Page
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Page
+- uid: Nomadik.Core.CompiledSearchQuery`2.SearchAsync(System.Linq.IQueryable{`0})
+  name: SearchAsync(IQueryable<TIn>)
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_SearchAsync_System_Linq_IQueryable__0__
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.SearchAsync(System.Linq.IQueryable{`0})
+  name.vb: SearchAsync(IQueryable(Of TIn))
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.SearchAsync(System.Linq.IQueryable<TIn>)
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).SearchAsync(System.Linq.IQueryable(Of TIn))
+  nameWithType: CompiledSearchQuery<TIn, TOut>.SearchAsync(IQueryable<TIn>)
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).SearchAsync(IQueryable(Of TIn))
+- uid: Nomadik.Core.CompiledSearchQuery`2.SearchAsync*
+  name: SearchAsync
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_SearchAsync_
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.SearchAsync
+  isSpec: "True"
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.SearchAsync
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).SearchAsync
+  nameWithType: CompiledSearchQuery<TIn, TOut>.SearchAsync
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).SearchAsync
+- uid: Nomadik.Core.CompiledSearchQuery`2.Select(System.Linq.IQueryable{`0})
+  name: Select(IQueryable<TIn>)
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Select_System_Linq_IQueryable__0__
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.Select(System.Linq.IQueryable{`0})
+  name.vb: Select(IQueryable(Of TIn))
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Select(System.Linq.IQueryable<TIn>)
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Select(System.Linq.IQueryable(Of TIn))
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Select(IQueryable<TIn>)
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Select(IQueryable(Of TIn))
+- uid: Nomadik.Core.CompiledSearchQuery`2.Select*
+  name: Select
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Select_
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.Select
+  isSpec: "True"
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Select
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Select
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Select
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Select
+- uid: Nomadik.Core.CompiledSearchQuery`2.Where(System.Linq.IQueryable{`0})
+  name: Where(IQueryable<TIn>)
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Where_System_Linq_IQueryable__0__
+  commentId: M:Nomadik.Core.CompiledSearchQuery`2.Where(System.Linq.IQueryable{`0})
+  name.vb: Where(IQueryable(Of TIn))
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Where(System.Linq.IQueryable<TIn>)
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Where(System.Linq.IQueryable(Of TIn))
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Where(IQueryable<TIn>)
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Where(IQueryable(Of TIn))
+- uid: Nomadik.Core.CompiledSearchQuery`2.Where*
+  name: Where
+  href: api/Nomadik.Core.CompiledSearchQuery-2.html#Nomadik_Core_CompiledSearchQuery_2_Where_
+  commentId: Overload:Nomadik.Core.CompiledSearchQuery`2.Where
+  isSpec: "True"
+  fullName: Nomadik.Core.CompiledSearchQuery<TIn, TOut>.Where
+  fullName.vb: Nomadik.Core.CompiledSearchQuery(Of TIn, TOut).Where
+  nameWithType: CompiledSearchQuery<TIn, TOut>.Where
+  nameWithType.vb: CompiledSearchQuery(Of TIn, TOut).Where
+- uid: Nomadik.Core.Converters
+  name: Nomadik.Core.Converters
+  href: api/Nomadik.Core.Converters.html
+  commentId: N:Nomadik.Core.Converters
+  fullName: Nomadik.Core.Converters
+  nameWithType: Nomadik.Core.Converters
+- uid: Nomadik.Core.Converters.ObjectToInferredTypesConverter
+  name: ObjectToInferredTypesConverter
+  href: api/Nomadik.Core.Converters.ObjectToInferredTypesConverter.html
+  commentId: T:Nomadik.Core.Converters.ObjectToInferredTypesConverter
+  fullName: Nomadik.Core.Converters.ObjectToInferredTypesConverter
+  nameWithType: ObjectToInferredTypesConverter
+- uid: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Nomadik.Core.Converters.ObjectToInferredTypesConverter.html#Nomadik_Core_Converters_ObjectToInferredTypesConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Nomadik.Core.Converters.ObjectToInferredTypesConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ObjectToInferredTypesConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: ObjectToInferredTypesConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Read*
+  name: Read
+  href: api/Nomadik.Core.Converters.ObjectToInferredTypesConverter.html#Nomadik_Core_Converters_ObjectToInferredTypesConverter_Read_
+  commentId: Overload:Nomadik.Core.Converters.ObjectToInferredTypesConverter.Read
+  isSpec: "True"
+  fullName: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Read
+  nameWithType: ObjectToInferredTypesConverter.Read
+- uid: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Write(System.Text.Json.Utf8JsonWriter,System.Object,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, object, JsonSerializerOptions)
+  href: api/Nomadik.Core.Converters.ObjectToInferredTypesConverter.html#Nomadik_Core_Converters_ObjectToInferredTypesConverter_Write_System_Text_Json_Utf8JsonWriter_System_Object_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Nomadik.Core.Converters.ObjectToInferredTypesConverter.Write(System.Text.Json.Utf8JsonWriter,System.Object,System.Text.Json.JsonSerializerOptions)
+  name.vb: Write(Utf8JsonWriter, Object, JsonSerializerOptions)
+  fullName: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Write(System.Text.Json.Utf8JsonWriter, object, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Write(System.Text.Json.Utf8JsonWriter, Object, System.Text.Json.JsonSerializerOptions)
+  nameWithType: ObjectToInferredTypesConverter.Write(Utf8JsonWriter, object, JsonSerializerOptions)
+  nameWithType.vb: ObjectToInferredTypesConverter.Write(Utf8JsonWriter, Object, JsonSerializerOptions)
+- uid: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Write*
+  name: Write
+  href: api/Nomadik.Core.Converters.ObjectToInferredTypesConverter.html#Nomadik_Core_Converters_ObjectToInferredTypesConverter_Write_
+  commentId: Overload:Nomadik.Core.Converters.ObjectToInferredTypesConverter.Write
+  isSpec: "True"
+  fullName: Nomadik.Core.Converters.ObjectToInferredTypesConverter.Write
+  nameWithType: ObjectToInferredTypesConverter.Write
+- uid: Nomadik.Core.Converters.SearchFilterConverter
+  name: SearchFilterConverter
+  href: api/Nomadik.Core.Converters.SearchFilterConverter.html
+  commentId: T:Nomadik.Core.Converters.SearchFilterConverter
+  fullName: Nomadik.Core.Converters.SearchFilterConverter
+  nameWithType: SearchFilterConverter
+- uid: Nomadik.Core.Converters.SearchFilterConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Nomadik.Core.Converters.SearchFilterConverter.html#Nomadik_Core_Converters_SearchFilterConverter_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Nomadik.Core.Converters.SearchFilterConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)
+  name.vb: Read(Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Nomadik.Core.Converters.SearchFilterConverter.Read(ref System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Nomadik.Core.Converters.SearchFilterConverter.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SearchFilterConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: SearchFilterConverter.Read(Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Nomadik.Core.Converters.SearchFilterConverter.Read*
+  name: Read
+  href: api/Nomadik.Core.Converters.SearchFilterConverter.html#Nomadik_Core_Converters_SearchFilterConverter_Read_
+  commentId: Overload:Nomadik.Core.Converters.SearchFilterConverter.Read
+  isSpec: "True"
+  fullName: Nomadik.Core.Converters.SearchFilterConverter.Read
+  nameWithType: SearchFilterConverter.Read
+- uid: Nomadik.Core.Converters.SearchFilterConverter.Write(System.Text.Json.Utf8JsonWriter,Nomadik.Core.SearchFilter,System.Text.Json.JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, SearchFilter, JsonSerializerOptions)
+  href: api/Nomadik.Core.Converters.SearchFilterConverter.html#Nomadik_Core_Converters_SearchFilterConverter_Write_System_Text_Json_Utf8JsonWriter_Nomadik_Core_SearchFilter_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Nomadik.Core.Converters.SearchFilterConverter.Write(System.Text.Json.Utf8JsonWriter,Nomadik.Core.SearchFilter,System.Text.Json.JsonSerializerOptions)
+  fullName: Nomadik.Core.Converters.SearchFilterConverter.Write(System.Text.Json.Utf8JsonWriter, Nomadik.Core.SearchFilter, System.Text.Json.JsonSerializerOptions)
+  nameWithType: SearchFilterConverter.Write(Utf8JsonWriter, SearchFilter, JsonSerializerOptions)
+- uid: Nomadik.Core.Converters.SearchFilterConverter.Write*
+  name: Write
+  href: api/Nomadik.Core.Converters.SearchFilterConverter.html#Nomadik_Core_Converters_SearchFilterConverter_Write_
+  commentId: Overload:Nomadik.Core.Converters.SearchFilterConverter.Write
+  isSpec: "True"
+  fullName: Nomadik.Core.Converters.SearchFilterConverter.Write
+  nameWithType: SearchFilterConverter.Write
+- uid: Nomadik.Core.Extensions
+  name: Nomadik.Core.Extensions
+  href: api/Nomadik.Core.Extensions.html
+  commentId: N:Nomadik.Core.Extensions
+  fullName: Nomadik.Core.Extensions
+  nameWithType: Nomadik.Core.Extensions
+- uid: Nomadik.Core.Extensions.ExpressionExtensions
+  name: ExpressionExtensions
+  href: api/Nomadik.Core.Extensions.ExpressionExtensions.html
+  commentId: T:Nomadik.Core.Extensions.ExpressionExtensions
+  fullName: Nomadik.Core.Extensions.ExpressionExtensions
+  nameWithType: ExpressionExtensions
+- uid: Nomadik.Core.Extensions.ExpressionExtensions.ToMemberTable*
+  name: ToMemberTable
+  href: api/Nomadik.Core.Extensions.ExpressionExtensions.html#Nomadik_Core_Extensions_ExpressionExtensions_ToMemberTable_
+  commentId: Overload:Nomadik.Core.Extensions.ExpressionExtensions.ToMemberTable
+  isSpec: "True"
+  fullName: Nomadik.Core.Extensions.ExpressionExtensions.ToMemberTable
+  nameWithType: ExpressionExtensions.ToMemberTable
+- uid: Nomadik.Core.Extensions.ExpressionExtensions.ToMemberTable``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  name: ToMemberTable<T1, T2>(Expression<Func<T1, T2>>)
+  href: api/Nomadik.Core.Extensions.ExpressionExtensions.html#Nomadik_Core_Extensions_ExpressionExtensions_ToMemberTable__2_System_Linq_Expressions_Expression_System_Func___0___1___
+  commentId: M:Nomadik.Core.Extensions.ExpressionExtensions.ToMemberTable``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  name.vb: ToMemberTable(Of T1, T2)(Expression(Of Func(Of T1, T2)))
+  fullName: Nomadik.Core.Extensions.ExpressionExtensions.ToMemberTable<T1, T2>(System.Linq.Expressions.Expression<System.Func<T1, T2>>)
+  fullName.vb: Nomadik.Core.Extensions.ExpressionExtensions.ToMemberTable(Of T1, T2)(System.Linq.Expressions.Expression(Of System.Func(Of T1, T2)))
+  nameWithType: ExpressionExtensions.ToMemberTable<T1, T2>(Expression<Func<T1, T2>>)
+  nameWithType.vb: ExpressionExtensions.ToMemberTable(Of T1, T2)(Expression(Of Func(Of T1, T2)))
+- uid: Nomadik.Core.Extensions.OperatorExtensions
+  name: OperatorExtensions
+  href: api/Nomadik.Core.Extensions.OperatorExtensions.html
+  commentId: T:Nomadik.Core.Extensions.OperatorExtensions
+  fullName: Nomadik.Core.Extensions.OperatorExtensions
+  nameWithType: OperatorExtensions
+- uid: Nomadik.Core.Extensions.OperatorExtensions.ToExpression(Nomadik.Core.Operator)
+  name: ToExpression(Operator)
+  href: api/Nomadik.Core.Extensions.OperatorExtensions.html#Nomadik_Core_Extensions_OperatorExtensions_ToExpression_Nomadik_Core_Operator_
+  commentId: M:Nomadik.Core.Extensions.OperatorExtensions.ToExpression(Nomadik.Core.Operator)
+  fullName: Nomadik.Core.Extensions.OperatorExtensions.ToExpression(Nomadik.Core.Operator)
+  nameWithType: OperatorExtensions.ToExpression(Operator)
+- uid: Nomadik.Core.Extensions.OperatorExtensions.ToExpression*
+  name: ToExpression
+  href: api/Nomadik.Core.Extensions.OperatorExtensions.html#Nomadik_Core_Extensions_OperatorExtensions_ToExpression_
+  commentId: Overload:Nomadik.Core.Extensions.OperatorExtensions.ToExpression
+  isSpec: "True"
+  fullName: Nomadik.Core.Extensions.OperatorExtensions.ToExpression
+  nameWithType: OperatorExtensions.ToExpression
+- uid: Nomadik.Core.Operator
+  name: Operator
+  href: api/Nomadik.Core.Operator.html
+  commentId: T:Nomadik.Core.Operator
+  fullName: Nomadik.Core.Operator
+  nameWithType: Operator
+- uid: Nomadik.Core.Operator.EQ
+  name: EQ
+  href: api/Nomadik.Core.Operator.html#Nomadik_Core_Operator_EQ
+  commentId: F:Nomadik.Core.Operator.EQ
+  fullName: Nomadik.Core.Operator.EQ
+  nameWithType: Operator.EQ
+- uid: Nomadik.Core.Operator.GT
+  name: GT
+  href: api/Nomadik.Core.Operator.html#Nomadik_Core_Operator_GT
+  commentId: F:Nomadik.Core.Operator.GT
+  fullName: Nomadik.Core.Operator.GT
+  nameWithType: Operator.GT
+- uid: Nomadik.Core.Operator.GTE
+  name: GTE
+  href: api/Nomadik.Core.Operator.html#Nomadik_Core_Operator_GTE
+  commentId: F:Nomadik.Core.Operator.GTE
+  fullName: Nomadik.Core.Operator.GTE
+  nameWithType: Operator.GTE
+- uid: Nomadik.Core.Operator.ILI
+  name: ILI
+  href: api/Nomadik.Core.Operator.html#Nomadik_Core_Operator_ILI
+  commentId: F:Nomadik.Core.Operator.ILI
+  fullName: Nomadik.Core.Operator.ILI
+  nameWithType: Operator.ILI
+- uid: Nomadik.Core.Operator.LI
+  name: LI
+  href: api/Nomadik.Core.Operator.html#Nomadik_Core_Operator_LI
+  commentId: F:Nomadik.Core.Operator.LI
+  fullName: Nomadik.Core.Operator.LI
+  nameWithType: Operator.LI
+- uid: Nomadik.Core.Operator.LT
+  name: LT
+  href: api/Nomadik.Core.Operator.html#Nomadik_Core_Operator_LT
+  commentId: F:Nomadik.Core.Operator.LT
+  fullName: Nomadik.Core.Operator.LT
+  nameWithType: Operator.LT
+- uid: Nomadik.Core.Operator.LTE
+  name: LTE
+  href: api/Nomadik.Core.Operator.html#Nomadik_Core_Operator_LTE
+  commentId: F:Nomadik.Core.Operator.LTE
+  fullName: Nomadik.Core.Operator.LTE
+  nameWithType: Operator.LTE
+- uid: Nomadik.Core.Operator.NE
+  name: NE
+  href: api/Nomadik.Core.Operator.html#Nomadik_Core_Operator_NE
+  commentId: F:Nomadik.Core.Operator.NE
+  fullName: Nomadik.Core.Operator.NE
+  nameWithType: Operator.NE
+- uid: Nomadik.Core.OrderDir
+  name: OrderDir
+  href: api/Nomadik.Core.OrderDir.html
+  commentId: T:Nomadik.Core.OrderDir
+  fullName: Nomadik.Core.OrderDir
+  nameWithType: OrderDir
+- uid: Nomadik.Core.OrderDir.Asc
+  name: Asc
+  href: api/Nomadik.Core.OrderDir.html#Nomadik_Core_OrderDir_Asc
+  commentId: F:Nomadik.Core.OrderDir.Asc
+  fullName: Nomadik.Core.OrderDir.Asc
+  nameWithType: OrderDir.Asc
+- uid: Nomadik.Core.OrderDir.Desc
+  name: Desc
+  href: api/Nomadik.Core.OrderDir.html#Nomadik_Core_OrderDir_Desc
+  commentId: F:Nomadik.Core.OrderDir.Desc
+  fullName: Nomadik.Core.OrderDir.Desc
+  nameWithType: OrderDir.Desc
+- uid: Nomadik.Core.SearchFilter
+  name: SearchFilter
+  href: api/Nomadik.Core.SearchFilter.html
+  commentId: T:Nomadik.Core.SearchFilter
+  fullName: Nomadik.Core.SearchFilter
+  nameWithType: SearchFilter
+- uid: Nomadik.Core.SearchFilter.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name: Compile(IReadOnlyDictionary<string, Expression>)
+  href: api/Nomadik.Core.SearchFilter.html#Nomadik_Core_SearchFilter_Compile_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Linq_Expressions_Expression__
+  commentId: M:Nomadik.Core.SearchFilter.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name.vb: Compile(IReadOnlyDictionary(Of String, Expression))
+  fullName: Nomadik.Core.SearchFilter.Compile(System.Collections.Generic.IReadOnlyDictionary<string, System.Linq.Expressions.Expression>)
+  fullName.vb: Nomadik.Core.SearchFilter.Compile(System.Collections.Generic.IReadOnlyDictionary(Of String, System.Linq.Expressions.Expression))
+  nameWithType: SearchFilter.Compile(IReadOnlyDictionary<string, Expression>)
+  nameWithType.vb: SearchFilter.Compile(IReadOnlyDictionary(Of String, Expression))
+- uid: Nomadik.Core.SearchFilter.Compile*
+  name: Compile
+  href: api/Nomadik.Core.SearchFilter.html#Nomadik_Core_SearchFilter_Compile_
+  commentId: Overload:Nomadik.Core.SearchFilter.Compile
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchFilter.Compile
+  nameWithType: SearchFilter.Compile
+- uid: Nomadik.Core.SearchFilterAnd
+  name: SearchFilterAnd
+  href: api/Nomadik.Core.SearchFilterAnd.html
+  commentId: T:Nomadik.Core.SearchFilterAnd
+  fullName: Nomadik.Core.SearchFilterAnd
+  nameWithType: SearchFilterAnd
+- uid: Nomadik.Core.SearchFilterAnd.And
+  name: And
+  href: api/Nomadik.Core.SearchFilterAnd.html#Nomadik_Core_SearchFilterAnd_And
+  commentId: P:Nomadik.Core.SearchFilterAnd.And
+  fullName: Nomadik.Core.SearchFilterAnd.And
+  nameWithType: SearchFilterAnd.And
+- uid: Nomadik.Core.SearchFilterAnd.And*
+  name: And
+  href: api/Nomadik.Core.SearchFilterAnd.html#Nomadik_Core_SearchFilterAnd_And_
+  commentId: Overload:Nomadik.Core.SearchFilterAnd.And
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchFilterAnd.And
+  nameWithType: SearchFilterAnd.And
+- uid: Nomadik.Core.SearchFilterAnd.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name: Compile(IReadOnlyDictionary<string, Expression>)
+  href: api/Nomadik.Core.SearchFilterAnd.html#Nomadik_Core_SearchFilterAnd_Compile_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Linq_Expressions_Expression__
+  commentId: M:Nomadik.Core.SearchFilterAnd.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name.vb: Compile(IReadOnlyDictionary(Of String, Expression))
+  fullName: Nomadik.Core.SearchFilterAnd.Compile(System.Collections.Generic.IReadOnlyDictionary<string, System.Linq.Expressions.Expression>)
+  fullName.vb: Nomadik.Core.SearchFilterAnd.Compile(System.Collections.Generic.IReadOnlyDictionary(Of String, System.Linq.Expressions.Expression))
+  nameWithType: SearchFilterAnd.Compile(IReadOnlyDictionary<string, Expression>)
+  nameWithType.vb: SearchFilterAnd.Compile(IReadOnlyDictionary(Of String, Expression))
+- uid: Nomadik.Core.SearchFilterAnd.Compile*
+  name: Compile
+  href: api/Nomadik.Core.SearchFilterAnd.html#Nomadik_Core_SearchFilterAnd_Compile_
+  commentId: Overload:Nomadik.Core.SearchFilterAnd.Compile
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchFilterAnd.Compile
+  nameWithType: SearchFilterAnd.Compile
+- uid: Nomadik.Core.SearchFilterOr
+  name: SearchFilterOr
+  href: api/Nomadik.Core.SearchFilterOr.html
+  commentId: T:Nomadik.Core.SearchFilterOr
+  fullName: Nomadik.Core.SearchFilterOr
+  nameWithType: SearchFilterOr
+- uid: Nomadik.Core.SearchFilterOr.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name: Compile(IReadOnlyDictionary<string, Expression>)
+  href: api/Nomadik.Core.SearchFilterOr.html#Nomadik_Core_SearchFilterOr_Compile_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Linq_Expressions_Expression__
+  commentId: M:Nomadik.Core.SearchFilterOr.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name.vb: Compile(IReadOnlyDictionary(Of String, Expression))
+  fullName: Nomadik.Core.SearchFilterOr.Compile(System.Collections.Generic.IReadOnlyDictionary<string, System.Linq.Expressions.Expression>)
+  fullName.vb: Nomadik.Core.SearchFilterOr.Compile(System.Collections.Generic.IReadOnlyDictionary(Of String, System.Linq.Expressions.Expression))
+  nameWithType: SearchFilterOr.Compile(IReadOnlyDictionary<string, Expression>)
+  nameWithType.vb: SearchFilterOr.Compile(IReadOnlyDictionary(Of String, Expression))
+- uid: Nomadik.Core.SearchFilterOr.Compile*
+  name: Compile
+  href: api/Nomadik.Core.SearchFilterOr.html#Nomadik_Core_SearchFilterOr_Compile_
+  commentId: Overload:Nomadik.Core.SearchFilterOr.Compile
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchFilterOr.Compile
+  nameWithType: SearchFilterOr.Compile
+- uid: Nomadik.Core.SearchFilterOr.Or
+  name: Or
+  href: api/Nomadik.Core.SearchFilterOr.html#Nomadik_Core_SearchFilterOr_Or
+  commentId: P:Nomadik.Core.SearchFilterOr.Or
+  fullName: Nomadik.Core.SearchFilterOr.Or
+  nameWithType: SearchFilterOr.Or
+- uid: Nomadik.Core.SearchFilterOr.Or*
+  name: Or
+  href: api/Nomadik.Core.SearchFilterOr.html#Nomadik_Core_SearchFilterOr_Or_
+  commentId: Overload:Nomadik.Core.SearchFilterOr.Or
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchFilterOr.Or
+  nameWithType: SearchFilterOr.Or
+- uid: Nomadik.Core.SearchFilterWhere
+  name: SearchFilterWhere
+  href: api/Nomadik.Core.SearchFilterWhere.html
+  commentId: T:Nomadik.Core.SearchFilterWhere
+  fullName: Nomadik.Core.SearchFilterWhere
+  nameWithType: SearchFilterWhere
+- uid: Nomadik.Core.SearchFilterWhere.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name: Compile(IReadOnlyDictionary<string, Expression>)
+  href: api/Nomadik.Core.SearchFilterWhere.html#Nomadik_Core_SearchFilterWhere_Compile_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Linq_Expressions_Expression__
+  commentId: M:Nomadik.Core.SearchFilterWhere.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name.vb: Compile(IReadOnlyDictionary(Of String, Expression))
+  fullName: Nomadik.Core.SearchFilterWhere.Compile(System.Collections.Generic.IReadOnlyDictionary<string, System.Linq.Expressions.Expression>)
+  fullName.vb: Nomadik.Core.SearchFilterWhere.Compile(System.Collections.Generic.IReadOnlyDictionary(Of String, System.Linq.Expressions.Expression))
+  nameWithType: SearchFilterWhere.Compile(IReadOnlyDictionary<string, Expression>)
+  nameWithType.vb: SearchFilterWhere.Compile(IReadOnlyDictionary(Of String, Expression))
+- uid: Nomadik.Core.SearchFilterWhere.Compile*
+  name: Compile
+  href: api/Nomadik.Core.SearchFilterWhere.html#Nomadik_Core_SearchFilterWhere_Compile_
+  commentId: Overload:Nomadik.Core.SearchFilterWhere.Compile
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchFilterWhere.Compile
+  nameWithType: SearchFilterWhere.Compile
+- uid: Nomadik.Core.SearchFilterWhere.Where
+  name: Where
+  href: api/Nomadik.Core.SearchFilterWhere.html#Nomadik_Core_SearchFilterWhere_Where
+  commentId: P:Nomadik.Core.SearchFilterWhere.Where
+  fullName: Nomadik.Core.SearchFilterWhere.Where
+  nameWithType: SearchFilterWhere.Where
+- uid: Nomadik.Core.SearchFilterWhere.Where*
+  name: Where
+  href: api/Nomadik.Core.SearchFilterWhere.html#Nomadik_Core_SearchFilterWhere_Where_
+  commentId: Overload:Nomadik.Core.SearchFilterWhere.Where
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchFilterWhere.Where
+  nameWithType: SearchFilterWhere.Where
+- uid: Nomadik.Core.SearchOperation
+  name: SearchOperation
+  href: api/Nomadik.Core.SearchOperation.html
+  commentId: T:Nomadik.Core.SearchOperation
+  fullName: Nomadik.Core.SearchOperation
+  nameWithType: SearchOperation
+- uid: Nomadik.Core.SearchOperation.Key
+  name: Key
+  href: api/Nomadik.Core.SearchOperation.html#Nomadik_Core_SearchOperation_Key
+  commentId: P:Nomadik.Core.SearchOperation.Key
+  fullName: Nomadik.Core.SearchOperation.Key
+  nameWithType: SearchOperation.Key
+- uid: Nomadik.Core.SearchOperation.Key*
+  name: Key
+  href: api/Nomadik.Core.SearchOperation.html#Nomadik_Core_SearchOperation_Key_
+  commentId: Overload:Nomadik.Core.SearchOperation.Key
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchOperation.Key
+  nameWithType: SearchOperation.Key
+- uid: Nomadik.Core.SearchOperation.Operator
+  name: Operator
+  href: api/Nomadik.Core.SearchOperation.html#Nomadik_Core_SearchOperation_Operator
+  commentId: P:Nomadik.Core.SearchOperation.Operator
+  fullName: Nomadik.Core.SearchOperation.Operator
+  nameWithType: SearchOperation.Operator
+- uid: Nomadik.Core.SearchOperation.Operator*
+  name: Operator
+  href: api/Nomadik.Core.SearchOperation.html#Nomadik_Core_SearchOperation_Operator_
+  commentId: Overload:Nomadik.Core.SearchOperation.Operator
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchOperation.Operator
+  nameWithType: SearchOperation.Operator
+- uid: Nomadik.Core.SearchOperation.Value
+  name: Value
+  href: api/Nomadik.Core.SearchOperation.html#Nomadik_Core_SearchOperation_Value
+  commentId: P:Nomadik.Core.SearchOperation.Value
+  fullName: Nomadik.Core.SearchOperation.Value
+  nameWithType: SearchOperation.Value
+- uid: Nomadik.Core.SearchOperation.Value*
+  name: Value
+  href: api/Nomadik.Core.SearchOperation.html#Nomadik_Core_SearchOperation_Value_
+  commentId: Overload:Nomadik.Core.SearchOperation.Value
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchOperation.Value
+  nameWithType: SearchOperation.Value
+- uid: Nomadik.Core.SearchOrder
+  name: SearchOrder
+  href: api/Nomadik.Core.SearchOrder.html
+  commentId: T:Nomadik.Core.SearchOrder
+  fullName: Nomadik.Core.SearchOrder
+  nameWithType: SearchOrder
+- uid: Nomadik.Core.SearchOrder.By
+  name: By
+  href: api/Nomadik.Core.SearchOrder.html#Nomadik_Core_SearchOrder_By
+  commentId: P:Nomadik.Core.SearchOrder.By
+  fullName: Nomadik.Core.SearchOrder.By
+  nameWithType: SearchOrder.By
+- uid: Nomadik.Core.SearchOrder.By*
+  name: By
+  href: api/Nomadik.Core.SearchOrder.html#Nomadik_Core_SearchOrder_By_
+  commentId: Overload:Nomadik.Core.SearchOrder.By
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchOrder.By
+  nameWithType: SearchOrder.By
+- uid: Nomadik.Core.SearchOrder.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name: Compile(IReadOnlyDictionary<string, Expression>)
+  href: api/Nomadik.Core.SearchOrder.html#Nomadik_Core_SearchOrder_Compile_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Linq_Expressions_Expression__
+  commentId: M:Nomadik.Core.SearchOrder.Compile(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Linq.Expressions.Expression})
+  name.vb: Compile(IReadOnlyDictionary(Of String, Expression))
+  fullName: Nomadik.Core.SearchOrder.Compile(System.Collections.Generic.IReadOnlyDictionary<string, System.Linq.Expressions.Expression>)
+  fullName.vb: Nomadik.Core.SearchOrder.Compile(System.Collections.Generic.IReadOnlyDictionary(Of String, System.Linq.Expressions.Expression))
+  nameWithType: SearchOrder.Compile(IReadOnlyDictionary<string, Expression>)
+  nameWithType.vb: SearchOrder.Compile(IReadOnlyDictionary(Of String, Expression))
+- uid: Nomadik.Core.SearchOrder.Compile*
+  name: Compile
+  href: api/Nomadik.Core.SearchOrder.html#Nomadik_Core_SearchOrder_Compile_
+  commentId: Overload:Nomadik.Core.SearchOrder.Compile
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchOrder.Compile
+  nameWithType: SearchOrder.Compile
+- uid: Nomadik.Core.SearchOrder.Dir
+  name: Dir
+  href: api/Nomadik.Core.SearchOrder.html#Nomadik_Core_SearchOrder_Dir
+  commentId: P:Nomadik.Core.SearchOrder.Dir
+  fullName: Nomadik.Core.SearchOrder.Dir
+  nameWithType: SearchOrder.Dir
+- uid: Nomadik.Core.SearchOrder.Dir*
+  name: Dir
+  href: api/Nomadik.Core.SearchOrder.html#Nomadik_Core_SearchOrder_Dir_
+  commentId: Overload:Nomadik.Core.SearchOrder.Dir
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchOrder.Dir
+  nameWithType: SearchOrder.Dir
+- uid: Nomadik.Core.SearchPagination
+  name: SearchPagination
+  href: api/Nomadik.Core.SearchPagination.html
+  commentId: T:Nomadik.Core.SearchPagination
+  fullName: Nomadik.Core.SearchPagination
+  nameWithType: SearchPagination
+- uid: Nomadik.Core.SearchPagination.Num
+  name: Num
+  href: api/Nomadik.Core.SearchPagination.html#Nomadik_Core_SearchPagination_Num
+  commentId: P:Nomadik.Core.SearchPagination.Num
+  fullName: Nomadik.Core.SearchPagination.Num
+  nameWithType: SearchPagination.Num
+- uid: Nomadik.Core.SearchPagination.Num*
+  name: Num
+  href: api/Nomadik.Core.SearchPagination.html#Nomadik_Core_SearchPagination_Num_
+  commentId: Overload:Nomadik.Core.SearchPagination.Num
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchPagination.Num
+  nameWithType: SearchPagination.Num
+- uid: Nomadik.Core.SearchPagination.Size
+  name: Size
+  href: api/Nomadik.Core.SearchPagination.html#Nomadik_Core_SearchPagination_Size
+  commentId: P:Nomadik.Core.SearchPagination.Size
+  fullName: Nomadik.Core.SearchPagination.Size
+  nameWithType: SearchPagination.Size
+- uid: Nomadik.Core.SearchPagination.Size*
+  name: Size
+  href: api/Nomadik.Core.SearchPagination.html#Nomadik_Core_SearchPagination_Size_
+  commentId: Overload:Nomadik.Core.SearchPagination.Size
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchPagination.Size
+  nameWithType: SearchPagination.Size
+- uid: Nomadik.Core.SearchPagination.Skip
+  name: Skip
+  href: api/Nomadik.Core.SearchPagination.html#Nomadik_Core_SearchPagination_Skip
+  commentId: P:Nomadik.Core.SearchPagination.Skip
+  fullName: Nomadik.Core.SearchPagination.Skip
+  nameWithType: SearchPagination.Skip
+- uid: Nomadik.Core.SearchPagination.Skip*
+  name: Skip
+  href: api/Nomadik.Core.SearchPagination.html#Nomadik_Core_SearchPagination_Skip_
+  commentId: Overload:Nomadik.Core.SearchPagination.Skip
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchPagination.Skip
+  nameWithType: SearchPagination.Skip
+- uid: Nomadik.Core.SearchPagination.Take
+  name: Take
+  href: api/Nomadik.Core.SearchPagination.html#Nomadik_Core_SearchPagination_Take
+  commentId: P:Nomadik.Core.SearchPagination.Take
+  fullName: Nomadik.Core.SearchPagination.Take
+  nameWithType: SearchPagination.Take
+- uid: Nomadik.Core.SearchPagination.Take*
+  name: Take
+  href: api/Nomadik.Core.SearchPagination.html#Nomadik_Core_SearchPagination_Take_
+  commentId: Overload:Nomadik.Core.SearchPagination.Take
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchPagination.Take
+  nameWithType: SearchPagination.Take
+- uid: Nomadik.Core.SearchQuery
+  name: SearchQuery
+  href: api/Nomadik.Core.SearchQuery.html
+  commentId: T:Nomadik.Core.SearchQuery
+  fullName: Nomadik.Core.SearchQuery
+  nameWithType: SearchQuery
+- uid: Nomadik.Core.SearchQuery.Compile*
+  name: Compile
+  href: api/Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Compile_
+  commentId: Overload:Nomadik.Core.SearchQuery.Compile
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchQuery.Compile
+  nameWithType: SearchQuery.Compile
+- uid: Nomadik.Core.SearchQuery.Compile``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  name: Compile<TIn, TOut>(Expression<Func<TIn, TOut>>)
+  href: api/Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Compile__2_System_Linq_Expressions_Expression_System_Func___0___1___
+  commentId: M:Nomadik.Core.SearchQuery.Compile``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})
+  name.vb: Compile(Of TIn, TOut)(Expression(Of Func(Of TIn, TOut)))
+  fullName: Nomadik.Core.SearchQuery.Compile<TIn, TOut>(System.Linq.Expressions.Expression<System.Func<TIn, TOut>>)
+  fullName.vb: Nomadik.Core.SearchQuery.Compile(Of TIn, TOut)(System.Linq.Expressions.Expression(Of System.Func(Of TIn, TOut)))
+  nameWithType: SearchQuery.Compile<TIn, TOut>(Expression<Func<TIn, TOut>>)
+  nameWithType.vb: SearchQuery.Compile(Of TIn, TOut)(Expression(Of Func(Of TIn, TOut)))
+- uid: Nomadik.Core.SearchQuery.Filter
+  name: Filter
+  href: api/Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Filter
+  commentId: P:Nomadik.Core.SearchQuery.Filter
+  fullName: Nomadik.Core.SearchQuery.Filter
+  nameWithType: SearchQuery.Filter
+- uid: Nomadik.Core.SearchQuery.Filter*
+  name: Filter
+  href: api/Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Filter_
+  commentId: Overload:Nomadik.Core.SearchQuery.Filter
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchQuery.Filter
+  nameWithType: SearchQuery.Filter
+- uid: Nomadik.Core.SearchQuery.Order
+  name: Order
+  href: api/Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Order
+  commentId: P:Nomadik.Core.SearchQuery.Order
+  fullName: Nomadik.Core.SearchQuery.Order
+  nameWithType: SearchQuery.Order
+- uid: Nomadik.Core.SearchQuery.Order*
+  name: Order
+  href: api/Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Order_
+  commentId: Overload:Nomadik.Core.SearchQuery.Order
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchQuery.Order
+  nameWithType: SearchQuery.Order
+- uid: Nomadik.Core.SearchQuery.Page
+  name: Page
+  href: api/Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Page
+  commentId: P:Nomadik.Core.SearchQuery.Page
+  fullName: Nomadik.Core.SearchQuery.Page
+  nameWithType: SearchQuery.Page
+- uid: Nomadik.Core.SearchQuery.Page*
+  name: Page
+  href: api/Nomadik.Core.SearchQuery.html#Nomadik_Core_SearchQuery_Page_
+  commentId: Overload:Nomadik.Core.SearchQuery.Page
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchQuery.Page
+  nameWithType: SearchQuery.Page
+- uid: Nomadik.Core.SearchQueryResult`1
+  name: SearchQueryResult<T>
+  href: api/Nomadik.Core.SearchQueryResult-1.html
+  commentId: T:Nomadik.Core.SearchQueryResult`1
+  name.vb: SearchQueryResult(Of T)
+  fullName: Nomadik.Core.SearchQueryResult<T>
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T)
+  nameWithType: SearchQueryResult<T>
+  nameWithType.vb: SearchQueryResult(Of T)
+- uid: Nomadik.Core.SearchQueryResult`1.#ctor(System.Collections.Generic.List{`0},System.Int32,System.Int32)
+  name: SearchQueryResult(List<T>, int, int)
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1__ctor_System_Collections_Generic_List__0__System_Int32_System_Int32_
+  commentId: M:Nomadik.Core.SearchQueryResult`1.#ctor(System.Collections.Generic.List{`0},System.Int32,System.Int32)
+  name.vb: New(List(Of T), Integer, Integer)
+  fullName: Nomadik.Core.SearchQueryResult<T>.SearchQueryResult(System.Collections.Generic.List<T>, int, int)
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).New(System.Collections.Generic.List(Of T), Integer, Integer)
+  nameWithType: SearchQueryResult<T>.SearchQueryResult(List<T>, int, int)
+  nameWithType.vb: SearchQueryResult(Of T).New(List(Of T), Integer, Integer)
+- uid: Nomadik.Core.SearchQueryResult`1.#ctor*
+  name: SearchQueryResult
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1__ctor_
+  commentId: Overload:Nomadik.Core.SearchQueryResult`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Core.SearchQueryResult<T>.SearchQueryResult
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).New
+  nameWithType: SearchQueryResult<T>.SearchQueryResult
+  nameWithType.vb: SearchQueryResult(Of T).New
+- uid: Nomadik.Core.SearchQueryResult`1.From
+  name: From
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1_From
+  commentId: P:Nomadik.Core.SearchQueryResult`1.From
+  fullName: Nomadik.Core.SearchQueryResult<T>.From
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).From
+  nameWithType: SearchQueryResult<T>.From
+  nameWithType.vb: SearchQueryResult(Of T).From
+- uid: Nomadik.Core.SearchQueryResult`1.From*
+  name: From
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1_From_
+  commentId: Overload:Nomadik.Core.SearchQueryResult`1.From
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchQueryResult<T>.From
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).From
+  nameWithType: SearchQueryResult<T>.From
+  nameWithType.vb: SearchQueryResult(Of T).From
+- uid: Nomadik.Core.SearchQueryResult`1.Of
+  name: Of
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1_Of
+  commentId: P:Nomadik.Core.SearchQueryResult`1.Of
+  fullName: Nomadik.Core.SearchQueryResult<T>.Of
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).Of
+  nameWithType: SearchQueryResult<T>.Of
+  nameWithType.vb: SearchQueryResult(Of T).Of
+- uid: Nomadik.Core.SearchQueryResult`1.Of*
+  name: Of
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1_Of_
+  commentId: Overload:Nomadik.Core.SearchQueryResult`1.Of
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchQueryResult<T>.Of
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).Of
+  nameWithType: SearchQueryResult<T>.Of
+  nameWithType.vb: SearchQueryResult(Of T).Of
+- uid: Nomadik.Core.SearchQueryResult`1.Results
+  name: Results
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1_Results
+  commentId: P:Nomadik.Core.SearchQueryResult`1.Results
+  fullName: Nomadik.Core.SearchQueryResult<T>.Results
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).Results
+  nameWithType: SearchQueryResult<T>.Results
+  nameWithType.vb: SearchQueryResult(Of T).Results
+- uid: Nomadik.Core.SearchQueryResult`1.Results*
+  name: Results
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1_Results_
+  commentId: Overload:Nomadik.Core.SearchQueryResult`1.Results
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchQueryResult<T>.Results
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).Results
+  nameWithType: SearchQueryResult<T>.Results
+  nameWithType.vb: SearchQueryResult(Of T).Results
+- uid: Nomadik.Core.SearchQueryResult`1.To
+  name: To
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1_To
+  commentId: P:Nomadik.Core.SearchQueryResult`1.To
+  fullName: Nomadik.Core.SearchQueryResult<T>.To
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).To
+  nameWithType: SearchQueryResult<T>.To
+  nameWithType.vb: SearchQueryResult(Of T).To
+- uid: Nomadik.Core.SearchQueryResult`1.To*
+  name: To
+  href: api/Nomadik.Core.SearchQueryResult-1.html#Nomadik_Core_SearchQueryResult_1_To_
+  commentId: Overload:Nomadik.Core.SearchQueryResult`1.To
+  isSpec: "True"
+  fullName: Nomadik.Core.SearchQueryResult<T>.To
+  fullName.vb: Nomadik.Core.SearchQueryResult(Of T).To
+  nameWithType: SearchQueryResult<T>.To
+  nameWithType.vb: SearchQueryResult(Of T).To
+- uid: Nomadik.Extensions
+  name: Nomadik.Extensions
+  href: api/Nomadik.Extensions.html
+  commentId: N:Nomadik.Extensions
+  fullName: Nomadik.Extensions
+  nameWithType: Nomadik.Extensions
+- uid: Nomadik.Extensions.IQueryableExtensions
+  name: IQueryableExtensions
+  href: api/Nomadik.Extensions.IQueryableExtensions.html
+  commentId: T:Nomadik.Extensions.IQueryableExtensions
+  fullName: Nomadik.Extensions.IQueryableExtensions
+  nameWithType: IQueryableExtensions
+- uid: Nomadik.Extensions.IQueryableExtensions.OrderBy*
+  name: OrderBy
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_OrderBy_
+  commentId: Overload:Nomadik.Extensions.IQueryableExtensions.OrderBy
+  isSpec: "True"
+  fullName: Nomadik.Extensions.IQueryableExtensions.OrderBy
+  nameWithType: IQueryableExtensions.OrderBy
+- uid: Nomadik.Extensions.IQueryableExtensions.OrderBy``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name: OrderBy<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_OrderBy__2_System_Linq_IQueryable___0__Nomadik_Core_CompiledSearchQuery___0___1__
+  commentId: M:Nomadik.Extensions.IQueryableExtensions.OrderBy``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name.vb: OrderBy(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+  fullName: Nomadik.Extensions.IQueryableExtensions.OrderBy<TIn, TOut>(System.Linq.IQueryable<TIn>, Nomadik.Core.CompiledSearchQuery<TIn, TOut>)
+  fullName.vb: Nomadik.Extensions.IQueryableExtensions.OrderBy(Of TIn, TOut)(System.Linq.IQueryable(Of TIn), Nomadik.Core.CompiledSearchQuery(Of TIn, TOut))
+  nameWithType: IQueryableExtensions.OrderBy<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  nameWithType.vb: IQueryableExtensions.OrderBy(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+- uid: Nomadik.Extensions.IQueryableExtensions.Page*
+  name: Page
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_Page_
+  commentId: Overload:Nomadik.Extensions.IQueryableExtensions.Page
+  isSpec: "True"
+  fullName: Nomadik.Extensions.IQueryableExtensions.Page
+  nameWithType: IQueryableExtensions.Page
+- uid: Nomadik.Extensions.IQueryableExtensions.Page``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name: Page<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_Page__2_System_Linq_IQueryable___0__Nomadik_Core_CompiledSearchQuery___0___1__
+  commentId: M:Nomadik.Extensions.IQueryableExtensions.Page``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name.vb: Page(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+  fullName: Nomadik.Extensions.IQueryableExtensions.Page<TIn, TOut>(System.Linq.IQueryable<TIn>, Nomadik.Core.CompiledSearchQuery<TIn, TOut>)
+  fullName.vb: Nomadik.Extensions.IQueryableExtensions.Page(Of TIn, TOut)(System.Linq.IQueryable(Of TIn), Nomadik.Core.CompiledSearchQuery(Of TIn, TOut))
+  nameWithType: IQueryableExtensions.Page<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  nameWithType.vb: IQueryableExtensions.Page(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+- uid: Nomadik.Extensions.IQueryableExtensions.SearchAsync*
+  name: SearchAsync
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_SearchAsync_
+  commentId: Overload:Nomadik.Extensions.IQueryableExtensions.SearchAsync
+  isSpec: "True"
+  fullName: Nomadik.Extensions.IQueryableExtensions.SearchAsync
+  nameWithType: IQueryableExtensions.SearchAsync
+- uid: Nomadik.Extensions.IQueryableExtensions.SearchAsync``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name: SearchAsync<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_SearchAsync__2_System_Linq_IQueryable___0__Nomadik_Core_CompiledSearchQuery___0___1__
+  commentId: M:Nomadik.Extensions.IQueryableExtensions.SearchAsync``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name.vb: SearchAsync(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+  fullName: Nomadik.Extensions.IQueryableExtensions.SearchAsync<TIn, TOut>(System.Linq.IQueryable<TIn>, Nomadik.Core.CompiledSearchQuery<TIn, TOut>)
+  fullName.vb: Nomadik.Extensions.IQueryableExtensions.SearchAsync(Of TIn, TOut)(System.Linq.IQueryable(Of TIn), Nomadik.Core.CompiledSearchQuery(Of TIn, TOut))
+  nameWithType: IQueryableExtensions.SearchAsync<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  nameWithType.vb: IQueryableExtensions.SearchAsync(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+- uid: Nomadik.Extensions.IQueryableExtensions.Select*
+  name: Select
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_Select_
+  commentId: Overload:Nomadik.Extensions.IQueryableExtensions.Select
+  isSpec: "True"
+  fullName: Nomadik.Extensions.IQueryableExtensions.Select
+  nameWithType: IQueryableExtensions.Select
+- uid: Nomadik.Extensions.IQueryableExtensions.Select``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name: Select<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_Select__2_System_Linq_IQueryable___0__Nomadik_Core_CompiledSearchQuery___0___1__
+  commentId: M:Nomadik.Extensions.IQueryableExtensions.Select``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name.vb: Select(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+  fullName: Nomadik.Extensions.IQueryableExtensions.Select<TIn, TOut>(System.Linq.IQueryable<TIn>, Nomadik.Core.CompiledSearchQuery<TIn, TOut>)
+  fullName.vb: Nomadik.Extensions.IQueryableExtensions.Select(Of TIn, TOut)(System.Linq.IQueryable(Of TIn), Nomadik.Core.CompiledSearchQuery(Of TIn, TOut))
+  nameWithType: IQueryableExtensions.Select<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  nameWithType.vb: IQueryableExtensions.Select(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+- uid: Nomadik.Extensions.IQueryableExtensions.Where*
+  name: Where
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_Where_
+  commentId: Overload:Nomadik.Extensions.IQueryableExtensions.Where
+  isSpec: "True"
+  fullName: Nomadik.Extensions.IQueryableExtensions.Where
+  nameWithType: IQueryableExtensions.Where
+- uid: Nomadik.Extensions.IQueryableExtensions.Where``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name: Where<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  href: api/Nomadik.Extensions.IQueryableExtensions.html#Nomadik_Extensions_IQueryableExtensions_Where__2_System_Linq_IQueryable___0__Nomadik_Core_CompiledSearchQuery___0___1__
+  commentId: M:Nomadik.Extensions.IQueryableExtensions.Where``2(System.Linq.IQueryable{``0},Nomadik.Core.CompiledSearchQuery{``0,``1})
+  name.vb: Where(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+  fullName: Nomadik.Extensions.IQueryableExtensions.Where<TIn, TOut>(System.Linq.IQueryable<TIn>, Nomadik.Core.CompiledSearchQuery<TIn, TOut>)
+  fullName.vb: Nomadik.Extensions.IQueryableExtensions.Where(Of TIn, TOut)(System.Linq.IQueryable(Of TIn), Nomadik.Core.CompiledSearchQuery(Of TIn, TOut))
+  nameWithType: IQueryableExtensions.Where<TIn, TOut>(IQueryable<TIn>, CompiledSearchQuery<TIn, TOut>)
+  nameWithType.vb: IQueryableExtensions.Where(Of TIn, TOut)(IQueryable(Of TIn), CompiledSearchQuery(Of TIn, TOut))
+- uid: Nomadik.Extensions.Swagger
+  name: Nomadik.Extensions.Swagger
+  href: api/Nomadik.Extensions.Swagger.html
+  commentId: N:Nomadik.Extensions.Swagger
+  fullName: Nomadik.Extensions.Swagger
+  nameWithType: Nomadik.Extensions.Swagger
+- uid: Nomadik.Extensions.Swagger.NomadikIgnoreAttribute
+  name: NomadikIgnoreAttribute
+  href: api/Nomadik.Extensions.Swagger.NomadikIgnoreAttribute.html
+  commentId: T:Nomadik.Extensions.Swagger.NomadikIgnoreAttribute
+  fullName: Nomadik.Extensions.Swagger.NomadikIgnoreAttribute
+  nameWithType: NomadikIgnoreAttribute
+- uid: Nomadik.Extensions.Swagger.NomadikOperationFilter
+  name: NomadikOperationFilter
+  href: api/Nomadik.Extensions.Swagger.NomadikOperationFilter.html
+  commentId: T:Nomadik.Extensions.Swagger.NomadikOperationFilter
+  fullName: Nomadik.Extensions.Swagger.NomadikOperationFilter
+  nameWithType: NomadikOperationFilter
+- uid: Nomadik.Extensions.Swagger.NomadikOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)
+  name: Apply(OpenApiOperation, OperationFilterContext)
+  href: api/Nomadik.Extensions.Swagger.NomadikOperationFilter.html#Nomadik_Extensions_Swagger_NomadikOperationFilter_Apply_Microsoft_OpenApi_Models_OpenApiOperation_Swashbuckle_AspNetCore_SwaggerGen_OperationFilterContext_
+  commentId: M:Nomadik.Extensions.Swagger.NomadikOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)
+  fullName: Nomadik.Extensions.Swagger.NomadikOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation, Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)
+  nameWithType: NomadikOperationFilter.Apply(OpenApiOperation, OperationFilterContext)
+- uid: Nomadik.Extensions.Swagger.NomadikOperationFilter.Apply*
+  name: Apply
+  href: api/Nomadik.Extensions.Swagger.NomadikOperationFilter.html#Nomadik_Extensions_Swagger_NomadikOperationFilter_Apply_
+  commentId: Overload:Nomadik.Extensions.Swagger.NomadikOperationFilter.Apply
+  isSpec: "True"
+  fullName: Nomadik.Extensions.Swagger.NomadikOperationFilter.Apply
+  nameWithType: NomadikOperationFilter.Apply
+- uid: Nomadik.Extensions.Swagger.NomadikSearchAttribute
+  name: NomadikSearchAttribute
+  href: api/Nomadik.Extensions.Swagger.NomadikSearchAttribute.html
+  commentId: T:Nomadik.Extensions.Swagger.NomadikSearchAttribute
+  fullName: Nomadik.Extensions.Swagger.NomadikSearchAttribute
+  nameWithType: NomadikSearchAttribute
+- uid: Nomadik.Extensions.Swagger.NomadikSearchAttribute.#ctor(System.Type)
+  name: NomadikSearchAttribute(Type)
+  href: api/Nomadik.Extensions.Swagger.NomadikSearchAttribute.html#Nomadik_Extensions_Swagger_NomadikSearchAttribute__ctor_System_Type_
+  commentId: M:Nomadik.Extensions.Swagger.NomadikSearchAttribute.#ctor(System.Type)
+  name.vb: New(Type)
+  fullName: Nomadik.Extensions.Swagger.NomadikSearchAttribute.NomadikSearchAttribute(System.Type)
+  fullName.vb: Nomadik.Extensions.Swagger.NomadikSearchAttribute.New(System.Type)
+  nameWithType: NomadikSearchAttribute.NomadikSearchAttribute(Type)
+  nameWithType.vb: NomadikSearchAttribute.New(Type)
+- uid: Nomadik.Extensions.Swagger.NomadikSearchAttribute.#ctor*
+  name: NomadikSearchAttribute
+  href: api/Nomadik.Extensions.Swagger.NomadikSearchAttribute.html#Nomadik_Extensions_Swagger_NomadikSearchAttribute__ctor_
+  commentId: Overload:Nomadik.Extensions.Swagger.NomadikSearchAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Extensions.Swagger.NomadikSearchAttribute.NomadikSearchAttribute
+  fullName.vb: Nomadik.Extensions.Swagger.NomadikSearchAttribute.New
+  nameWithType: NomadikSearchAttribute.NomadikSearchAttribute
+  nameWithType.vb: NomadikSearchAttribute.New
+- uid: Nomadik.Extensions.Swagger.NomadikSearchAttribute.DTO
+  name: DTO
+  href: api/Nomadik.Extensions.Swagger.NomadikSearchAttribute.html#Nomadik_Extensions_Swagger_NomadikSearchAttribute_DTO
+  commentId: P:Nomadik.Extensions.Swagger.NomadikSearchAttribute.DTO
+  fullName: Nomadik.Extensions.Swagger.NomadikSearchAttribute.DTO
+  nameWithType: NomadikSearchAttribute.DTO
+- uid: Nomadik.Extensions.Swagger.NomadikSearchAttribute.DTO*
+  name: DTO
+  href: api/Nomadik.Extensions.Swagger.NomadikSearchAttribute.html#Nomadik_Extensions_Swagger_NomadikSearchAttribute_DTO_
+  commentId: Overload:Nomadik.Extensions.Swagger.NomadikSearchAttribute.DTO
+  isSpec: "True"
+  fullName: Nomadik.Extensions.Swagger.NomadikSearchAttribute.DTO
+  nameWithType: NomadikSearchAttribute.DTO
+- uid: Nomadik.Extensions.Swagger.PropertyEnumSchema
+  name: PropertyEnumSchema
+  href: api/Nomadik.Extensions.Swagger.PropertyEnumSchema.html
+  commentId: T:Nomadik.Extensions.Swagger.PropertyEnumSchema
+  fullName: Nomadik.Extensions.Swagger.PropertyEnumSchema
+  nameWithType: PropertyEnumSchema
+- uid: Nomadik.Extensions.Swagger.PropertyEnumSchema.#ctor(System.Collections.Generic.List{System.String})
+  name: PropertyEnumSchema(List<string>)
+  href: api/Nomadik.Extensions.Swagger.PropertyEnumSchema.html#Nomadik_Extensions_Swagger_PropertyEnumSchema__ctor_System_Collections_Generic_List_System_String__
+  commentId: M:Nomadik.Extensions.Swagger.PropertyEnumSchema.#ctor(System.Collections.Generic.List{System.String})
+  name.vb: New(List(Of String))
+  fullName: Nomadik.Extensions.Swagger.PropertyEnumSchema.PropertyEnumSchema(System.Collections.Generic.List<string>)
+  fullName.vb: Nomadik.Extensions.Swagger.PropertyEnumSchema.New(System.Collections.Generic.List(Of String))
+  nameWithType: PropertyEnumSchema.PropertyEnumSchema(List<string>)
+  nameWithType.vb: PropertyEnumSchema.New(List(Of String))
+- uid: Nomadik.Extensions.Swagger.PropertyEnumSchema.#ctor*
+  name: PropertyEnumSchema
+  href: api/Nomadik.Extensions.Swagger.PropertyEnumSchema.html#Nomadik_Extensions_Swagger_PropertyEnumSchema__ctor_
+  commentId: Overload:Nomadik.Extensions.Swagger.PropertyEnumSchema.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Extensions.Swagger.PropertyEnumSchema.PropertyEnumSchema
+  fullName.vb: Nomadik.Extensions.Swagger.PropertyEnumSchema.New
+  nameWithType: PropertyEnumSchema.PropertyEnumSchema
+  nameWithType.vb: PropertyEnumSchema.New
+- uid: Nomadik.Extensions.Swagger.SearchFilterAndSchema
+  name: SearchFilterAndSchema
+  href: api/Nomadik.Extensions.Swagger.SearchFilterAndSchema.html
+  commentId: T:Nomadik.Extensions.Swagger.SearchFilterAndSchema
+  fullName: Nomadik.Extensions.Swagger.SearchFilterAndSchema
+  nameWithType: SearchFilterAndSchema
+- uid: Nomadik.Extensions.Swagger.SearchFilterAndSchema.#ctor(System.String)
+  name: SearchFilterAndSchema(string)
+  href: api/Nomadik.Extensions.Swagger.SearchFilterAndSchema.html#Nomadik_Extensions_Swagger_SearchFilterAndSchema__ctor_System_String_
+  commentId: M:Nomadik.Extensions.Swagger.SearchFilterAndSchema.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Nomadik.Extensions.Swagger.SearchFilterAndSchema.SearchFilterAndSchema(string)
+  fullName.vb: Nomadik.Extensions.Swagger.SearchFilterAndSchema.New(String)
+  nameWithType: SearchFilterAndSchema.SearchFilterAndSchema(string)
+  nameWithType.vb: SearchFilterAndSchema.New(String)
+- uid: Nomadik.Extensions.Swagger.SearchFilterAndSchema.#ctor*
+  name: SearchFilterAndSchema
+  href: api/Nomadik.Extensions.Swagger.SearchFilterAndSchema.html#Nomadik_Extensions_Swagger_SearchFilterAndSchema__ctor_
+  commentId: Overload:Nomadik.Extensions.Swagger.SearchFilterAndSchema.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Extensions.Swagger.SearchFilterAndSchema.SearchFilterAndSchema
+  fullName.vb: Nomadik.Extensions.Swagger.SearchFilterAndSchema.New
+  nameWithType: SearchFilterAndSchema.SearchFilterAndSchema
+  nameWithType.vb: SearchFilterAndSchema.New
+- uid: Nomadik.Extensions.Swagger.SearchFilterOrSchema
+  name: SearchFilterOrSchema
+  href: api/Nomadik.Extensions.Swagger.SearchFilterOrSchema.html
+  commentId: T:Nomadik.Extensions.Swagger.SearchFilterOrSchema
+  fullName: Nomadik.Extensions.Swagger.SearchFilterOrSchema
+  nameWithType: SearchFilterOrSchema
+- uid: Nomadik.Extensions.Swagger.SearchFilterOrSchema.#ctor(System.String)
+  name: SearchFilterOrSchema(string)
+  href: api/Nomadik.Extensions.Swagger.SearchFilterOrSchema.html#Nomadik_Extensions_Swagger_SearchFilterOrSchema__ctor_System_String_
+  commentId: M:Nomadik.Extensions.Swagger.SearchFilterOrSchema.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Nomadik.Extensions.Swagger.SearchFilterOrSchema.SearchFilterOrSchema(string)
+  fullName.vb: Nomadik.Extensions.Swagger.SearchFilterOrSchema.New(String)
+  nameWithType: SearchFilterOrSchema.SearchFilterOrSchema(string)
+  nameWithType.vb: SearchFilterOrSchema.New(String)
+- uid: Nomadik.Extensions.Swagger.SearchFilterOrSchema.#ctor*
+  name: SearchFilterOrSchema
+  href: api/Nomadik.Extensions.Swagger.SearchFilterOrSchema.html#Nomadik_Extensions_Swagger_SearchFilterOrSchema__ctor_
+  commentId: Overload:Nomadik.Extensions.Swagger.SearchFilterOrSchema.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Extensions.Swagger.SearchFilterOrSchema.SearchFilterOrSchema
+  fullName.vb: Nomadik.Extensions.Swagger.SearchFilterOrSchema.New
+  nameWithType: SearchFilterOrSchema.SearchFilterOrSchema
+  nameWithType.vb: SearchFilterOrSchema.New
+- uid: Nomadik.Extensions.Swagger.SearchFilterSchema
+  name: SearchFilterSchema
+  href: api/Nomadik.Extensions.Swagger.SearchFilterSchema.html
+  commentId: T:Nomadik.Extensions.Swagger.SearchFilterSchema
+  fullName: Nomadik.Extensions.Swagger.SearchFilterSchema
+  nameWithType: SearchFilterSchema
+- uid: Nomadik.Extensions.Swagger.SearchFilterSchema.#ctor(System.String,System.String,System.String)
+  name: SearchFilterSchema(string, string, string)
+  href: api/Nomadik.Extensions.Swagger.SearchFilterSchema.html#Nomadik_Extensions_Swagger_SearchFilterSchema__ctor_System_String_System_String_System_String_
+  commentId: M:Nomadik.Extensions.Swagger.SearchFilterSchema.#ctor(System.String,System.String,System.String)
+  name.vb: New(String, String, String)
+  fullName: Nomadik.Extensions.Swagger.SearchFilterSchema.SearchFilterSchema(string, string, string)
+  fullName.vb: Nomadik.Extensions.Swagger.SearchFilterSchema.New(String, String, String)
+  nameWithType: SearchFilterSchema.SearchFilterSchema(string, string, string)
+  nameWithType.vb: SearchFilterSchema.New(String, String, String)
+- uid: Nomadik.Extensions.Swagger.SearchFilterSchema.#ctor*
+  name: SearchFilterSchema
+  href: api/Nomadik.Extensions.Swagger.SearchFilterSchema.html#Nomadik_Extensions_Swagger_SearchFilterSchema__ctor_
+  commentId: Overload:Nomadik.Extensions.Swagger.SearchFilterSchema.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Extensions.Swagger.SearchFilterSchema.SearchFilterSchema
+  fullName.vb: Nomadik.Extensions.Swagger.SearchFilterSchema.New
+  nameWithType: SearchFilterSchema.SearchFilterSchema
+  nameWithType.vb: SearchFilterSchema.New
+- uid: Nomadik.Extensions.Swagger.SearchFilterWhereSchema
+  name: SearchFilterWhereSchema
+  href: api/Nomadik.Extensions.Swagger.SearchFilterWhereSchema.html
+  commentId: T:Nomadik.Extensions.Swagger.SearchFilterWhereSchema
+  fullName: Nomadik.Extensions.Swagger.SearchFilterWhereSchema
+  nameWithType: SearchFilterWhereSchema
+- uid: Nomadik.Extensions.Swagger.SearchFilterWhereSchema.#ctor(System.String)
+  name: SearchFilterWhereSchema(string)
+  href: api/Nomadik.Extensions.Swagger.SearchFilterWhereSchema.html#Nomadik_Extensions_Swagger_SearchFilterWhereSchema__ctor_System_String_
+  commentId: M:Nomadik.Extensions.Swagger.SearchFilterWhereSchema.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Nomadik.Extensions.Swagger.SearchFilterWhereSchema.SearchFilterWhereSchema(string)
+  fullName.vb: Nomadik.Extensions.Swagger.SearchFilterWhereSchema.New(String)
+  nameWithType: SearchFilterWhereSchema.SearchFilterWhereSchema(string)
+  nameWithType.vb: SearchFilterWhereSchema.New(String)
+- uid: Nomadik.Extensions.Swagger.SearchFilterWhereSchema.#ctor*
+  name: SearchFilterWhereSchema
+  href: api/Nomadik.Extensions.Swagger.SearchFilterWhereSchema.html#Nomadik_Extensions_Swagger_SearchFilterWhereSchema__ctor_
+  commentId: Overload:Nomadik.Extensions.Swagger.SearchFilterWhereSchema.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Extensions.Swagger.SearchFilterWhereSchema.SearchFilterWhereSchema
+  fullName.vb: Nomadik.Extensions.Swagger.SearchFilterWhereSchema.New
+  nameWithType: SearchFilterWhereSchema.SearchFilterWhereSchema
+  nameWithType.vb: SearchFilterWhereSchema.New
+- uid: Nomadik.Extensions.Swagger.SearchOperationSchema
+  name: SearchOperationSchema
+  href: api/Nomadik.Extensions.Swagger.SearchOperationSchema.html
+  commentId: T:Nomadik.Extensions.Swagger.SearchOperationSchema
+  fullName: Nomadik.Extensions.Swagger.SearchOperationSchema
+  nameWithType: SearchOperationSchema
+- uid: Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor(System.String,System.String)
+  name: SearchOperationSchema(string, string)
+  href: api/Nomadik.Extensions.Swagger.SearchOperationSchema.html#Nomadik_Extensions_Swagger_SearchOperationSchema__ctor_System_String_System_String_
+  commentId: M:Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Nomadik.Extensions.Swagger.SearchOperationSchema.SearchOperationSchema(string, string)
+  fullName.vb: Nomadik.Extensions.Swagger.SearchOperationSchema.New(String, String)
+  nameWithType: SearchOperationSchema.SearchOperationSchema(string, string)
+  nameWithType.vb: SearchOperationSchema.New(String, String)
+- uid: Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor*
+  name: SearchOperationSchema
+  href: api/Nomadik.Extensions.Swagger.SearchOperationSchema.html#Nomadik_Extensions_Swagger_SearchOperationSchema__ctor_
+  commentId: Overload:Nomadik.Extensions.Swagger.SearchOperationSchema.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Extensions.Swagger.SearchOperationSchema.SearchOperationSchema
+  fullName.vb: Nomadik.Extensions.Swagger.SearchOperationSchema.New
+  nameWithType: SearchOperationSchema.SearchOperationSchema
+  nameWithType.vb: SearchOperationSchema.New
+- uid: Nomadik.Extensions.Swagger.SearchOrderSchema
+  name: SearchOrderSchema
+  href: api/Nomadik.Extensions.Swagger.SearchOrderSchema.html
+  commentId: T:Nomadik.Extensions.Swagger.SearchOrderSchema
+  fullName: Nomadik.Extensions.Swagger.SearchOrderSchema
+  nameWithType: SearchOrderSchema
+- uid: Nomadik.Extensions.Swagger.SearchOrderSchema.#ctor(System.String,System.String)
+  name: SearchOrderSchema(string, string)
+  href: api/Nomadik.Extensions.Swagger.SearchOrderSchema.html#Nomadik_Extensions_Swagger_SearchOrderSchema__ctor_System_String_System_String_
+  commentId: M:Nomadik.Extensions.Swagger.SearchOrderSchema.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Nomadik.Extensions.Swagger.SearchOrderSchema.SearchOrderSchema(string, string)
+  fullName.vb: Nomadik.Extensions.Swagger.SearchOrderSchema.New(String, String)
+  nameWithType: SearchOrderSchema.SearchOrderSchema(string, string)
+  nameWithType.vb: SearchOrderSchema.New(String, String)
+- uid: Nomadik.Extensions.Swagger.SearchOrderSchema.#ctor*
+  name: SearchOrderSchema
+  href: api/Nomadik.Extensions.Swagger.SearchOrderSchema.html#Nomadik_Extensions_Swagger_SearchOrderSchema__ctor_
+  commentId: Overload:Nomadik.Extensions.Swagger.SearchOrderSchema.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Extensions.Swagger.SearchOrderSchema.SearchOrderSchema
+  fullName.vb: Nomadik.Extensions.Swagger.SearchOrderSchema.New
+  nameWithType: SearchOrderSchema.SearchOrderSchema
+  nameWithType.vb: SearchOrderSchema.New
+- uid: Nomadik.Extensions.Swagger.SearchQuerySchema
+  name: SearchQuerySchema
+  href: api/Nomadik.Extensions.Swagger.SearchQuerySchema.html
+  commentId: T:Nomadik.Extensions.Swagger.SearchQuerySchema
+  fullName: Nomadik.Extensions.Swagger.SearchQuerySchema
+  nameWithType: SearchQuerySchema
+- uid: Nomadik.Extensions.Swagger.SearchQuerySchema.#ctor(System.String,System.String)
+  name: SearchQuerySchema(string, string)
+  href: api/Nomadik.Extensions.Swagger.SearchQuerySchema.html#Nomadik_Extensions_Swagger_SearchQuerySchema__ctor_System_String_System_String_
+  commentId: M:Nomadik.Extensions.Swagger.SearchQuerySchema.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Nomadik.Extensions.Swagger.SearchQuerySchema.SearchQuerySchema(string, string)
+  fullName.vb: Nomadik.Extensions.Swagger.SearchQuerySchema.New(String, String)
+  nameWithType: SearchQuerySchema.SearchQuerySchema(string, string)
+  nameWithType.vb: SearchQuerySchema.New(String, String)
+- uid: Nomadik.Extensions.Swagger.SearchQuerySchema.#ctor*
+  name: SearchQuerySchema
+  href: api/Nomadik.Extensions.Swagger.SearchQuerySchema.html#Nomadik_Extensions_Swagger_SearchQuerySchema__ctor_
+  commentId: Overload:Nomadik.Extensions.Swagger.SearchQuerySchema.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Nomadik.Extensions.Swagger.SearchQuerySchema.SearchQuerySchema
+  fullName.vb: Nomadik.Extensions.Swagger.SearchQuerySchema.New
+  nameWithType: SearchQuerySchema.SearchQuerySchema
+  nameWithType.vb: SearchQuerySchema.New
+- uid: Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions
+  name: SwaggerGenOptionsExtensions
+  href: api/Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions.html
+  commentId: T:Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions
+  fullName: Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions
+  nameWithType: SwaggerGenOptionsExtensions
+- uid: Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions.AddNomadik(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions)
+  name: AddNomadik(SwaggerGenOptions)
+  href: api/Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions.html#Nomadik_Extensions_Swagger_SwaggerGenOptionsExtensions_AddNomadik_Swashbuckle_AspNetCore_SwaggerGen_SwaggerGenOptions_
+  commentId: M:Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions.AddNomadik(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions)
+  fullName: Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions.AddNomadik(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions)
+  nameWithType: SwaggerGenOptionsExtensions.AddNomadik(SwaggerGenOptions)
+- uid: Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions.AddNomadik*
+  name: AddNomadik
+  href: api/Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions.html#Nomadik_Extensions_Swagger_SwaggerGenOptionsExtensions_AddNomadik_
+  commentId: Overload:Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions.AddNomadik
+  isSpec: "True"
+  fullName: Nomadik.Extensions.Swagger.SwaggerGenOptionsExtensions.AddNomadik
+  nameWithType: SwaggerGenOptionsExtensions.AddNomadik
