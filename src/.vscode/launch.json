@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cs",
+            "name": "netcoredbg",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "Nomadik.Example.dll",
+            "cwd": "${workspaceFolder}/Nomadik.Example/bin/Debug/net8.0/"
+        }
+    ]
+}

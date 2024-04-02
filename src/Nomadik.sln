@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomadik.Core", "Nomadik.Core\Nomadik.Core.csproj", "{5D777AD5-C553-47CB-8A94-4E07B1F5B2E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomadik.Example", "Nomadik.Example\Nomadik.Example.csproj", "{E1E88550-4F3F-45B0-8A6C-CB63004913C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomadik.Core.IntegrationTests", "Nomadik.Core.IntegrationTests\Nomadik.Core.IntegrationTests.csproj", "{7234D94C-6FF8-4813-9E50-E4DD255198D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomadik.Core.UnitTests", "Nomadik.Core.UnitTests\Nomadik.Core.UnitTests.csproj", "{431C96CA-A561-42F7-97F2-84EC0E5A4EB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomadik.Extensions.Swagger", "Nomadik.Extensions.Swagger\Nomadik.Extensions.Swagger.csproj", "{F735BE52-61AF-4F4C-B4B4-108DFB484870}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D777AD5-C553-47CB-8A94-4E07B1F5B2E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D777AD5-C553-47CB-8A94-4E07B1F5B2E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D777AD5-C553-47CB-8A94-4E07B1F5B2E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D777AD5-C553-47CB-8A94-4E07B1F5B2E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{663E1AA8-9936-433B-AE11-45A204011F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{663E1AA8-9936-433B-AE11-45A204011F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{663E1AA8-9936-433B-AE11-45A204011F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{663E1AA8-9936-433B-AE11-45A204011F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E88550-4F3F-45B0-8A6C-CB63004913C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E88550-4F3F-45B0-8A6C-CB63004913C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E88550-4F3F-45B0-8A6C-CB63004913C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E88550-4F3F-45B0-8A6C-CB63004913C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7234D94C-6FF8-4813-9E50-E4DD255198D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7234D94C-6FF8-4813-9E50-E4DD255198D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7234D94C-6FF8-4813-9E50-E4DD255198D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7234D94C-6FF8-4813-9E50-E4DD255198D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431C96CA-A561-42F7-97F2-84EC0E5A4EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431C96CA-A561-42F7-97F2-84EC0E5A4EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431C96CA-A561-42F7-97F2-84EC0E5A4EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431C96CA-A561-42F7-97F2-84EC0E5A4EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F735BE52-61AF-4F4C-B4B4-108DFB484870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F735BE52-61AF-4F4C-B4B4-108DFB484870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F735BE52-61AF-4F4C-B4B4-108DFB484870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F735BE52-61AF-4F4C-B4B4-108DFB484870}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+@Nomadik.Example_HostAddress = http://localhost:5195
+
+GET {{Nomadik.Example_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
