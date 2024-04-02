@@ -24,8 +24,5 @@ public enum Operator
     LTE,
 
     /// <summary>Like</summary>
-    LI,
-
-    /// <summary>Invariant Like</summary>
-    ILI
+    LI
 }
