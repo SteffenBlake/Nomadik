@@ -25,6 +25,9 @@ So, the question is as such:
 
 **The answer, it turns out, is Yes!**
 
+# API Documentation
+https://steffenblake.github.io/Nomadik/api/Nomadik.Core.html
+
 # What does it look like?
 
 Heres an example chunk of code below that will demonstrate the library in action:
@@ -120,6 +123,3 @@ By default, all **Public exposed Properties with a Getter* will be serialized as
 To that end, you are tightly coupled to largely only supporting SearchQuery endpoints as `POST`.
 
 If you don't care about OpenAPI support though, then it should work fine (and you can probably ignore this entire section of the documentation, why are you even reading this far anyways?)
-
-# API Documentation
-Link: https://steffenblake.github.io/Nomadik/api/Nomadik.Core.html
