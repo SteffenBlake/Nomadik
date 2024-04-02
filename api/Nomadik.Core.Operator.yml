@@ -8,7 +8,6 @@ items:
   - Nomadik.Core.Operator.EQ
   - Nomadik.Core.Operator.GT
   - Nomadik.Core.Operator.GTE
-  - Nomadik.Core.Operator.ILI
   - Nomadik.Core.Operator.LI
   - Nomadik.Core.Operator.LT
   - Nomadik.Core.Operator.LTE
@@ -232,34 +231,6 @@ items:
   example: []
   syntax:
     content: LI = 6
-    return:
-      type: Nomadik.Core.Operator
-- uid: Nomadik.Core.Operator.ILI
-  commentId: F:Nomadik.Core.Operator.ILI
-  id: ILI
-  parent: Nomadik.Core.Operator
-  langs:
-  - csharp
-  - vb
-  name: ILI
-  nameWithType: Operator.ILI
-  fullName: Nomadik.Core.Operator.ILI
-  type: Field
-  source:
-    remote:
-      path: src/Nomadik.Core/Operator.cs
-      branch: main
-      repo: https://github.com/SteffenBlake/Nomadik.git
-    id: ILI
-    path: src/Nomadik.Core/Operator.cs
-    startLine: 29
-  assemblies:
-  - Nomadik.Core
-  namespace: Nomadik.Core
-  summary: Invariant Like
-  example: []
-  syntax:
-    content: ILI = 7
     return:
       type: Nomadik.Core.Operator
 references:

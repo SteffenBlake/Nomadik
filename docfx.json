@@ -9,7 +9,7 @@
           ]
         }
       ],
-      "dest": ".metadata"
+      "dest": "api"
     }
   ],
   "build": {
