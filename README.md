@@ -121,5 +121,5 @@ To that end, you are tightly coupled to largely only supporting SearchQuery endp
 
 If you don't care about OpenAPI support though, then it should work fine (and you can probably ignore this entire section of the documentation, why are you even reading this far anyways?)
 
-# API
-[See the Wiki for details on the application's API](https://github.com/SteffenBlake/Nomadik/wiki)
+# API Documentation
+Link: https://steffenblake.github.io/Nomadik/api/Nomadik.Core.html
