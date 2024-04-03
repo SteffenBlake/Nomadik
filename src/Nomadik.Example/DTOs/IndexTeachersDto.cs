@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq.Expressions;
 using Nomadik.Example.Data;
 
@@ -13,8 +14,10 @@ public class IndexTeachersDto
 
     public required int StudentCount { get; init; }
 
+    public required IEnumerable<int> ClassroomIds { get; init; }
+
     public static Expression<Func<Teacher, IndexTeachersDto>> Mapper(
-        ExampleDbContext db
+        ExampleDbContext _
     )
     {
         return t => new ()
@@ -22,7 +25,8 @@ public class IndexTeachersDto
             Id = t.TeacherId,
             FullName = t.FirstName + " " + t.LastName,
             ClassroomCount = t.Classrooms.Count,
-            StudentCount = t.Classrooms.Sum(c => c.Students.Count)
+            StudentCount = t.Classrooms.Sum(c => c.Students.Count),
+            ClassroomIds = t.Classrooms.Select(c => c.ClassroomId)
         };
     }
 }

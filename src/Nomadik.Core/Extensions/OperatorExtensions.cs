@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq.Expressions;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +16,7 @@ public static class OperatorExtensions
     /// With a logical operator
     /// </summary>
     public static Func<Expression, Expression, Expression> ToExpression(
-        this Operator op
+        this Operator op, Type valueType
     )
     {
         return op switch
@@ -28,6 +29,7 @@ public static class OperatorExtensions
             Operator.LTE => Expression.LessThanOrEqual,
 
             Operator.LI => Like,
+            Operator.CO => (a,b) => Contains(a, b, valueType),
             _ => throw new NotImplementedException()
         };
     }
@@ -52,5 +54,23 @@ public static class OperatorExtensions
             );
 
         return Expression.Call(like, dbFunctions, toString, b);
+    }
+
+    private static MethodCallExpression Contains(
+        Expression a, Expression b, Type valueType
+    )
+    {
+        // There's multiple Contains functions, we want the simpler one
+        var contains = typeof(Enumerable)
+            .GetMethods(
+                BindingFlags.NonPublic | 
+                BindingFlags.Public | 
+                BindingFlags.Static
+            ).Single(m => 
+                m.Name == nameof(Enumerable.Contains) &&
+                m.GetParameters().Length == 2
+            ).MakeGenericMethod(valueType);
+
+        return Expression.Call(contains, a, b);
     }
 }

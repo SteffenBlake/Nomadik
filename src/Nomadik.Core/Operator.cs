@@ -24,5 +24,8 @@ public enum Operator
     LTE,
 
     /// <summary>Like</summary>
-    LI
+    LI,
+
+    /// <summary>Contains</summary>
+    CO
 }

@@ -23,6 +23,10 @@ public class SearchOperation
     internal Expression Compile(IReadOnlyDictionary<string, Expression> ctx)
     {
         var valueConst = Expression.Constant(Value);
-        return Operator.ToExpression()(ctx[Key.ToLower()], valueConst);
+        return Operator.ToExpression(Value.GetType())
+        (
+            ctx[Key.ToLower()], 
+            valueConst
+        );
     }
 }
