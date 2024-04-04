@@ -27,7 +27,7 @@ public class CompoundStringJoinTests
     }
 
     [Test]
-    public async Task CompoundListSelect_Where_Works()
+    public async Task CompoundListSelect_WhereContains_Works()
     {
         // Arrange
         using var db = Composition.CreateDb();

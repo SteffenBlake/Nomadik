@@ -105,9 +105,10 @@ public class CompiledSearchQuery<TIn, TOut>(
             return data;
         }
 
-        var orderExpression = Query.Order.Compile(Table);
+        var orderExpression = Table[Query.Order.By.ToLower()];
+        var conversion = Expression.Convert(orderExpression, typeof(object));
         var orderLambda = Expression.Lambda<Func<TIn, object>>(
-            orderExpression, Parameters
+            conversion, Parameters
         );
 
         return Query.Order.Dir switch 
