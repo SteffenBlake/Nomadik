@@ -6,8 +6,8 @@ namespace Nomadik.Core;
 
 /// <summary>
 /// Represents a <see cref="SearchQuery"/> that has been compiled against
-/// A given Expression InitMember Mapper, binding it to a hard type
-/// And caching the Expression Mappings for compiling Filter/Search Queries
+/// a given Expression InitMember Mapper, binding it to a hard type
+/// and caching the Expression Mappings for compiling Filter/Search Queries
 /// </summary>
 public class CompiledSearchQuery<TIn, TOut>(
     SearchQuery query,
@@ -34,7 +34,7 @@ public class CompiledSearchQuery<TIn, TOut>(
     /// back to back.
     /// If Pagination is enabled, the total count of unpaged items is
     /// simultaneously async queried to populate the 
-    /// <see cref="SearchQueryResult{T}.Of"/> Property.
+    /// <see cref="SearchQueryResult{T}.Of"/> property.
     /// </summary>
     public async Task<SearchQueryResult<TOut>> SearchAsync(
         IQueryable<TIn> data
@@ -42,16 +42,16 @@ public class CompiledSearchQuery<TIn, TOut>(
     {
         var filtered = Where(data);
 
-        var ordered = OrderBy(filtered);
+        var ordered = TryOrderBy(filtered);
         var paged = Page(ordered);
 
         var dataTask = Select(paged).ToListAsync();
 
         // We can avoid querying the total count of the db
-        // If there wasnt pagination, as the count of the results
-        // Will also be the count of the total possible results
-        // However if pagination is enabled then that inherently requires
-        // A second Count query on the db
+        // if there wasn't pagination, as the count of the results
+        // will also be the count of the total possible results
+        // however if pagination is enabled then that inherently requires
+        // a second Count query on the db
         var ofTask = Query.Filter == null ?
             dataTask.ContinueWith(d => d.Result.Count) :
             filtered.CountAsync();
@@ -91,12 +91,13 @@ public class CompiledSearchQuery<TIn, TOut>(
     }
 
     /// <summary>
-    /// Uses the bound <see cref="SearchQuery.Order"/> to sort
+    /// Null safe version of <see cref="OrderBy(IQueryable{TIn})"/>. 
+    /// Uses the bound <see cref="Query"/>.<see cref="SearchQuery.Order"/> to sort
     /// a mapped <see cref="IQueryable{T}"/> of matching bound 
-    /// <typeparamref name="TIn"/>. If the Order is null it will
-    /// just return the same unmodified <paramref name="data"/>
+    /// <typeparamref name="TIn"/>. If <see cref="SearchQuery.Order"/> is
+    /// null, returns the original unmodified data.
     /// </summary>
-    public IQueryable<TIn> OrderBy(
+    public IQueryable<TIn> TryOrderBy(
         IQueryable<TIn> data 
     )
     {
@@ -105,20 +106,111 @@ public class CompiledSearchQuery<TIn, TOut>(
             return data;
         }
 
-        var orderExpression = Table[Query.Order.By.ToLower()];
-        var conversion = Expression.Convert(orderExpression, typeof(object));
-        var orderLambda = Expression.Lambda<Func<TIn, object>>(
-            conversion, Parameters
+        return OrderByInternal(
+            data, 
+            Query.Order
         );
+    }
 
-        return Query.Order.Dir switch 
+    /// <summary>
+    /// Uses the bound <see cref="Query"/>.<see cref="SearchQuery.Order"/> to sort
+    /// a mapped <see cref="IQueryable{T}"/> of matching bound 
+    /// <typeparamref name="TIn"/>. Throws a <see cref="NullReferenceException"/>
+    /// if <see cref="Query"/>.<see cref="SearchQuery.Order"/> is null
+    /// </summary>
+    public IOrderedQueryable<TIn> OrderBy(
+        IQueryable<TIn> data 
+    )
+    {
+        return OrderByInternal(
+            data, 
+            Query.Order ?? throw new NullReferenceException(
+                $"{nameof(Query)}.{nameof(SearchQuery.Order)} is required for ThenBy()"
+            )
+        );
+    }
+
+    private IOrderedQueryable<TIn> OrderByInternal(
+        IQueryable<TIn> data,
+        SearchOrder order
+    )
+    {
+        var orderLambda = order.Compile<TIn>(Table, Parameters);
+
+        var ordered = order.Dir switch 
         {
             OrderDir.Asc => data.OrderBy(orderLambda),
             OrderDir.Desc => data.OrderByDescending(orderLambda),
             _ => throw new NotImplementedException()
         };
+
+        return order.Then == null ? ordered : ThenByInternal(ordered, order.Then);
     }
 
+    /// <summary>
+    /// Null safe version of <see cref="ThenBy(IOrderedQueryable{TIn})"/>.
+    /// Uses the bound <see cref="Query"/>.<see cref="SearchQuery.Order"/> 
+    /// to further sort a mapped <see cref="IOrderedQueryable{T}"/> 
+    /// of matching bound <typeparamref name="TIn"/>.
+    /// </summary>
+    public IOrderedQueryable<TIn> TryThenBy(
+        IOrderedQueryable<TIn> data 
+    )
+    {
+        if (Query.Order == null)
+        {
+            return data;
+        }
+
+        return ThenByInternal(
+            data, 
+            Query.Order
+        );
+    }
+
+    /// <summary>
+    /// Uses the bound <see cref="Query"/>.<see cref="SearchQuery.Order"/> to further sort
+    /// a mapped <see cref="IOrderedQueryable{T}"/> of matching bound 
+    /// <typeparamref name="TIn"/>. Throws a <see cref="NullReferenceException"/>
+    /// if <see cref="Query"/>.<see cref="SearchQuery.Order"/> is null
+    /// </summary>
+    public IOrderedQueryable<TIn> ThenBy(
+        IOrderedQueryable<TIn> data 
+    )
+    {
+        return ThenByInternal(
+            data, 
+            Query.Order ?? throw new NullReferenceException(
+                $"{nameof(Query)}.{nameof(SearchQuery.Order)} is required for ThenBy()"
+            )
+        );
+    }
+
+    private IOrderedQueryable<TIn> ThenByInternal(
+        IOrderedQueryable<TIn> data,
+        SearchOrder order
+    )
+    {
+        // Recursively iterate down then "ThenBy" stack of orderBy's
+        var result = data;
+        var target = order;
+        
+        while (target != null)
+        {
+            var orderLambda = target.Compile<TIn>(Table, Parameters); 
+
+            result = target.Dir switch 
+            {
+                OrderDir.Asc => result.ThenBy(orderLambda),
+                OrderDir.Desc => result.ThenByDescending(orderLambda),
+                _ => throw new NotImplementedException()
+            };
+
+            target = target.Then;
+        }
+
+        return result;
+    }
 
     /// <summary>
     /// Uses the bound <see cref="SearchQuery.Page"/> to Paginate

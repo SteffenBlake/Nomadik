@@ -4,6 +4,9 @@ using System.Text.Json.Nodes;
 
 namespace Nomadik.Core.Converters;
 
+/// <summary>
+/// Json Converter for deserializing of <see cref="SearchFilter"/>s
+/// </summary>
 public class SearchFilterConverter : JsonConverter<SearchFilter>
 {
     public override SearchFilter? Read(

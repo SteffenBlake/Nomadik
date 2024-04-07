@@ -8,13 +8,37 @@ namespace Nomadik.Core;
 /// </summary>
 public class SearchOrder
 {
+    /// <summary>
+    /// The Direction to OrderBy
+    /// </summary>
     [JsonConverter(typeof(JsonStringEnumConverter<OrderDir>))]
     public OrderDir Dir { get; init; } = OrderDir.Asc;
 
+    /// <summary>
+    /// The Field to Order By
+    /// </summary>
     public required string By { get; init; }
 
-    public Expression Compile(IReadOnlyDictionary<string, Expression> ctx)
+    /// <summary>
+    /// Further "Then" Order By after this one (can be repeatedly nested)
+    /// </summary>
+    public SearchOrder? Then { get; init; } = null;
+
+    /// <summary>
+    /// Compiles this Order Operation into a logical expression.
+    /// Should not be called directly, use 
+    /// <see cref="SearchQuery.Compile{TIn, TOut}(Expression{Func{TIn, TOut}})"/>
+    /// and its produced <see cref="CompiledSearchQuery{TIn, TOut}"/> instead.
+    /// </summary>
+    public Expression<Func<T, object>> Compile<T>(
+        IReadOnlyDictionary<string, Expression> table,
+        IReadOnlyCollection<ParameterExpression> parameters
+    )
     {
-       return ctx[By.ToLower()]; 
+        var orderExpression = table[By.ToLower()];
+        var conversion = Expression.Convert(orderExpression, typeof(object));
+        return Expression.Lambda<Func<T, object>>(
+            conversion, parameters
+        );
     }
 }

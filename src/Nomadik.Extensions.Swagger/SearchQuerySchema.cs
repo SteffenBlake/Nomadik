@@ -3,6 +3,9 @@ using Nomadik.Core;
 
 namespace Nomadik.Extensions.Swagger;
 
+/// <summary>
+///
+/// </summary>
 public class SearchQuerySchema : OpenApiSchema
 {
     public SearchQuerySchema(string searchFilterId, string searchOrderId)

@@ -2,6 +2,9 @@ using Microsoft.OpenApi.Models;
 
 namespace Nomadik.Extensions.Swagger;
 
+/// <summary>
+///
+/// </summary>
 public class SearchFilterWhereSchema : OpenApiSchema
 {
     public SearchFilterWhereSchema(string searchOperationId)

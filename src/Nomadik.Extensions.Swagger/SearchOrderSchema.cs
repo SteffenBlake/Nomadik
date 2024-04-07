@@ -2,6 +2,9 @@ using Microsoft.OpenApi.Models;
 
 namespace Nomadik.Extensions.Swagger;
 
+/// <summary>
+///
+/// </summary>
 public class SearchOrderSchema : OpenApiSchema
 {
     public SearchOrderSchema(

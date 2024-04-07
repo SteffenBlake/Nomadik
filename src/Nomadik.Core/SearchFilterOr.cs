@@ -4,10 +4,13 @@ namespace Nomadik.Core;
 
 /// <summary>
 /// Implementation of <see cref="SearchFilter"/> that chains
-/// All passed in child SearchFilters in logical OR operators
+/// all passed in child SearchFilters in logical OR operators
 /// </summary>
 public class SearchFilterOr : SearchFilter
 {
+    /// <summary>
+    /// Discriminator for this <see cref="SearchFilter"/>
+    /// </summary>
     public required List<SearchFilter> Or { get; init; }
 
     /// <inheritdoc/>

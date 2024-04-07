@@ -25,6 +25,16 @@ public static class IQueryableExtensions
         return query.Where(data);
     }
 
+
+    /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.TryOrderBy(IQueryable{T})" />
+    public static IQueryable<TIn> TryOrderBy<TIn, TOut>(
+        this IQueryable<TIn> data, 
+        CompiledSearchQuery<TIn, TOut> query
+    )
+    {
+        return query.OrderBy(data);
+    }
+
     /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.OrderBy(IQueryable{T})" />
     public static IQueryable<TIn> OrderBy<TIn, TOut>(
         this IQueryable<TIn> data, 
@@ -32,6 +42,24 @@ public static class IQueryableExtensions
     )
     {
         return query.OrderBy(data);
+    }
+
+    /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.TryThenBy(IOrderedQueryable{T})" />
+    public static IQueryable<TIn> TryThenBy<TIn, TOut>(
+        this IOrderedQueryable<TIn> data, 
+        CompiledSearchQuery<TIn, TOut> query
+    )
+    {
+        return query.TryThenBy(data);
+    }
+
+    /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.ThenBy(IOrderedQueryable{T})" />
+    public static IQueryable<TIn> ThenBy<TIn, TOut>(
+        this IOrderedQueryable<TIn> data, 
+        CompiledSearchQuery<TIn, TOut> query
+    )
+    {
+        return query.ThenBy(data);
     }
 
     /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.Page(IQueryable{T})" />

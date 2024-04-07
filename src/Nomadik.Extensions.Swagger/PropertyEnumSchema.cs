@@ -3,6 +3,9 @@ using Microsoft.OpenApi.Models;
 
 namespace Nomadik.Extensions.Swagger;
 
+/// <summary>
+///
+/// </summary>
 public class PropertyEnumSchema : OpenApiSchema
 {
     public PropertyEnumSchema(List<string> properties)

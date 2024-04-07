@@ -1,4 +1,3 @@
-using System.Reflection;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Nomadik.Core;
@@ -8,6 +7,7 @@ namespace Nomadik.Extensions.Swagger;
 
 public class NomadikOperationFilter : IOperationFilter
 {
+    /// <inheritdoc />
     public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
         foreach(var attribute in context.ApiDescription.CustomAttributes())

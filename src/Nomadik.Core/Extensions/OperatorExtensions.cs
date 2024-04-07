@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Linq.Expressions;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +12,10 @@ public static class OperatorExtensions
     /// <summary>
     /// Converts a <see cref="Operator"/> into its respective
     /// <see cref="Expression"/> function that combines a left and right side
-    /// With a logical operator
+    /// with a logical operator.
+    /// Should not be called directly, use 
+    /// <see cref="SearchQuery.Compile{TIn, TOut}(Expression{Func{TIn, TOut}})"/>
+    /// and its produced <see cref="CompiledSearchQuery{TIn, TOut}"/> instead.
     /// </summary>
     public static Func<Expression, Expression, Expression> ToExpression(
         this Operator op, Type valueType
