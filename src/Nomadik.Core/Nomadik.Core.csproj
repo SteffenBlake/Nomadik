@@ -5,6 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/SteffenBlake/Nomadik</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Copyright>Copyright (c) Steffen Cole Blake 2024</Copyright>
+    <LicenseUrl>https://raw.githubusercontent.com/SteffenBlake/Nomadik/main/LICENSE</LicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
