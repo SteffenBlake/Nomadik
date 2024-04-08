@@ -36,7 +36,7 @@ jobs:
       if: github.ref_type == 'tag'
       env:
         VERSION: ${{ github.ref_name }}
-      run: 'dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$Version'
+      run: 'dotnet pack --output nupkgs --no-restore --no-build /p:Version=$Version'
     - name: upload nuget package
       if: github.ref_type == 'tag'
       run: dotnet nuget push nupkgs/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
