@@ -41,7 +41,7 @@ jobs:
       if: github.ref_type == 'tag'
       env:
         VERSION: ${{ github.ref_name }}
-          run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$Version
+          run: 'dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$Version'
     - name: upload nuget package
       if: github.ref_type == 'tag'
       env:
