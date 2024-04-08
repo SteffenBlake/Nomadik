@@ -29,14 +29,14 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore -c Release -p:Version=$Version 
+      run: dotnet build --no-restore -c Release -p:Version=$VERSION 
     - name: Test
       run: dotnet test --no-build -c Release
     - name: pack nuget packages
       if: github.ref_type == 'tag'
       env:
         VERSION: ${{ github.ref_name }}
-      run: dotnet pack --output nupkgs --no-restore --no-build -p:PackageVersion=$Version
+      run: dotnet pack --output nupkgs --no-restore --no-build -p:PackageVersion=$VERSION
     - name: upload nuget package
       if: github.ref_type == 'tag'
       run: dotnet nuget push nupkgs/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
