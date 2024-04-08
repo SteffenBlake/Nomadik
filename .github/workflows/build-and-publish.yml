@@ -25,10 +25,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set Version Variable
-      if: ${{ github.ref_type == 'tag' }} && startsWith(github.ref, 'refs/tags/v')
+      if: ${{ github.ref_type == 'tag' }}
       env:
-        TAG: ${{ github.ref_name }}
-      run: echo "VERSION=${TAG#v}" >> $GITHUB_ENV
+        VERSION: ${{ github.ref_name }}
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -36,12 +35,12 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore -c Release /p:Version=$VERSION
+      run: dotnet build --no-restore -c Release 
     - name: Test
-      run: dotnet test --no-build --verbosity normal -c Release
+      run: dotnet test --no-build -c Release
     - name: pack nuget packages
-      if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
-      run: dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
+      if: github.ref_type == 'tag'
+      run: dotnet pack --output nupkgs --no-restore --no-build 
     - name: upload nuget package
-      if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
+      if: github.ref_type == 'tag'
       run: dotnet nuget push nupkgs/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
