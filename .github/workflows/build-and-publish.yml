@@ -21,9 +21,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Update Version
+      if: github.ref_type == 'tag'
+      env:
+        REFNAME: ${{ github.ref_name }}
+      run: echo "{VERSION}={REFNAME}" >> $GITHUB_ENV && echo "VERSION=$VERSION"
     - uses: actions/checkout@v4
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
@@ -34,8 +39,6 @@ jobs:
       run: dotnet test --no-build -c Release
     - name: pack nuget packages
       if: github.ref_type == 'tag'
-      env:
-        VERSION: ${{ github.ref_name }}
       run: dotnet pack --output nupkgs --no-restore --no-build -p:PackageVersion=$VERSION
     - name: upload nuget package
       if: github.ref_type == 'tag'
