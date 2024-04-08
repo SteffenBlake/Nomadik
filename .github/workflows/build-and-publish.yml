@@ -24,8 +24,8 @@ jobs:
     - name: Update Version
       if: github.ref_type == 'tag'
       env:
-        REFNAME: ${{ github.ref_name }}
-      run: echo "{VERSION}={REFNAME}" >> $GITHUB_ENV && echo "VERSION=$VERSION"
+        TAG: ${{ github.ref_name }}
+      run: echo "VERSION=$TAG" >> $GITHUB_ENV 
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
