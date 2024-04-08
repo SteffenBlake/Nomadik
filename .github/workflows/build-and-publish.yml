@@ -22,11 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set Version Variable
-      if: ${{ github.ref_type == 'tag' }}
-      env:
-        VERSION: ${{ github.ref_name }}
-      run: echo "VERSION SET = $VERSION"
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -41,9 +36,7 @@ jobs:
       if: github.ref_type == 'tag'
       env:
         VERSION: ${{ github.ref_name }}
-          run: 'dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$Version'
+      run: 'dotnet pack --output nupkgs --no-restore --no-build /p:PackageVersion=$Version'
     - name: upload nuget package
       if: github.ref_type == 'tag'
-      env:
-        VERSION: ${{ github.ref_name }}
       run: dotnet nuget push nupkgs/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
