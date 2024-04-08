@@ -21,12 +21,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v4
     - name: Update Version
       if: github.ref_type == 'tag'
       env:
         TAG: ${{ github.ref_name }}
       run: echo "VERSION=$TAG" >> $GITHUB_ENV 
-    - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
