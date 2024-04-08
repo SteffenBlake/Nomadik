@@ -26,95 +26,92 @@ public class NomadikOperationFilter : IOperationFilter
     )
     {
         var prefix = nomadikSearch.DTO.Name;
-
-        var props = nomadikSearch.DTO.GetProperties()
-            .Where(p =>
-                p.GetMethod != null &&
-                p.GetMethod.IsPublic &&
-                !p.CustomAttributes.Any(a => 
-                    a.AttributeType == typeof(NomadikIgnoreAttribute)
-                )
-            )
-            .Select(a => a.Name)
-            .ToList();
+        var schemas = context.SchemaRepository.Schemas;
 
         var propertyEnumId = prefix + "PropertyEnum";
-        if (!context.SchemaRepository.Schemas.ContainsKey(propertyEnumId))
+        if (!schemas.ContainsKey(propertyEnumId))
         {
-            context.SchemaRepository.Schemas[propertyEnumId] =
-                new PropertyEnumSchema(props);
+            var props = nomadikSearch.DTO.GetProperties()
+                .Where(p =>
+                    p.GetMethod != null &&
+                    p.GetMethod.IsPublic &&
+                    !p.CustomAttributes.Any(a => 
+                        a.AttributeType == typeof(NomadikIgnoreAttribute)
+                    )
+                )
+                .Select(a => a.Name)
+                .ToList();
+
+            schemas[propertyEnumId] = new PropertyEnumSchema(props);
         }
 
         var searchOrderId = prefix + nameof(SearchOrder);
-        if (!context.SchemaRepository.Schemas.ContainsKey(searchOrderId))
+        if (!schemas.ContainsKey(searchOrderId))
         {
-            context.SchemaRepository.Schemas[searchOrderId] =
-                new SearchOrderSchema(nameof(OrderDir), propertyEnumId);
+            var original = schemas[nameof(SearchOrder)];
+            schemas[searchOrderId] = new SearchOrderSchema(
+                nameof(OrderDir), 
+                propertyEnumId,
+                original
+            );
         }
 
         var operatorId = nameof(Operator);
-        if (!context.SchemaRepository.Schemas.ContainsKey(operatorId))
-        {
-            context.SchemaRepository.Schemas[operatorId] =
-                new OpenApiSchema()
-                {
-                    Type = "string",
-                    Enum = Enum.GetNames<Operator>().Select(o =>
-                        (IOpenApiAny)new OpenApiString(o)
-                    ).ToList()
-                };
-        }
+        _ = EnsureSchema(context, typeof(Operator));
 
         var searchOperationId = prefix + nameof(SearchOperation);
-        if (!context.SchemaRepository.Schemas.ContainsKey(searchOperationId))
+        if (!schemas.ContainsKey(searchOperationId))
         {
-            context.SchemaRepository.Schemas[searchOperationId] =
-                new SearchOperationSchema(operatorId, propertyEnumId);
+            schemas[searchOperationId] = new SearchOperationSchema(
+                operatorId, propertyEnumId
+            );
         }
 
         var searchFilterWhereId = prefix + nameof(SearchFilterWhere);
-        if (!context.SchemaRepository.Schemas.ContainsKey(searchFilterWhereId))
+        if (!schemas.ContainsKey(searchFilterWhereId))
         {
-            context.SchemaRepository.Schemas[searchFilterWhereId] =
-                new SearchFilterWhereSchema(searchOperationId);
+            schemas[searchFilterWhereId] = new SearchFilterWhereSchema(
+                searchOperationId
+            );
         }
 
         var searchFilterId = prefix + nameof(SearchFilter);
         var searchFilterAndId = prefix + nameof(SearchFilterAnd);
         var searchFilterOrId = prefix + nameof(SearchFilterOr);
 
-        if (!context.SchemaRepository.Schemas.ContainsKey(searchFilterId))
+        if (!schemas.ContainsKey(searchFilterId))
         {
-            context.SchemaRepository.Schemas[searchFilterId] =
-                new SearchFilterSchema(
-                    searchFilterAndId,
-                    searchFilterOrId,
-                    searchFilterWhereId
-                );
+            schemas[searchFilterId] = new SearchFilterSchema(
+                searchFilterAndId,
+                searchFilterOrId,
+                searchFilterWhereId
+            );
         }
 
-        if (!context.SchemaRepository.Schemas.ContainsKey(searchFilterAndId))
+        if (!schemas.ContainsKey(searchFilterAndId))
         {
-            context.SchemaRepository.Schemas[searchFilterAndId] =
+            schemas[searchFilterAndId] =
                 new SearchFilterAndSchema(searchFilterId);
         }
 
-        if (!context.SchemaRepository.Schemas.ContainsKey(searchFilterOrId))
+        if (!schemas.ContainsKey(searchFilterOrId))
         {
-            context.SchemaRepository.Schemas[searchFilterOrId] =
-                new SearchFilterOrSchema(searchFilterId);
+            schemas[searchFilterOrId] = new SearchFilterOrSchema(
+                searchFilterId
+            );
         }
 
         var searchQueryId = prefix + nameof(SearchQuery);
-        if (!context.SchemaRepository.Schemas.ContainsKey(searchQueryId))
+        if (!schemas.ContainsKey(searchQueryId))
         {
-            context.SchemaRepository.Schemas[searchQueryId] =
-                new SearchQuerySchema(searchFilterId, searchOrderId);
+            schemas[searchQueryId] = new SearchQuerySchema(
+                searchFilterId, searchOrderId
+            );
         }
 
         foreach(var content in operation.RequestBody.Content)
         {
-            if (content.Value.Schema.Reference.Id != nameof(SearchQuery))
+            if (content.Value?.Schema?.Reference?.Id != nameof(SearchQuery))
             {
                 continue;
             }
@@ -128,7 +125,7 @@ public class NomadikOperationFilter : IOperationFilter
 
         foreach(var parameter in operation.Parameters)
         {
-            if (parameter.Schema.Reference.Id != nameof(SearchQuery))
+            if (parameter.Schema?.Reference?.Id != nameof(SearchQuery))
             {
                 continue;
             }
@@ -138,5 +135,23 @@ public class NomadikOperationFilter : IOperationFilter
                 Type = ReferenceType.Schema
             };
         }
+    }
+
+    private static OpenApiSchema EnsureSchema(
+        OperationFilterContext context,
+        Type type
+    )
+    {
+        if (context.SchemaRepository.TryLookupByType(type, out var schema))
+        {
+            return schema;
+        }
+
+        if (context.SchemaRepository.Schemas.TryGetValue(type.Name, out schema))
+        {
+            return schema;
+        }
+
+        return context.SchemaGenerator.GenerateSchema(type, context.SchemaRepository);
     }
 }

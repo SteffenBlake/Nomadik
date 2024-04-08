@@ -9,12 +9,15 @@ public class SearchOrderSchema : OpenApiSchema
 {
     public SearchOrderSchema(
         string dirId,
-        string byId
+        string byId,
+        OpenApiSchema original
     )
     {
         Type = "object";
+        Description = original.Description;
         Properties["dir"] = new() 
         {
+            Description = original.Properties["dir"].Description,
             Reference = new()
             {
                 Id = dirId,
@@ -23,6 +26,7 @@ public class SearchOrderSchema : OpenApiSchema
         };
         Properties["by"] = new ()
         {
+            Description = original.Properties["by"].Description,
             Reference = new()
             {
                 Id = byId,

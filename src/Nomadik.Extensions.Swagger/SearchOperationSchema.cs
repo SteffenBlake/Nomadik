@@ -14,14 +14,16 @@ public class SearchOperationSchema : OpenApiSchema
         Type = "object";
         Properties["key"] = new()
         {
+            Nullable = false,
             Reference = new()
             {
                 Id = keyId,
-                Type = ReferenceType.Schema
+                Type = ReferenceType.Schema,
             }
         };
         Properties["operator"] = new()
         {
+            Nullable = false,
             Reference = new()
             {
                 Id = operatorId,

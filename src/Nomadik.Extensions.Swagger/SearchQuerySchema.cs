@@ -8,12 +8,15 @@ namespace Nomadik.Extensions.Swagger;
 /// </summary>
 public class SearchQuerySchema : OpenApiSchema
 {
-    public SearchQuerySchema(string searchFilterId, string searchOrderId)
+    public SearchQuerySchema(
+        string searchFilterId, string searchOrderId
+    )
     {
         Type = "object";
 
         Properties["filter"] = new()
         {
+            Nullable = true,
             Reference = new()
             {
                 Id = searchFilterId,
@@ -23,6 +26,7 @@ public class SearchQuerySchema : OpenApiSchema
 
         Properties["order"] = new()
         {
+            Nullable = true,
             Reference = new()
             {
                 Id = searchOrderId,
@@ -32,6 +36,7 @@ public class SearchQuerySchema : OpenApiSchema
 
         Properties["page"] = new()
         {
+            Nullable = true,
             Reference = new()
             {
                 Id = nameof(SearchPagination),
