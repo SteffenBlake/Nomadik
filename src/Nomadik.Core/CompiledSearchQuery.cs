@@ -45,25 +45,23 @@ public class CompiledSearchQuery<TIn, TOut>(
         var ordered = TryOrderBy(filtered);
         var paged = Page(ordered);
 
-        var dataTask = Select(paged).ToListAsync();
+        var result = await Select(paged).ToListAsync();
 
         // We can avoid querying the total count of the db
         // if there wasn't pagination, as the count of the results
         // will also be the count of the total possible results
         // however if pagination is enabled then that inherently requires
         // a second Count query on the db
-        var ofTask = Query.Filter == null ?
-            dataTask.ContinueWith(d => d.Result.Count) :
-            filtered.CountAsync();
-
-        await Task.WhenAll(ofTask, dataTask);
+        var of = Query.Filter == null ?
+            result.Count :
+            await filtered.CountAsync();
 
         var from = (Query.Page?.Skip ?? 0) + 1;
 
         return new (
-            dataTask.Result, 
+            result, 
             from,
-            ofTask.Result
+            of
         );
     }
 

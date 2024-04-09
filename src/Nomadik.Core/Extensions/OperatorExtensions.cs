@@ -21,7 +21,7 @@ public static class OperatorExtensions
         this Operator op, Type valueType
     )
     {
-        return op switch
+        Func<Expression, Expression, Expression> wrapper = op switch
         {
             Operator.EQ => Expression.Equal,
             Operator.NE => Expression.NotEqual,
@@ -34,6 +34,19 @@ public static class OperatorExtensions
             Operator.CO => (a,b) => Contains(a, b, valueType),
             _ => throw new NotImplementedException()
         };
+
+        if (valueType != typeof(string))
+        {
+            return wrapper;
+        }
+
+        return op switch
+        {
+            Operator.GT or Operator.GTE or Operator.LT or Operator.LTE =>
+                (a, b) => StringCompare(a, b, wrapper),
+            _ => wrapper
+        };
+
     }
 
     private static MethodCallExpression Like(
@@ -62,6 +75,17 @@ public static class OperatorExtensions
         Expression a, Expression b, Type valueType
     )
     {
+        if (a is MethodCallExpression m)
+        {
+            if (
+                m.Method.Name == nameof(Enumerable.ToList) ||
+                m.Method.Name == nameof(Enumerable.ToArray)
+            )
+            {
+                a = m.Arguments.First();
+            }
+        }
+
         // There's multiple Contains functions, we want the simpler one
         var contains = typeof(Enumerable)
             .GetMethods(
@@ -74,5 +98,27 @@ public static class OperatorExtensions
             ).MakeGenericMethod(valueType);
 
         return Expression.Call(contains, a, b);
+    }
+
+    private static Expression StringCompare(
+        Expression a, 
+        Expression b, 
+        Func<Expression, Expression, Expression> wrapper
+    )
+    {
+        var compare = typeof(string)
+            .GetMethods(
+                BindingFlags.NonPublic | 
+                BindingFlags.Public | 
+                BindingFlags.Static
+            ).Single(m => 
+                m.Name == nameof(string.Compare) &&
+                m.GetParameters().Length == 2
+            );
+
+        var left = Expression.Call(compare, a, b);
+        var right = Expression.Constant(0);
+
+        return wrapper(left, right);
     }
 }
