@@ -16,6 +16,7 @@ public class SearchFilterConverter : JsonConverter<SearchFilter>
     )
     {
         var raw = JsonSerializer.Deserialize<JsonObject>(ref reader, options)!;
+
         if (raw.ContainsKey(nameof(SearchFilterAnd.And)))
         {
             return raw.Deserialize<SearchFilterAnd>(options);
@@ -28,6 +29,11 @@ public class SearchFilterConverter : JsonConverter<SearchFilter>
         {
             return raw.Deserialize<SearchFilterWhere>(options);
         }
+        if (raw.ContainsKey(nameof(SearchFilterNot.Not)))
+        {
+            return raw.Deserialize<SearchFilterNot>(options);
+        }
+
         throw new JsonException();
     }
 

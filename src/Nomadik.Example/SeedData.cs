@@ -4,6 +4,9 @@ namespace Nomadik.Example;
 
 public static class SeedData 
 {
+    /// <summary>
+    /// Seeds the database with test data
+    /// </summary>
     public static async Task Run(ExampleDbContext db, string[] names)
     {
         var classrooms = new bool[100]

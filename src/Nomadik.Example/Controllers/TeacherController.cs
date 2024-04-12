@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Nomadik.Core;
+using Nomadik.Core.Abstractions;
+using Nomadik.Core.Extensions;
 using Nomadik.Example.Data;
 using Nomadik.Example.DTOs;
 using Nomadik.Extensions;
@@ -14,12 +16,12 @@ public static class TeacherController
         [FromBody]
         SearchQuery query,
         [FromServices]
-        ExampleDbContext db
+        ExampleDbContext db,
+        [FromServices]
+        INomadik<Teacher, IndexTeachersDto> mapper
     )
     {
-        var mapper = IndexTeachersDto.Mapper(db); 
-        var compiledQuery = query.Compile(mapper);
-
-        return await db.Teachers.SearchAsync(compiledQuery);
+        var search = mapper.Compile(query);
+        return await db.Teachers.SearchAsync(search);
     }
 }

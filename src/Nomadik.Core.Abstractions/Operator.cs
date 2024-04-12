@@ -1,4 +1,4 @@
-namespace Nomadik.Core;
+namespace Nomadik.Core.Abstractions;
 
 /// <summary>
 /// Set of supported Operations for serialization of filter expressions
@@ -27,5 +27,11 @@ public enum Operator
     LI,
 
     /// <summary>Contains</summary>
-    CO
+    CO,
+
+    /// <summary>All Match</summary>
+    All,
+
+    /// <summary>Any Match</summary>
+    Any
 }

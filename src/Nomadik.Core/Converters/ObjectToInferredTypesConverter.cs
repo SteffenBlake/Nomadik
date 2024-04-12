@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace Nomadik.Core.Converters;
@@ -18,7 +19,7 @@ public class ObjectToInferredTypesConverter : JsonConverter<object>
         JsonTokenType.String when reader.TryGetDateTime(out DateTime datetime) => 
             datetime,
         JsonTokenType.String => reader.GetString()!,
-        _ => throw new NotSupportedException()
+        _ => JsonDocument.ParseValue(ref reader).RootElement.Clone()
     };
 
     public override void Write(

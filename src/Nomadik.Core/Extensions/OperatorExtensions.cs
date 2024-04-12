@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
+using Nomadik.Core.Abstractions;
 
 namespace Nomadik.Core.Extensions;
 
@@ -17,11 +18,11 @@ public static class OperatorExtensions
     /// <see cref="SearchQuery.Compile{TIn, TOut}(Expression{Func{TIn, TOut}})"/>
     /// and its produced <see cref="CompiledSearchQuery{TIn, TOut}"/> instead.
     /// </summary>
-    public static Func<Expression, Expression, Expression> ToExpression(
-        this Operator op, Type valueType
+    public static Func<Expression, Expression, Expression>? ToExpression(
+        this Operator op
     )
     {
-        Func<Expression, Expression, Expression> wrapper = op switch
+        return op switch
         {
             Operator.EQ => Expression.Equal,
             Operator.NE => Expression.NotEqual,
@@ -29,46 +30,8 @@ public static class OperatorExtensions
             Operator.LT => Expression.LessThan,
             Operator.GTE => Expression.GreaterThanOrEqual,
             Operator.LTE => Expression.LessThanOrEqual,
-
-            Operator.LI => Like,
-            Operator.CO => (a,b) => Contains(a, b, valueType),
-            _ => throw new NotImplementedException()
+            _ => null
         };
-
-        if (valueType != typeof(string))
-        {
-            return wrapper;
-        }
-
-        return op switch
-        {
-            Operator.GT or Operator.GTE or Operator.LT or Operator.LTE =>
-                (a, b) => StringCompare(a, b, wrapper),
-            _ => wrapper
-        };
-
-    }
-
-    private static MethodCallExpression Like(
-        Expression a, Expression b
-    )
-    {
-        var toString = Expression.Call(a, nameof(ToString), Type.EmptyTypes);
-
-        var dbFunctions = Expression.Constant(EF.Functions);
-
-        // There's two Like functions, we want the simpler one
-        var like = typeof(DbFunctionsExtensions)
-            .GetMethods(
-                BindingFlags.NonPublic | 
-                BindingFlags.Public | 
-                BindingFlags.Static
-            ).Single(m => 
-                m.Name == nameof(DbFunctionsExtensions.Like) &&
-                m.GetParameters().Length == 3
-            );
-
-        return Expression.Call(like, dbFunctions, toString, b);
     }
 
     private static MethodCallExpression Contains(

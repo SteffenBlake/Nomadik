@@ -1,6 +1,6 @@
-using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Nomadik.Core;
+using Nomadik.Core.Abstractions;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Nomadik.Extensions.Swagger;

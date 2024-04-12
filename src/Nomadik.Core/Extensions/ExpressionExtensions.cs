@@ -13,7 +13,8 @@ public static class ExpressionExtensions
     /// with the Keys being it's individual Member Names
     /// </summary>
     public static IReadOnlyDictionary<string, Expression> ToMemberTable<T1, T2>(
-        this Expression<Func<T1, T2>> expression
+        this Expression<Func<T1, T2>> expression,
+        IEqualityComparer<string> comparer
     ) 
     {
         if (expression.Body is not MemberInitExpression init)
@@ -22,7 +23,7 @@ public static class ExpressionExtensions
                 $"Expression body root must be a MemberInitExpression (new()), was iinstead unsupported node type: '{expression.Body.NodeType}'"
             );
         }
-        Dictionary<string, Expression> lookupTable = [];
+        Dictionary<string, Expression> lookupTable = new(comparer);
         for (var b = 0; b < init.Bindings.Count; b++)
         {
             var binding = init.Bindings[b];

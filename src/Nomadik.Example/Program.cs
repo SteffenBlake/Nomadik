@@ -5,7 +5,10 @@ using Nomadik.Example;
 using Nomadik.Example.Data;
 using Nomadik.Example.Repositories;
 using Nomadik.Extensions.Swagger;
+using Nomadik.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Filters;
+using Nomadik.Example.MapperProviders;
+using Nomadik.Example.DTOs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,6 +44,11 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 builder.Services.Configure<Microsoft.AspNetCore.Mvc.JsonOptions>(options =>
 {
     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
+
+builder.Services.AddNomadik(options =>
+{
+    options.AddProviderScoped<IndexTeachersProvider, Teacher, IndexTeachersDto>();
 });
 
 var app = builder.Build();

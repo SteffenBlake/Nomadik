@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using System.Text.Json.Serialization;
+using Nomadik.Core.Abstractions;
 using Nomadik.Core.Converters;
-using Nomadik.Core.Extensions;
 
 namespace Nomadik.Core;
 
@@ -32,16 +32,28 @@ public class SearchOperation
     /// <summary>
     /// Serializes this Operation into a logical expression
     /// Should not be called directly, use 
-    /// <see cref="SearchQuery.Compile{TIn, TOut}(Expression{Func{TIn, TOut}})"/>
+    /// <see cref="Nomadik{Tin, Tout}.Compile(SearchQuery)"/>
     /// and its produced <see cref="CompiledSearchQuery{TIn, TOut}"/> instead.
     /// </summary>
-    public Expression Compile(IReadOnlyDictionary<string, Expression> ctx)
+    public Expression Compile<TIn, TOut>(INomadik<TIn, TOut> context)
     {
-        var valueConst = Expression.Constant(Value);
-        return Operator.ToExpression(Value.GetType())
-        (
-            ctx[Key.ToLower()], 
-            valueConst
+        var expression = context.Lookup[Key];
+        foreach(var handler in context.OpHandlers)
+        {
+            if (handler.TryHandle(
+                context, 
+                Operator,
+                expression, 
+                Value,
+                out var result
+            ))
+            {
+                return result;
+            }
+        }
+
+        throw new NotImplementedException(
+            $"No injected {nameof(INomadikOperationHandler)} handled the given data: Type='{Value.GetType}' Value={Value} Operator={Operator}"
         );
     }
 }

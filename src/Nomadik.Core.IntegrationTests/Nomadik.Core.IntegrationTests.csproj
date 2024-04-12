@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Nomadik.Core\Nomadik.Core.csproj" />
+    <ProjectReference Include="..\Nomadik.Core.Abstractions\Nomadik.Core.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

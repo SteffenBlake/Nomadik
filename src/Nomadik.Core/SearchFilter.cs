@@ -1,5 +1,6 @@
 using System.Linq.Expressions;
 using System.Text.Json.Serialization;
+using Nomadik.Core.Abstractions;
 using Nomadik.Core.Converters;
 
 namespace Nomadik.Core;
@@ -16,7 +17,7 @@ public abstract class SearchFilter
     /// <see cref="SearchQuery.Compile{TIn, TOut}(Expression{Func{TIn, TOut}})"/>
     /// and its produced <see cref="CompiledSearchQuery{TIn, TOut}"/> instead.
     /// </summary>
-    public abstract Expression Compile(
-        IReadOnlyDictionary<string, Expression> ctx
+    public abstract Expression Compile<TIn, TOut>(
+        INomadik<TIn, TOut> context 
     );
 }

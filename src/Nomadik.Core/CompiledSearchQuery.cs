@@ -1,28 +1,21 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using Nomadik.Core.Extensions;
+using Nomadik.Core.Abstractions;
 
 namespace Nomadik.Core;
 
 /// <summary>
 /// Represents a <see cref="SearchQuery"/> that has been compiled against
-/// a given Expression InitMember Mapper, binding it to a hard type
+/// a given <see cref="INomadik{TIn, TOut}/> mapping", binding it to a hard type
 /// and caching the Expression Mappings for compiling Filter/Search Queries
 /// </summary>
 public class CompiledSearchQuery<TIn, TOut>(
-    SearchQuery query,
-    Expression<Func<TIn, TOut>> mapper
+    INomadik<TIn, TOut> context,
+    SearchQuery query
 )
 {
-    private SearchQuery Query { get; } = query;
-
-    private Expression<Func<TIn, TOut>> Mapper { get; } = mapper;
-
-    private IReadOnlyDictionary<string, Expression> Table { get; }
-        = mapper.ToMemberTable();
-
-    private IReadOnlyCollection<ParameterExpression> Parameters { get; }
-        = mapper.Parameters;
+    private readonly SearchQuery _query = query;
+    private readonly INomadik<TIn, TOut> _context = context;
 
     /// <summary>
     /// Runs 
@@ -52,11 +45,11 @@ public class CompiledSearchQuery<TIn, TOut>(
         // will also be the count of the total possible results
         // however if pagination is enabled then that inherently requires
         // a second Count query on the db
-        var of = Query.Filter == null ?
+        var of = _query.Filter == null ?
             result.Count :
             await filtered.CountAsync();
 
-        var from = (Query.Page?.Skip ?? 0) + 1;
+        var from = (_query.Page?.Skip ?? 0) + 1;
 
         return new (
             result, 
@@ -75,14 +68,14 @@ public class CompiledSearchQuery<TIn, TOut>(
         IQueryable<TIn> data 
     )
     {
-        if (Query.Filter == null)
+        if (_query.Filter == null)
         {
             return data;
         }
 
-        var filterExpression = Query.Filter.Compile(Table);
+        var filterExpression = _query.Filter.Compile(_context);
         var filterLambda = Expression.Lambda<Func<TIn, bool>>(
-            filterExpression, Parameters
+            filterExpression, _context.Mapper.Parameters 
         );
 
         return data.Where(filterLambda);
@@ -90,7 +83,7 @@ public class CompiledSearchQuery<TIn, TOut>(
 
     /// <summary>
     /// Null safe version of <see cref="OrderBy(IQueryable{TIn})"/>. 
-    /// Uses the bound <see cref="Query"/>.<see cref="SearchQuery.Order"/> to sort
+    /// Uses the bound <see cref="SearchQuery.Order"/> to sort
     /// a mapped <see cref="IQueryable{T}"/> of matching bound 
     /// <typeparamref name="TIn"/>. If <see cref="SearchQuery.Order"/> is
     /// null, returns the original unmodified data.
@@ -99,22 +92,22 @@ public class CompiledSearchQuery<TIn, TOut>(
         IQueryable<TIn> data 
     )
     {
-        if (Query.Order == null)
+        if (_query.Order == null)
         {
             return data;
         }
 
         return OrderByInternal(
             data, 
-            Query.Order
+            _query.Order
         );
     }
 
     /// <summary>
-    /// Uses the bound <see cref="Query"/>.<see cref="SearchQuery.Order"/> to sort
+    /// Uses the bound <see cref="SearchQuery.Order"/> to sort
     /// a mapped <see cref="IQueryable{T}"/> of matching bound 
     /// <typeparamref name="TIn"/>. Throws a <see cref="NullReferenceException"/>
-    /// if <see cref="Query"/>.<see cref="SearchQuery.Order"/> is null
+    /// if <see cref="SearchQuery.Order"/> is null
     /// </summary>
     public IOrderedQueryable<TIn> OrderBy(
         IQueryable<TIn> data 
@@ -122,8 +115,8 @@ public class CompiledSearchQuery<TIn, TOut>(
     {
         return OrderByInternal(
             data, 
-            Query.Order ?? throw new NullReferenceException(
-                $"{nameof(Query)}.{nameof(SearchQuery.Order)} is required for ThenBy()"
+            _query.Order ?? throw new NullReferenceException(
+                $"{nameof(SearchQuery.Order)} is required for ThenBy()"
             )
         );
     }
@@ -133,7 +126,7 @@ public class CompiledSearchQuery<TIn, TOut>(
         SearchOrder order
     )
     {
-        var orderLambda = order.Compile<TIn>(Table, Parameters);
+        var orderLambda = order.Compile(_context);
 
         var ordered = order.Dir switch 
         {
@@ -147,30 +140,32 @@ public class CompiledSearchQuery<TIn, TOut>(
 
     /// <summary>
     /// Null safe version of <see cref="ThenBy(IOrderedQueryable{TIn})"/>.
-    /// Uses the bound <see cref="Query"/>.<see cref="SearchQuery.Order"/> 
+    /// Uses the bound <see cref="SearchQuery.Order"/> 
     /// to further sort a mapped <see cref="IOrderedQueryable{T}"/> 
     /// of matching bound <typeparamref name="TIn"/>.
+    /// If <see cref="SearchQuery.Order"/> is null it will return the original
+    /// data unchanged.
     /// </summary>
     public IOrderedQueryable<TIn> TryThenBy(
         IOrderedQueryable<TIn> data 
     )
     {
-        if (Query.Order == null)
+        if (_query.Order == null)
         {
             return data;
         }
 
         return ThenByInternal(
             data, 
-            Query.Order
+            _query.Order
         );
     }
 
     /// <summary>
-    /// Uses the bound <see cref="Query"/>.<see cref="SearchQuery.Order"/> to further sort
+    /// Uses the bound <see cref="SearchQuery.Order"/> to further sort
     /// a mapped <see cref="IOrderedQueryable{T}"/> of matching bound 
     /// <typeparamref name="TIn"/>. Throws a <see cref="NullReferenceException"/>
-    /// if <see cref="Query"/>.<see cref="SearchQuery.Order"/> is null
+    /// if <see cref="SearchQuery.Order"/> is null
     /// </summary>
     public IOrderedQueryable<TIn> ThenBy(
         IOrderedQueryable<TIn> data 
@@ -178,8 +173,8 @@ public class CompiledSearchQuery<TIn, TOut>(
     {
         return ThenByInternal(
             data, 
-            Query.Order ?? throw new NullReferenceException(
-                $"{nameof(Query)}.{nameof(SearchQuery.Order)} is required for ThenBy()"
+            _query.Order ?? throw new NullReferenceException(
+                $"{nameof(_query)}.{nameof(SearchQuery.Order)} is required for ThenBy()"
             )
         );
     }
@@ -195,7 +190,7 @@ public class CompiledSearchQuery<TIn, TOut>(
         
         while (target != null)
         {
-            var orderLambda = target.Compile<TIn>(Table, Parameters); 
+            var orderLambda = target.Compile(_context); 
 
             result = target.Dir switch 
             {
@@ -220,29 +215,29 @@ public class CompiledSearchQuery<TIn, TOut>(
         IQueryable<TIn> data 
     )
     {
-        if (Query.Page == null)
+        if (_query.Page == null)
         {
             return data;
         }
 
-        if (Query.Page.Num == 1)
+        if (_query.Page.Num == 1)
         {
-            return data.Take(Query.Page.Size);
+            return data.Take(_query.Page.Size);
         }
 
         return data
-            .Skip(Query.Page.Skip)
-            .Take(Query.Page.Take);
+            .Skip(_query.Page.Skip)
+            .Take(_query.Page.Take);
     }
 
     /// <summary>
-    /// Leverages a Search's bound MemberInit Expression to perform a
-    /// LINQ Select Operation on a Query
+    /// Leverages a <see cref="INomadik{TIn, TOut}" bound MemberInit Expression
+    /// to perform a LINQ Select Operation on a Query
     /// </summary>
     public IQueryable<TOut> Select(
         IQueryable<TIn> data
     )
     {
-        return data.Select(Mapper);
+        return data.Select(_context.Mapper);
     }
 }

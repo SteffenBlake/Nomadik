@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using Nomadik.Core.Abstractions;
 
 namespace Nomadik.Core;
 
@@ -14,8 +15,8 @@ public class SearchFilterWhere : SearchFilter
     public required SearchOperation Where { get; init; }
 
     /// <inheritdoc/>
-    public override Expression Compile(IReadOnlyDictionary<string, Expression> ctx)
+    public override Expression Compile<TIn, TOut>(INomadik<TIn, TOut> context)
     {
-        return Where.Compile(ctx);
+        return Where.Compile(context);
     }
 }

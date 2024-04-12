@@ -1,4 +1,5 @@
 using Nomadik.Core;
+using Nomadik.Core.Abstractions;
 using Nomadik.Example.DTOs;
 using Swashbuckle.AspNetCore.Filters;
 

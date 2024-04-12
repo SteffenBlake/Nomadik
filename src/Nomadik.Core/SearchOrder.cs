@@ -1,5 +1,6 @@
 using System.Linq.Expressions;
 using System.Text.Json.Serialization;
+using Nomadik.Core.Abstractions;
 
 namespace Nomadik.Core;
 
@@ -30,15 +31,14 @@ public class SearchOrder
     /// <see cref="SearchQuery.Compile{TIn, TOut}(Expression{Func{TIn, TOut}})"/>
     /// and its produced <see cref="CompiledSearchQuery{TIn, TOut}"/> instead.
     /// </summary>
-    public Expression<Func<T, object>> Compile<T>(
-        IReadOnlyDictionary<string, Expression> table,
-        IReadOnlyCollection<ParameterExpression> parameters
+    public Expression<Func<TIn, object>> Compile<TIn, TOut>(
+        INomadik<TIn, TOut> context
     )
     {
-        var orderExpression = table[By.ToLower()];
+        var orderExpression = context.Lookup[By.ToLower()];
         var conversion = Expression.Convert(orderExpression, typeof(object));
-        return Expression.Lambda<Func<T, object>>(
-            conversion, parameters
+        return Expression.Lambda<Func<TIn, object>>(
+            conversion, context.Mapper.Parameters 
         );
     }
 }

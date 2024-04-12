@@ -1,3 +1,4 @@
+using Nomadik.Core.Abstractions;
 using Nomadik.Core.IntegrationTests.Data;
 using Nomadik.Core.IntegrationTests.DTOs;
 using Nomadik.Extensions;
@@ -50,10 +51,10 @@ public class BoolJoinOperationTests
                 }
             }
         };
-        var compiledQuery = query.Compile(mapping);
+        var search = Nomadik.Compile(query, mapping);
 
         // Act
-        var result = await db.C.SearchAsync(compiledQuery);
+        var result = await db.C.SearchAsync(search);
 
         // Assert
         Assert.Multiple(() => 
@@ -92,10 +93,10 @@ public class BoolJoinOperationTests
                 Dir = OrderDir.Asc
             }
         };
-        var compiledQuery = query.Compile(mapping);
+        var search = Nomadik.Compile(query, mapping);
 
         // Act
-        var result = await db.C.SearchAsync(compiledQuery);
+        var result = await db.C.SearchAsync(search);
 
         // Assert
         Assert.Multiple(() => 

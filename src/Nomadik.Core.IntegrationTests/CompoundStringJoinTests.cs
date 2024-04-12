@@ -1,3 +1,4 @@
+using Nomadik.Core.Abstractions;
 using Nomadik.Core.IntegrationTests.Data;
 using Nomadik.Core.IntegrationTests.DTOs;
 using Nomadik.Extensions;
@@ -47,10 +48,11 @@ public class CompoundStringJoinTests
                 }
             }
         };
-        var compiledQuery = query.Compile(mapping);
+
+        var search = Nomadik.Compile(query, mapping);
         
         // Act
-        var result = await db.B.SearchAsync(compiledQuery);
+        var result = await db.B.SearchAsync(search);
         
         // Assert
         Assert.Multiple(() => 

@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomadik.Core.IntegrationTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomadik.Extensions.Swagger", "Nomadik.Extensions.Swagger\Nomadik.Extensions.Swagger.csproj", "{F735BE52-61AF-4F4C-B4B4-108DFB484870}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomadik.Extensions.DependencyInjection", "Nomadik.Extensions.DependencyInjection\Nomadik.Extensions.DependencyInjection.csproj", "{7967E06C-15E8-4660-9615-B21F16726749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomadik.Core.Abstractions", "Nomadik.Core.Abstractions\Nomadik.Core.Abstractions.csproj", "{2B6C94C8-B8C8-494C-89DC-0D8150D25887}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,5 +44,13 @@ Global
 		{F735BE52-61AF-4F4C-B4B4-108DFB484870}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F735BE52-61AF-4F4C-B4B4-108DFB484870}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F735BE52-61AF-4F4C-B4B4-108DFB484870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7967E06C-15E8-4660-9615-B21F16726749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7967E06C-15E8-4660-9615-B21F16726749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7967E06C-15E8-4660-9615-B21F16726749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7967E06C-15E8-4660-9615-B21F16726749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6C94C8-B8C8-494C-89DC-0D8150D25887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6C94C8-B8C8-494C-89DC-0D8150D25887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6C94C8-B8C8-494C-89DC-0D8150D25887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6C94C8-B8C8-494C-89DC-0D8150D25887}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

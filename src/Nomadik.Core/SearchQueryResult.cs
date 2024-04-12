@@ -2,17 +2,17 @@ namespace Nomadik.Core;
 
 /// <summary>
 /// Represents a completed and serialized Search against a 
-/// query of <typeparamref name="T"/>. Generated via calling
+/// query of <typeparamref name="TOut"/>. Generated via calling
 /// <see cref="CompiledSearchQuery{TIn, TOut}.SearchAsync(IQueryable{TIn})"/>
 /// </summary>
-public class SearchQueryResult<T>(
-    List<T> results, int from, int of
+public class SearchQueryResult<TOut>(
+    List<TOut> results, int from, int of
 )
 {
     /// <summary>
     /// The Serialized result DTOs of the query
     /// </summary>
-    public List<T> Results { get; } = results;
+    public List<TOut> Results { get; } = results;
 
     /// <summary>
     /// Represents the 1 based inclusive record index

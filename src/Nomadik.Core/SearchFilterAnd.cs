@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using Nomadik.Core.Abstractions;
 
 namespace Nomadik.Core;
 
@@ -14,10 +15,10 @@ public class SearchFilterAnd : SearchFilter
     public required List<SearchFilter> And { get; init; }
 
     /// <inheritdoc/>
-    public override Expression Compile(IReadOnlyDictionary<string, Expression> ctx)
+    public override Expression Compile<TIn, TOut>(INomadik<TIn, TOut> context)
     {
         return And
-            .Select(o => o.Compile(ctx))
+            .Select(o => o.Compile(context))
             .Aggregate(Expression.And);
     }
 }

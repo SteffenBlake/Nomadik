@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Linq.Expressions;
-using Nomadik.Example.Data;
-
 namespace Nomadik.Example.DTOs;
 
 public class IndexTeachersDto 
@@ -15,18 +11,4 @@ public class IndexTeachersDto
     public required int StudentCount { get; init; }
 
     public required IEnumerable<int> ClassroomIds { get; init; }
-
-    public static Expression<Func<Teacher, IndexTeachersDto>> Mapper(
-        ExampleDbContext _
-    )
-    {
-        return t => new ()
-        {
-            Id = t.TeacherId,
-            FullName = t.FirstName + " " + t.LastName,
-            ClassroomCount = t.Classrooms.Count,
-            StudentCount = t.Classrooms.Sum(c => c.Students.Count),
-            ClassroomIds = t.Classrooms.Select(c => c.ClassroomId)
-        };
-    }
 }
