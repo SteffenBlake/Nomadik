@@ -3,6 +3,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.Json;
 using Nomadik.Core.Abstractions;
+using Nomadik.Core.Extensions;
 
 namespace Nomadik.Core.OperationHandlers;
 
@@ -18,28 +19,26 @@ public class ListOperationHandler : INomadikOperationHandler
     )
     {
         Func<Expression, Expression, Expression>? wrapper = op switch {
-            Operator.CO => (a, b) => ListContains(a, b, value.GetType()),
-            Operator.All => ListAll(context, value),
-            Operator.Any => ListAny(context, value),
+            Operator.CO => ListContains(value.GetType()),
+            Operator.All => Subquery(context, value, ListAll),
+            Operator.Any => Subquery(context, value, ListAny),
             _ => null
         };
 
+        var dehydrated = Dehydrate(expression);
         var constant = Expression.Constant(value);
-        result = wrapper?.Invoke(expression, constant);
+        result = wrapper?.Invoke(dehydrated, constant);
 
         return result != null;
     }
 
-    private static MethodCallExpression ListContains(
-        Expression a, Expression b, Type valueType
+    private static Func<Expression, Expression, Expression>? ListContains(
+        Type valueType
     )
     {
-        var dehydrated = Dehydrate(a);
-
         // There's multiple Contains functions, we want the simpler one
         var contains = typeof(Enumerable)
             .GetMethods(
-                BindingFlags.NonPublic | 
                 BindingFlags.Public | 
                 BindingFlags.Static
             ).Single(m => 
@@ -47,33 +46,112 @@ public class ListOperationHandler : INomadikOperationHandler
                 m.GetParameters().Length == 2
             ).MakeGenericMethod(valueType);
 
-        return Expression.Call(contains, dehydrated, b);
+        return (a, b) => Expression.Call(contains, a, b);
     }
 
-    private static Func<Expression, Expression, Expression>? ListAll<TIn, TOut>(
+    // Chains on a subquery inside of a LINQ operation.
+    // IE .Any(...) or .All(...).
+    // Composed from a sub filter expression
+    private static Func<Expression, Expression, Expression>? Subquery<TIn, TOut>(
         INomadik<TIn, TOut> context,
-        object value
+        object value,
+        Func<Type, MethodInfo> methodProvider
     )
     {
-        if (value is not JsonDocument doc)
+        if (value is not SearchFilter filter)
         {
             return null;
         }
 
-        throw new NotImplementedException();
+        var compile = filter.GetType()
+            .GetMethods(BindingFlags.Public | BindingFlags.Instance)
+            .Single(m => m.Name == nameof(filter.Compile));
+
+        // We arent actually comparing against b, but
+        // instead using it to compile an entire subquery, so we discard it here
+        // Since we used it above to compose filter
+        return (a, _) =>
+        {
+            // Extract the T out of IEnumerable<T>
+            var valueType = a.Type.GenericTypeArguments.Single();
+            var chainedMethod = methodProvider(valueType);
+            var typedCompile = compile.MakeGenericMethod(valueType, valueType);
+
+            var (subContext, parameter) = SubqueryContext(context, valueType);
+            var innerExpression = 
+                (Expression)typedCompile.Invoke(filter, [subContext])!;
+
+            var lambdaType = typeof(Func<,>)
+                .MakeGenericType(valueType, typeof(bool));
+
+            var innerQuery = Expression.Lambda(
+                lambdaType, innerExpression, parameter
+            );
+
+            return Expression.Call(chainedMethod, a, innerQuery!);   
+        };
     }
 
-    private static Func<Expression, Expression, Expression>? ListAny<TIn, TOut>(
-        INomadik<TIn, TOut> context,
-        object value
+    // Provides LINQ .All(...)
+    private static MethodInfo ListAll(Type valueType)
+    {
+        return typeof(Enumerable)
+            .GetMethods(
+                BindingFlags.Public | 
+                BindingFlags.Static
+            ).Single(m => 
+                m.Name == nameof(Enumerable.All) &&
+                m.GetParameters().Length == 2
+            ).MakeGenericMethod(valueType);
+    }
+
+
+    // Provides LINQ .Any(...)
+    private static MethodInfo ListAny(Type valueType)
+    {
+        return typeof(Enumerable)
+            .GetMethods(
+                BindingFlags.Public | 
+                BindingFlags.Static
+            ).Single(m => 
+                m.Name == nameof(Enumerable.All) &&
+                m.GetParameters().Length == 2
+            ).MakeGenericMethod(valueType);
+    }
+
+    private static (object, ParameterExpression)  SubqueryContext<TIn, TOut>(
+        INomadik<TIn, TOut> old, Type targetType
     )
     {
-        if (value is not JsonDocument doc)
-        {
-            return null;
-        }
+        var parameter = Expression.Parameter(targetType);
 
-        throw new NotImplementedException();
+        IReadOnlyDictionary<string, Expression> lookup = 
+            new Dictionary<string, Expression>{{ "value", parameter }};
+
+        var lambdaType = typeof(Func<,>)
+            .MakeGenericType(targetType, targetType);
+
+        var lambda = Expression.Lambda(lambdaType, parameter, parameter);
+
+        var constructors = typeof(Nomadik<,>)
+            .MakeGenericType(targetType, targetType)
+            .GetConstructors();
+
+        var dictType = typeof(IReadOnlyDictionary<string, Expression>); 
+        var targetConstructor = constructors
+            .Single(c =>
+            {
+                var parameters = c.GetParameters();
+                return parameters.Any(p => p.ParameterType == dictType);
+            }); 
+
+        var innerContext = targetConstructor.Invoke([
+            lambda, 
+            lookup, 
+            old.OpHandlers
+        ]);
+
+        return (innerContext, parameter);
     }
 
     // TODO : This probably could be redone as an ExpressionVisitor

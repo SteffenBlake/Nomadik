@@ -53,7 +53,7 @@ public class SearchOperation
         }
 
         throw new NotImplementedException(
-            $"No injected {nameof(INomadikOperationHandler)} handled the given data: Type='{Value.GetType}' Value={Value} Operator={Operator}"
+            $"No injected {nameof(INomadikOperationHandler)} handled the given data: Type='{Value.GetType()}' Value={Value} Operator={Operator}"
         );
     }
 }

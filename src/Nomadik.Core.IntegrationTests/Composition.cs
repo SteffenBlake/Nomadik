@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Nomadik.Core.Abstractions;
 using Nomadik.Core.IntegrationTests.Data;
@@ -15,6 +16,18 @@ internal class Composition
             );
 
         return new (options.Options);
+    }
+
+    internal static INomadik<TIn, TOut> CreateNomadik<TIn, TOut>
+    (
+        Expression<Func<TIn, TOut>> mapper
+    )
+    {
+        return new Nomadik<TIn, TOut>(
+            mapper,
+            new NomadikConfig(),
+            Nomadik.DefaultOpHandlers()
+        );
     }
 
     internal static INomadik<TIn, TOut> CreateNomadik<TIn, TOut>

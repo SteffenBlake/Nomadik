@@ -7,12 +7,26 @@ using Nomadik.Core.OperationHandlers;
 namespace Nomadik;
 
 /// <inheritdoc/>
-public class Nomadik<TIn, TOut>(
-    Expression<Func<TIn, TOut>> mapping,
-    INomadikConfig config,
-    IEnumerable<INomadikOperationHandler> opHandlers
-) : INomadik<TIn, TOut>
+public class Nomadik<TIn, TOut> : INomadik<TIn, TOut>
 {
+    public Nomadik(
+        Expression<Func<TIn, TOut>> mapping,
+        IReadOnlyDictionary<string, Expression> lookup,
+        IEnumerable<INomadikOperationHandler> opHandlers
+    )
+    {
+        Mapper = mapping;
+        Lookup = lookup;
+        OpHandlers = opHandlers;
+    }
+
+    public Nomadik(
+        Expression<Func<TIn, TOut>> mapping,
+        INomadikConfig config,
+        IEnumerable<INomadikOperationHandler> opHandlers
+    ) : this(mapping, mapping.ToMemberTable(config.KeyComparer), opHandlers)
+    {}
+
     public Nomadik(
         IMapperProvider<TIn, TOut> provider,
         INomadikConfig config,
@@ -21,15 +35,13 @@ public class Nomadik<TIn, TOut>(
     {}
 
     /// <inheritdoc/>
-    public Expression<Func<TIn, TOut>> Mapper { get; } = mapping;
+    public Expression<Func<TIn, TOut>> Mapper { get; }
 
     /// <inheritdoc/>
-    public IReadOnlyDictionary<string, Expression> Lookup { get; } 
-        = mapping.ToMemberTable(config.KeyComparer);
+    public IReadOnlyDictionary<string, Expression> Lookup { get; }
 
     /// <inheritdoc/>
     public IEnumerable<INomadikOperationHandler> OpHandlers { get; }
-        = opHandlers;
 }
 
 public static class Nomadik
