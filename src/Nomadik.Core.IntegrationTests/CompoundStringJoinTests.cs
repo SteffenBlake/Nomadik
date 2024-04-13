@@ -34,7 +34,7 @@ public class CompoundStringJoinTests
         using var db = Composition.CreateDb();
         await BuildDataAsync(db);
 
-        var mapping = DtoB.FromModel(db);
+        var mapping = DTOB.FromModel(db);
 
         var query = new SearchQuery()
         {
@@ -42,7 +42,7 @@ public class CompoundStringJoinTests
             {
                 Where = new()
                 {
-                    Key = nameof(DtoB.ModelAIds),
+                    Key = nameof(DTOB.ModelAIds),
                     Operator = Operator.CO,
                     Value = "|1|"
                 }

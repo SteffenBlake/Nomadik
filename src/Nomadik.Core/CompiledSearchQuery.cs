@@ -45,7 +45,7 @@ public class CompiledSearchQuery<TIn, TOut>(
         // will also be the count of the total possible results
         // however if pagination is enabled then that inherently requires
         // a second Count query on the db
-        var of = _query.Filter == null ?
+        var of = _query.Page == null ?
             result.Count :
             await filtered.CountAsync();
 

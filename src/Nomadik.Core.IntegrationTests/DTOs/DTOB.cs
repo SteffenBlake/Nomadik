@@ -3,13 +3,13 @@ using Nomadik.Core.IntegrationTests.Data;
 
 namespace Nomadik.Core.IntegrationTests.DTOs;
 
-public class DtoB 
+public class DTOB 
 {
     public required int Id { get; init; }
 
     public required IEnumerable<string> ModelAIds { get; init; }
 
-    public static Expression<Func<TestModelB, DtoB>> FromModel(TestDbContext _)
+    public static Expression<Func<TestModelB, DTOB>> FromModel(TestDbContext _)
     {
         return b => new()
         {

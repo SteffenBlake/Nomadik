@@ -11,5 +11,7 @@ public class TestDbContext(DbContextOptions<TestDbContext> options) :
 
    public DbSet<TestModelC> C { get; set; } 
 
-   public DbSet<TestModelD> D { get; set; } 
+   public DbSet<TestModelD> D { get; set; }
+
+   public DbSet<TestModelPaging> TestModelPagings { get; set; }
 }
