@@ -2,6 +2,7 @@ using System.Linq.Expressions;
 using System.Text.Json.Serialization;
 using Nomadik.Core.Abstractions;
 using Nomadik.Core.Converters;
+using Nomadik.Core.Extensions;
 
 namespace Nomadik.Core;
 
@@ -14,7 +15,7 @@ public abstract class SearchFilter
     /// <summary>
     /// Serializes a filter into a logical expression
     /// Should not be called directly, use 
-    /// <see cref="SearchQuery.Compile{TIn, TOut}(Expression{Func{TIn, TOut}})"/>
+    /// <see cref="NomadikExtensions.Compile{TIn, TOut}(INomadik{TIn, TOut}, SearchQuery)"/>
     /// and its produced <see cref="CompiledSearchQuery{TIn, TOut}"/> instead.
     /// </summary>
     public abstract Expression Compile<TIn, TOut>(

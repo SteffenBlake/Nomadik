@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using System.Text.Json.Serialization;
 using Nomadik.Core.Abstractions;
+using Nomadik.Core.Extensions;
 
 namespace Nomadik.Core;
 
@@ -28,7 +29,7 @@ public class SearchOrder
     /// <summary>
     /// Compiles this Order Operation into a logical expression.
     /// Should not be called directly, use 
-    /// <see cref="SearchQuery.Compile{TIn, TOut}(Expression{Func{TIn, TOut}})"/>
+    /// <see cref="NomadikExtensions.Compile{TIn, TOut}(INomadik{TIn, TOut}, SearchQuery)"/>
     /// and its produced <see cref="CompiledSearchQuery{TIn, TOut}"/> instead.
     /// </summary>
     public Expression<Func<TIn, object>> Compile<TIn, TOut>(

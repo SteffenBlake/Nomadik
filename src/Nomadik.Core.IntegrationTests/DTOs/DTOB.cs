@@ -14,7 +14,7 @@ public class DTOB
         return b => new()
         {
             Id = b.TestModelBId,
-            ModelAIds = b.TestModelAs.Select(a => "|" + a.TestModelAId + "|")
+            ModelAIds = b.TestModelAs.Select(a => "|" + a.TestModelAId + "|").ToList()
         };
     }
 }

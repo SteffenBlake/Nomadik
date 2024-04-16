@@ -2,6 +2,7 @@ using System.Linq.Expressions;
 using System.Text.Json.Serialization;
 using Nomadik.Core.Abstractions;
 using Nomadik.Core.Converters;
+using Nomadik.Core.Extensions;
 
 namespace Nomadik.Core;
 
@@ -27,12 +28,12 @@ public class SearchOperation
     /// Value to compare against
     /// </summary>
     [JsonConverter(typeof(ObjectToInferredTypesConverter))]
-    public required object Value { get; init; }
+    public required object? Value { get; init; }
 
     /// <summary>
     /// Serializes this Operation into a logical expression
     /// Should not be called directly, use 
-    /// <see cref="Nomadik{Tin, Tout}.Compile(SearchQuery)"/>
+    /// <see cref="NomadikExtensions.Compile{TIn, TOut}(INomadik{TIn, TOut}, SearchQuery)"/>
     /// and its produced <see cref="CompiledSearchQuery{TIn, TOut}"/> instead.
     /// </summary>
     public Expression Compile<TIn, TOut>(INomadik<TIn, TOut> context)

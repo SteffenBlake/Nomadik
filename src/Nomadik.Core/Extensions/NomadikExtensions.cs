@@ -3,7 +3,7 @@ using Nomadik.Core.Abstractions;
 namespace Nomadik.Core.Extensions;
 
 /// <summary>
-/// Extends <see cref="INomadik{TIn, TOut}"
+/// Extends <see cref="INomadik{TIn, TOut}"/>
 /// </summary>
 public static class NomadikExtensions 
 {

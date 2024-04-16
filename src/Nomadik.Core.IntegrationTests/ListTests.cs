@@ -10,6 +10,9 @@ public class ListTests
 {
     private static async Task<List<TestModelB>> BuildDataAsync(TestDbContext db)
     {
+        //  B
+        // 0-4 -> 10-14 + 30-34
+        // 5-9 -> 20-24 + 40-44
         var models = new int[10].Select((_, i) => new TestModelB()
         {
             TestModelBId = i,
@@ -63,6 +66,66 @@ public class ListTests
                             Key = "value",
                             Operator = Operator.GTE,
                             Value = "|20|"
+                        }
+                    }
+                }
+            }
+        };
+
+        var search = nomadik.Compile(query);
+
+        // Act
+        var searchResult = await db.B.SearchAsync(search);
+
+        // Assert
+        Assert.Multiple(() =>
+        {
+            Assert.That(searchResult.From, Is.EqualTo(1));
+            Assert.That(searchResult.To, Is.EqualTo(expecteds.Count));
+            Assert.That(searchResult.Of, Is.EqualTo(expecteds.Count));
+            Assert.That(searchResult.Results, Has.Count.EqualTo(expecteds.Count));
+        });
+
+        for (var n = 0; n < expecteds.Count; n++)
+        {
+            var expected = expecteds[n];
+            var actual = searchResult.Results
+                .SingleOrDefault(r => r.Id == expected.TestModelBId);
+
+            Assert.That(actual, Is.Not.Null);
+        }
+    }
+
+    [Test]
+    public async Task List_Any_SubFilter_Works()
+    {
+        // Arrange
+        using var db = Composition.CreateDb();
+        var nomadik = Composition.CreateNomadik(DTOB.FromModel(db));
+
+        var data = await BuildDataAsync(db);
+
+        var expecteds = data.Where(d => 
+            d.TestModelAs.Any(a => 
+                a.TestModelAId >= 22
+            )
+        ).ToList();
+
+        var query = new SearchQuery()
+        {
+            Filter = new SearchFilterWhere()
+            {
+                Where = new()
+                {
+                    Key = nameof(DTOB.ModelAIds),
+                    Operator = Operator.Any,
+                    Value = new SearchFilterWhere()
+                    {
+                        Where = new()
+                        {
+                            Key = "value",
+                            Operator = Operator.GTE,
+                            Value = "|22|"
                         }
                     }
                 }

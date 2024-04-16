@@ -48,6 +48,74 @@ public class PagingTests
     [TestCase(nameof(TestPagingDTO.ADTNull))]
     [TestCase(nameof(TestPagingDTO.ABool))]
     [TestCase(nameof(TestPagingDTO.ABoolNull))]
+    public async Task Paging_Asc(string key)
+    {
+        // Arrange
+        using var db = Composition.CreateDb();
+        var nomadik = Composition.CreateNomadik(new PagingMapper());
+
+        var data = await GenerateData(db);
+
+        var expecteds = data
+            .OrderBy(d => d.SomeInt)
+            .Take(5)
+            .ToList();
+
+        var query = new SearchQuery()
+        {
+            Order = new()
+            {
+                By = key,
+                Dir = OrderDir.Asc,
+                Then = new()
+                {
+                    By = nameof(TestPagingDTO.AnInt),
+                    Dir = OrderDir.Asc
+                }
+            },
+            Page = new()
+            {
+                Num = 1,
+                Size = 5,
+            }
+        };
+
+        // Act
+        var search = nomadik.Compile(query);
+        var searchResult = await db.TestModelPagings
+            .SearchAsync(search);
+
+        // Assert
+        Assert.That(searchResult.Results, Has.Count.EqualTo(expecteds.Count));
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(searchResult.Of, Is.EqualTo(data.Count));
+            Assert.That(searchResult.From, Is.EqualTo(1));
+            Assert.That(searchResult.To, Is.EqualTo(5));
+        });
+
+        for (var n = 0; n < expecteds.Count; n++)
+        {
+            var expected = expecteds[n];
+            var actual = searchResult.Results[n];
+
+            Assert.That(actual.AnInt, Is.EqualTo(expected.SomeInt));
+        }
+    }
+
+    [TestCase(nameof(TestPagingDTO.AnInt))]
+    [TestCase(nameof(TestPagingDTO.AnIntNull))]
+    [TestCase(nameof(TestPagingDTO.AString))]
+    [TestCase(nameof(TestPagingDTO.AStringNull))]
+    [TestCase(nameof(TestPagingDTO.ADecimal))]
+    [TestCase(nameof(TestPagingDTO.ADecimalNull))]
+    [TestCase(nameof(TestPagingDTO.ADTO))]
+    [TestCase(nameof(TestPagingDTO.ADTONull))]
+    [TestCase(nameof(TestPagingDTO.ADT))]
+    [TestCase(nameof(TestPagingDTO.ADTNull))]
+    [TestCase(nameof(TestPagingDTO.ABool))]
+    [TestCase(nameof(TestPagingDTO.ABoolNull))]
     public async Task Paging_Desc(string key)
     {
         // Arrange
@@ -100,17 +168,11 @@ public class PagingTests
             var expected = expecteds[n];
             var actual = searchResult.Results[n];
 
-            try {
-                Assert.That(actual.AnInt, Is.EqualTo(expected.SomeInt));
-            } 
-            catch (Exception)
-            {
-                var ids = searchResult.Results
-                    .Select(r => r.AnInt)
-                    .ToList();
-                /* Console.WriteLine($"Actual Order: {string.Join(",", ids)}"); */
-                throw;
-            }
+            Assert.That(actual.AnInt, Is.EqualTo(expected.SomeInt));
+            var ids = searchResult.Results
+                .Select(r => r.AnInt)
+                .ToList();
+        
         }
     }
 }

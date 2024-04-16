@@ -2,4 +2,4 @@
 _layout: landing
 ---
 
-# [API Documentation](api)
+# [API Documentation](/api/Nomadik.html)

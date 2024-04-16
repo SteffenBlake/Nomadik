@@ -6,7 +6,7 @@ namespace Nomadik.Core;
 
 /// <summary>
 /// Represents a <see cref="SearchQuery"/> that has been compiled against
-/// a given <see cref="INomadik{TIn, TOut}/> mapping", binding it to a hard type
+/// a given <see cref="INomadik{TIn, TOut}"/> mapping", binding it to a hard type
 /// and caching the Expression Mappings for compiling Filter/Search Queries
 /// </summary>
 public class CompiledSearchQuery<TIn, TOut>(
@@ -27,7 +27,7 @@ public class CompiledSearchQuery<TIn, TOut>(
     /// back to back.
     /// If Pagination is enabled, the total count of unpaged items is
     /// simultaneously async queried to populate the 
-    /// <see cref="SearchQueryResult{T}.Of"/> property.
+    /// <see cref="SearchQueryResult{TOut}.Of"/> property.
     /// </summary>
     public async Task<SearchQueryResult<TOut>> SearchAsync(
         IQueryable<TIn> data
@@ -116,7 +116,7 @@ public class CompiledSearchQuery<TIn, TOut>(
         return OrderByInternal(
             data, 
             _query.Order ?? throw new NullReferenceException(
-                $"{nameof(SearchQuery.Order)} is required for ThenBy()"
+                $"{nameof(SearchQuery.Order)} is required for OrderBy()"
             )
         );
     }
@@ -132,7 +132,6 @@ public class CompiledSearchQuery<TIn, TOut>(
         {
             OrderDir.Asc => data.OrderBy(orderLambda),
             OrderDir.Desc => data.OrderByDescending(orderLambda),
-            _ => throw new NotImplementedException()
         };
 
         return order.Then == null ? ordered : ThenByInternal(ordered, order.Then);
@@ -196,7 +195,6 @@ public class CompiledSearchQuery<TIn, TOut>(
             {
                 OrderDir.Asc => result.ThenBy(orderLambda),
                 OrderDir.Desc => result.ThenByDescending(orderLambda),
-                _ => throw new NotImplementedException()
             };
 
             target = target.Then;
@@ -231,7 +229,7 @@ public class CompiledSearchQuery<TIn, TOut>(
     }
 
     /// <summary>
-    /// Leverages a <see cref="INomadik{TIn, TOut}" bound MemberInit Expression
+    /// Leverages a <see cref="INomadik{TIn, TOut}"/> bound MemberInit Expression
     /// to perform a LINQ Select Operation on a Query
     /// </summary>
     public IQueryable<TOut> Select(

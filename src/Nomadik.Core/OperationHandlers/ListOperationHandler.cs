@@ -1,25 +1,26 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text.Json;
 using Nomadik.Core.Abstractions;
 using Nomadik.Core.Extensions;
 
 namespace Nomadik.Core.OperationHandlers;
 
+/// <inheritdoc/>
 public class ListOperationHandler : INomadikOperationHandler
 {
+    /// <inheritdoc/>
     public bool TryHandle<TIn, TOut>(
         INomadik<TIn, TOut> context, 
         Operator op, 
         Expression expression, 
-        object value, 
+        object? value, 
         [NotNullWhen(true)] 
         out Expression? result
     )
     {
         Func<Expression, Expression, Expression>? wrapper = op switch {
-            Operator.CO => ListContains(value.GetType()),
+            Operator.CO => ListContains(),
             Operator.All => Subquery(context, value, ListAll),
             Operator.Any => Subquery(context, value, ListAny),
             _ => null
@@ -32,9 +33,7 @@ public class ListOperationHandler : INomadikOperationHandler
         return result != null;
     }
 
-    private static Func<Expression, Expression, Expression>? ListContains(
-        Type valueType
-    )
+    private static Func<Expression, Expression, Expression>? ListContains()
     {
         // There's multiple Contains functions, we want the simpler one
         var contains = typeof(Enumerable)
@@ -44,9 +43,21 @@ public class ListOperationHandler : INomadikOperationHandler
             ).Single(m => 
                 m.Name == nameof(Enumerable.Contains) &&
                 m.GetParameters().Length == 2
-            ).MakeGenericMethod(valueType);
+            );
 
-        return (a, b) => Expression.Call(contains, a, b);
+        return (a, b) => 
+        {
+            // Extract the T out of IEnumerable<T>
+            var valueType = a.Type.GenericTypeArguments.Single();
+            var typedContains = contains.MakeGenericMethod(valueType);
+            var casted = Expression.Convert(b, valueType);
+
+            return Expression.Call(
+                typedContains, 
+                a, 
+                casted
+            );
+        };
     }
 
     // Chains on a subquery inside of a LINQ operation.
@@ -54,7 +65,7 @@ public class ListOperationHandler : INomadikOperationHandler
     // Composed from a sub filter expression
     private static Func<Expression, Expression, Expression>? Subquery<TIn, TOut>(
         INomadik<TIn, TOut> context,
-        object value,
+        object? value,
         Func<Type, MethodInfo> methodProvider
     )
     {
@@ -114,7 +125,7 @@ public class ListOperationHandler : INomadikOperationHandler
                 BindingFlags.Public | 
                 BindingFlags.Static
             ).Single(m => 
-                m.Name == nameof(Enumerable.All) &&
+                m.Name == nameof(Enumerable.Any) &&
                 m.GetParameters().Length == 2
             ).MakeGenericMethod(valueType);
     }

@@ -12,7 +12,7 @@ public class DefaultOperationHandler : INomadikOperationHandler
         INomadik<TIn, TOut> context, 
         Operator op, 
         Expression expression, 
-        object value,
+        object? value,
         [NotNullWhen(returnValue:true)]
         out Expression? result
     )

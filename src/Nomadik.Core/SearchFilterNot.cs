@@ -6,7 +6,6 @@ namespace Nomadik.Core;
 /// <summary>
 /// Implementation of <see cref="SearchFilter"/> that inverts the
 /// logic via a NOT operator of its child 
-/// <see cref="Not"/> <see cref="SearchFilter/>
 /// </summary>
 public class SearchFilterNot : SearchFilter
 {

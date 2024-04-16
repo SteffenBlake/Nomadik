@@ -9,6 +9,12 @@ namespace Nomadik.Extensions.DependencyInjection;
 /// </summary>
 public static class ServiceCollectionExtensions
 {
+    /// <summary>
+    /// Registers the full stack of Nomadik core services
+    /// to the Dependency Injection engine.
+    /// Inner options enable registering of individal Mappings,
+    /// addition of new middleware, and modifying project wide configuration
+    /// </summary>
     public static IServiceCollection AddNomadik(
         this IServiceCollection services,
         Action<NomadikOptions> options

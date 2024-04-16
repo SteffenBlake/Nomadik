@@ -7,18 +7,20 @@ using Nomadik.Core.Extensions;
 
 namespace Nomadik.Core.OperationHandlers;
 
+/// <inheritdoc/>
 public class StringOperationHandler : INomadikOperationHandler
 {
+    /// <inheritdoc/>
     public bool TryHandle<TIn, TOut>(
         INomadik<TIn, TOut> context, 
         Operator op, 
         Expression expression, 
-        object value, 
+        object? value, 
         [NotNullWhen(true)] 
         out Expression? result
     )
     {
-        if (value is not string s)
+        if (value is not string s && value != null)
         {
             result = default;
             return false;

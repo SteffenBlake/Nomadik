@@ -7,19 +7,12 @@ using Nomadik.Core.OperationHandlers;
 namespace Nomadik;
 
 /// <inheritdoc/>
-public class Nomadik<TIn, TOut> : INomadik<TIn, TOut>
+public class Nomadik<TIn, TOut>(
+    Expression<Func<TIn, TOut>> mapping,
+    IReadOnlyDictionary<string, Expression> lookup,
+    IEnumerable<INomadikOperationHandler> opHandlers
+) : INomadik<TIn, TOut>
 {
-    public Nomadik(
-        Expression<Func<TIn, TOut>> mapping,
-        IReadOnlyDictionary<string, Expression> lookup,
-        IEnumerable<INomadikOperationHandler> opHandlers
-    )
-    {
-        Mapper = mapping;
-        Lookup = lookup;
-        OpHandlers = opHandlers;
-    }
-
     public Nomadik(
         Expression<Func<TIn, TOut>> mapping,
         INomadikConfig config,
@@ -35,13 +28,13 @@ public class Nomadik<TIn, TOut> : INomadik<TIn, TOut>
     {}
 
     /// <inheritdoc/>
-    public Expression<Func<TIn, TOut>> Mapper { get; }
+    public Expression<Func<TIn, TOut>> Mapper { get; } = mapping;
 
     /// <inheritdoc/>
-    public IReadOnlyDictionary<string, Expression> Lookup { get; }
+    public IReadOnlyDictionary<string, Expression> Lookup { get; } = lookup;
 
     /// <inheritdoc/>
-    public IEnumerable<INomadikOperationHandler> OpHandlers { get; }
+    public IEnumerable<INomadikOperationHandler> OpHandlers { get; } = opHandlers;
 }
 
 public static class Nomadik
@@ -120,6 +113,14 @@ public static class Nomadik
         return new(context, query);
     }
 
+    /// <summary>
+    /// The set of baseline Operation Handlers that Nomadik ships with.
+    /// These will be the ones used by Nomadik if no further configuration
+    /// is specified, handled in the following order:
+    /// 1. <see cref="ListOperationHandler"/>
+    /// 2. <see cref="StringOperationHandler"/>
+    /// 3. <see cref="DefaultOperationHandler"/>
+    /// </summary>
     public static IEnumerable<INomadikOperationHandler> DefaultOpHandlers()
     {
         yield return new ListOperationHandler();

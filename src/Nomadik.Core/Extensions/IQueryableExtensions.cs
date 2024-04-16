@@ -32,7 +32,7 @@ public static class IQueryableExtensions
         CompiledSearchQuery<TIn, TOut> query
     )
     {
-        return query.OrderBy(data);
+        return query.TryOrderBy(data);
     }
 
     /// <inheritdoc cref="CompiledSearchQuery{TIn, TOut}.OrderBy(IQueryable{T})" />
