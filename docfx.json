@@ -4,6 +4,7 @@
       "src": [
         {
           "files": [
+            "src/Nomadik.Core.Abstractions/Nomadik.Core.Abstractions.csproj",
             "src/Nomadik.Core/Nomadik.Core.csproj",
             "src/Nomadik.Extensions.Swagger/Nomadik.Extensions.Swagger.csproj",
             "src/Nomadik.Extensions.DependencyInjection/Nomadik.Extensions.DependencyInjection.csproj"

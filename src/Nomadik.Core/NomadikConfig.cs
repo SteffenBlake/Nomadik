@@ -2,7 +2,7 @@ using Nomadik.Core.Abstractions;
 
 namespace Nomadik.Core;
 
-/// <inheritdoc/>
+/// <inheritdoc cref="INomadikConfig"/>
 public class NomadikConfig : INomadikConfig
 {
     /// <inheritdoc/>

@@ -3,6 +3,10 @@ namespace Nomadik.Core.Abstractions;
 /// <summary>
 /// Set of supported Operations for serialization of filter expressions
 /// </summary>
+/// <include 
+///     file="XmlDocs/Operator.xml"
+///     path="doc/member[@id='EQ']/*"
+/// />
 public enum Operator 
 {
     /// <summary>Equals</summary>

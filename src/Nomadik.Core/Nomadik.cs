@@ -6,7 +6,17 @@ using Nomadik.Core.OperationHandlers;
 
 namespace Nomadik;
 
-/// <inheritdoc/>
+/// <summary>
+/// Concrete implementation of <see cref="INomadik{TIn, TOut}"/>.
+///
+/// Largely used as an injectable container, for most use cases consumers
+/// should either interface with the static <see cref="Nomadik"/> API, or,
+/// leverage 
+/// <see href="/api/Nomadik.Extensions.DependencyInjection.html">
+/// Nomadik.Extensions.DependencyInjection
+/// </see>
+/// and inject the abstract <see cref="INomadik{TIn, TOut}"/> instead.
+/// </summary>
 public class Nomadik<TIn, TOut>(
     Expression<Func<TIn, TOut>> mapping,
     IReadOnlyDictionary<string, Expression> lookup,
@@ -46,6 +56,10 @@ public static class Nomadik
     /// to perform Filter, Sort, and Pagination operations on matching
     /// <see cref="IQueryable{T}"/> queries.
     /// </summary>
+    /// <include 
+    ///     file="XmlDocs/Nomadik/Compile.xml"
+    ///     path="doc/member[@id='M:Nomadik.Nomadik.Compile``2(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{``0,``1}})']/*"
+    /// />
     public static CompiledSearchQuery<TIn, TOut> Compile<TIn, TOut>(
         SearchQuery query, 
         Expression<Func<TIn, TOut>> mapper
@@ -61,6 +75,10 @@ public static class Nomadik
     /// to perform Filter, Sort, and Pagination operations on matching
     /// <see cref="IQueryable{T}"/> queries.
     /// </summary>
+    /// <include 
+    ///     file="XmlDocs/Nomadik/Compile.xml"
+    ///     path="doc/member[@id='M:Nomadik.Nomadik.Compile``2(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{``0,``1}},Nomadik.Core.Abstractions.INomadikConfig)']/*"
+    /// />
     public static CompiledSearchQuery<TIn, TOut> Compile<TIn, TOut>(
         SearchQuery query, 
         Expression<Func<TIn, TOut>> mapper,
@@ -77,6 +95,10 @@ public static class Nomadik
     /// to perform Filter, Sort, and Pagination operations on matching
     /// <see cref="IQueryable{T}"/> queries.
     /// </summary>
+    /// <include 
+    ///     file="XmlDocs/Nomadik/Compile.xml"
+    ///     path="doc/member[@id='M:Nomadik.Nomadik.Compile``2(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IEnumerable{Nomadik.Core.Abstractions.INomadikOperationHandler})']/*"
+    /// />
     public static CompiledSearchQuery<TIn, TOut> Compile<TIn, TOut>(
         SearchQuery query, 
         Expression<Func<TIn, TOut>> mapper,
@@ -98,6 +120,10 @@ public static class Nomadik
     /// to perform Filter, Sort, and Pagination operations on matching
     /// <see cref="IQueryable{T}"/> queries.
     /// </summary>
+    /// <include 
+    ///     file="XmlDocs/Nomadik/Compile.xml"
+    ///     path="doc/member[@id='M:Nomadik.Nomadik.Compile``2(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{``0,``1}},Nomadik.Core.Abstractions.INomadikConfig,System.Collections.Generic.IEnumerable{Nomadik.Core.Abstractions.INomadikOperationHandler})']/*"
+    /// />
     public static CompiledSearchQuery<TIn, TOut> Compile<TIn, TOut>(
         SearchQuery query, 
         Expression<Func<TIn, TOut>> mapper,

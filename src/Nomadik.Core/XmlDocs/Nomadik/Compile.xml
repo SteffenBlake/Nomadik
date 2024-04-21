@@ -1,0 +1,144 @@
+<doc>
+    <member id="M:Nomadik.Nomadik.Compile``2(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+        <example>
+            <code>
+            <!-- c_sharp -->
+            <![CDATA[
+                // SearchQuery is a fully serializable POCO
+                async Task<List<MyDto>> Example(SearchQuery query)
+                {
+                    // Build a Mapper of DataModel -> DTO
+                    Expression<Func<FooModel, MyDto>> mapper = m => new()
+                    {
+                        Foo = m.Bar
+                    };
+
+                    // Use Nomadik to compile the SearchQuery + Mapper
+                    // Into a CompiledSearchQuery<FooModel, MyDto>
+                    var searcher = Nomadik.Compile(query, mapper);
+
+                    // Perform an async Search on your database
+                    var searchResult = await MyDbContext.Foos
+                        .SearchAsync(searcher);
+
+                    // Consume the results
+                    return searchResult.Results;
+                }
+            ]]>
+            </code>
+        </example>
+    </member>
+  
+    <member id="M:Nomadik.Nomadik.Compile``2(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{``0,``1}},Nomadik.Core.Abstractions.INomadikConfig)">
+        <example>
+            <code>
+            <![CDATA[
+                // SearchQuery is a fully serializable POCO
+                async Task<List<MyDto>> Example(SearchQuery query)
+                {
+                    // Build a Mapper of DataModel -> DTO
+                    Expression<Func<FooModel, MyDto>> mapper = m => new()
+                    {
+                        Foo = m.Bar
+                    };
+
+                    // Use Nomadik to compile the SearchQuery + Mapper
+                    // Into a CompiledSearchQuery<FooModel, MyDto>
+                    var searcher = Nomadik.Compile(
+                        query, 
+                        mapper,
+                        new NomadikConfig() 
+                        { 
+                            KeyComparer = StringComparer.InvariantCultureIgnoreCase 
+                        }
+                    );
+
+                    // Perform an async Search on your database
+                    var searchResult = await MyDbContext.Foos
+                        .SearchAsync(searcher);
+
+                    // Consume the results
+                    return searchResult.Results;
+                }
+            ]]>
+            </code>
+        </example>
+    </member>
+
+    <member id="M:Nomadik.Nomadik.Compile``2(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IEnumerable{Nomadik.Core.Abstractions.INomadikOperationHandler})">
+        <example>
+            <code>
+            <![CDATA[
+                // SearchQuery is a fully serializable POCO
+                async Task<List<MyDto>> Example(SearchQuery query)
+                {
+                    // Build a Mapper of DataModel -> DTO
+                    Expression<Func<FooModel, MyDto>> mapper = m => new()
+                    {
+                        Foo = m.Bar
+                    };
+
+                    var opHandlers = Nomadik.DefaultOpHandlers().ToList();
+                    opHandlers.Add(new MyCustomOpHandler());
+
+                    // Use Nomadik to compile the SearchQuery + Mapper
+                    // Into a CompiledSearchQuery<FooModel, MyDto>
+                    var searcher = Nomadik.Compile(
+                        query, 
+                        mapper,
+                        opHandlers
+                    );
+
+                    // Perform an async Search on your database
+                    var searchResult = await MyDbContext.Foos
+                        .SearchAsync(searcher);
+
+                    // Consume the results
+                    return searchResult.Results;
+                }
+            ]]>
+            </code>
+        </example>
+    </member>
+
+    <member id="M:Nomadik.Nomadik.Compile``2(Nomadik.Core.SearchQuery,System.Linq.Expressions.Expression{System.Func{``0,``1}},Nomadik.Core.Abstractions.INomadikConfig,System.Collections.Generic.IEnumerable{Nomadik.Core.Abstractions.INomadikOperationHandler})">
+        <example>
+            <code>
+            <![CDATA[
+                // SearchQuery is a fully serializable POCO
+                async Task<List<MyDto>> Example(SearchQuery query)
+                {
+                    // Build a Mapper of DataModel -> DTO
+                    Expression<Func<FooModel, MyDto>> mapper = m => new()
+                    {
+                        Foo = m.Bar
+                    };
+
+                    var opHandlers = Nomadik.DefaultOpHandlers().ToList();
+                    opHandlers.Add(new MyCustomOpHandler());
+
+                    // Use Nomadik to compile the SearchQuery + Mapper
+                    // Into a CompiledSearchQuery<FooModel, MyDto>
+                    var searcher = Nomadik.Compile(
+                        query, 
+                        mapper,
+                        new NomadikConfig() 
+                        { 
+                            KeyComparer = StringComparer.InvariantCultureIgnoreCase 
+                        },
+                        opHandlers
+                    );
+
+                    // Perform an async Search on your database
+                    var searchResult = await MyDbContext.Foos
+                        .SearchAsync(searcher);
+
+                    // Consume the results
+                    return searchResult.Results;
+                }
+            ]]>
+            </code>
+        </example>
+    </member>
+
+</doc>

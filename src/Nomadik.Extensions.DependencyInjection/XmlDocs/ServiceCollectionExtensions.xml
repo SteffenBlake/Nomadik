@@ -1,0 +1,19 @@
+<doc>
+    <member id="AddNomadik">
+        <example>
+            <code>
+            <!-- c_sharp -->
+            <![CDATA[
+            builder.Services.AddNomadik(options =>
+            {
+                options.AddProviderScoped<IndexTeachersProvider, Teacher, IndexTeachersDto>();
+                options.Configure(config =>
+                {
+                    config.KeyComparer = StringComparer.InvariantCultureIgnoreCase;
+                })
+            });
+            ]]>
+            </code>
+        </example>
+    </member>
+</doc>

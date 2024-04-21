@@ -13,8 +13,12 @@ public static class ServiceCollectionExtensions
     /// Registers the full stack of Nomadik core services
     /// to the Dependency Injection engine.
     /// Inner options enable registering of individal Mappings,
-    /// addition of new middleware, and modifying project wide configuration
+    /// addition of new middleware, and modifying project wide configuration.
     /// </summary>
+    /// <include
+    ///     file = "XmlDocs/ServiceCollectionExtensions.xml"
+    ///     path = "doc/member[@id='AddNomadik']/*"
+    /// />
     public static IServiceCollection AddNomadik(
         this IServiceCollection services,
         Action<NomadikOptions> options

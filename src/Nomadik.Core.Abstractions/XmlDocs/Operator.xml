@@ -1,0 +1,40 @@
+<doc>
+    <member id="EQ">
+        <example>
+            The following will query on the field "SomeInteger" being equal to 20
+            <para>Example Json:</para>
+            <code>
+            <!-- json -->
+            <![CDATA[
+            {
+                "filter": {
+                    "where": {
+                        "Key": "SomeInteger",
+                        "Operator": "EQ",
+                        "Value": 20
+                    }
+                }
+            }
+            ]]>
+            </code>
+            <para>Example C#:</para>
+            <code>
+            <!-- c_sharp -->
+            <![CDATA[
+            new SearchQuery()
+            {
+                Filter = new SearchFilterWhere()
+                {
+                    Where = new()
+                    {
+                        Key = nameof(MyDto.SomeInteger),
+                        Operator = Operator.EQ,
+                        Value = 20
+                    }
+                }
+            }
+            ]]>
+            </code>
+        </example>
+    </member>
+</doc>

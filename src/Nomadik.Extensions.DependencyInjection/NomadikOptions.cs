@@ -18,7 +18,7 @@ public class NomadikOptions(
     private readonly NomadikConfig _config = config;
 
     /// <summary>
-    /// Registers a greedy loaded static Expression Mapper
+    /// Registers a greedy loaded static Expression Mapper.
     /// Mappings will be registered immediately as a singleton
     /// </summary>
     public void AddMapper<TIn, TOut>(Expression<Func<TIn, TOut>> mapper)
@@ -36,7 +36,7 @@ public class NomadikOptions(
     /// Registers a Mapping Provider as a Singleton that will 
     /// be invoked lazily whenever 
     /// <see cref="NomadikExtensions.Compile{TIn, TOut}(INomadik{TIn, TOut}, SearchQuery)"/>
-    /// Is invoked.
+    /// is invoked.
     /// </summary>
     public void AddProviderSingleton<TProvider, TIn, TOut>()
         where TProvider : class, IMapperProvider<TIn, TOut>
@@ -49,7 +49,7 @@ public class NomadikOptions(
     /// Registers a Mapping Provider as a Scoped Service that will 
     /// be invoked lazily whenever 
     /// <see cref="NomadikExtensions.Compile{TIn, TOut}(INomadik{TIn, TOut}, SearchQuery)"/>
-    /// Is invoked.
+    /// is invoked.
     /// </summary>
     public void AddProviderScoped<TProvider, TIn, TOut>()
         where TProvider : class, IMapperProvider<TIn, TOut>

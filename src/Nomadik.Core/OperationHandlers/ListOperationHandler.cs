@@ -6,7 +6,12 @@ using Nomadik.Core.Extensions;
 
 namespace Nomadik.Core.OperationHandlers;
 
-/// <inheritdoc/>
+/// <summary>
+/// Operation handlers for List and Array Operations, like:
+/// <para><see cref="Operator.CO"/></para>
+/// <para><see cref="Operator.Any"/></para>
+/// <para><see cref="Operator.All"/></para>
+/// </summary>
 public class ListOperationHandler : INomadikOperationHandler
 {
     /// <inheritdoc/>

@@ -3,20 +3,9 @@ using System.Linq.Expressions;
 namespace Nomadik.Core.Abstractions;
 
 /// <summary>
-/// Core storage object for Mappings, pre-serializes a mapping into
-/// its component expression parts. 
-/// Preliminary class to serialize a Member Init <see cref=Expression/> 
-/// into a <see cref="CompiledSearchQuery{TIn, TOut}"/> via
-/// <see cref="Compile(SearchQuery)"/>
+/// Core Nomadik Context for a given mapping, pre-caching its Mapping,
+/// lookup table, and set of registered <see cref="INomadikOperationHandler"/>s
 /// </summary>
-/// <param name="mapping">
-/// Preliminary Member Init Expression used to compile a <see cref="SearchQuery"/>
-/// into a <see cref="CompiledSearchQuery{TIn, TOut}"/>
-/// </param>
-/// <param name="opHandlers">
-/// Set of optional additional Operation Handlers to 
-/// modify serialization behavior into the final Expression Tree
-/// </param>
 public interface INomadik<TIn, TOut> 
 {
     /// <summary>
