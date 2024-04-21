@@ -27,7 +27,7 @@ public static Expression<Func<StudentModel, StudentDTO>> StudentToStudentDTO= m 
 `Page 2 of 5`
 
 
-3. We want the ability to perform the above "Search" operations *with respect to the properties on the ViewModel `M`
+3. We want the ability to perform the above "Search" operations *with respect to the properties on the ViewModel `M`*
 4. *However*, most ORMs support functionality to run those very "Search" operations on the database itself (Typically in the form of an `Expression<Func<E, bool>>`)
 
 ```
@@ -65,10 +65,12 @@ Which of course is a huge pain and adds a *lot* of extra boilerplate code, and f
 If you modify how you map `E.SomeField` to `M.SomeOtherField`, you *also* need to remember to update the matching logic over in serializing your `SearchForM.SomeOtherField` DTO field into that `Expression<Func<M, bool>>`.
 
 ```
-QA Tester: Bug Report! Sorting order on Students seems to be completely broken after yesterday's changes, what happened?
+QA Tester: Bug Report! Sorting order on Students seems to be completely broken after yesterday's
+           changes, what happened?
 
-Dev: Oh shoot, I think I know what happpned, we switched the display mapping to now be "LastName, FirstName" instead of "FirstName LastName", but,
-     we forgot to update the corrosponding search and filter operations to do the same...
+Dev: Oh shoot, I think I know what happpned, we switched the display mapping to now be
+     "LastName, FirstName" instead of "FirstName LastName", but, we forgot to update the
+     corrosponding search and filter operations to do the same...
 ```
 
 So, the question is as such:
@@ -87,13 +89,13 @@ https://steffenblake.github.io/Nomadik/api/Nomadik.Core.html
 
 Nomadik is a Monadic (pun intended) Expression tree serializer that can take in a MemberInitExpression + Markup Serializable SearchQuery POCO, and compile the two together to produce a full featured Search/Filter/Sort/Pagination Fluent interface.
 
-![meme gif of a fat cat staring at the screen and going "huh?"](https://media1.tenor.com/m/vmSP8owuOYYAAAAC/huh-cat-huh-m4rtin.gif)
+<img src="https://media1.tenor.com/m/vmSP8owuOYYAAAAC/huh-cat-huh-m4rtin.gif" height="200"/>
 
 Nomadik can take this:
 ```
 m => new () { ... }
 ```
-+ this json (or any other markup)
+Plus this json (or any other markup)
 ```
 {
    filter: { where: { key: "foo", operator: EQ, value: "bar" }},
@@ -152,7 +154,7 @@ pubic class TeachersController(MyDbContext db, INomadik<Teacher, TeacherDTO> tea
 
     public async Task<SearchQueryResult<TeacherDTO>> SearchTeachers(SearchQuery query)
     {
-        var teacherSearch = query.Compile(_teacherMapper);
+        var teacherSearch = _teacherMapper.Compile(query);
         return _db.Teachers.SearchAsync(teacherSearch);
     }
 }
@@ -412,7 +414,7 @@ pubic class TeachersController(MyDbContext db, INomadik<Teacher, TeacherDTO> tea
 
     public async Task<SearchQueryResult<TeacherDTO>> SearchTeachers(SearchQuery query)
     {
-        var teacherSearch = query.Compile(_teacherMapper);
+        var teacherSearch  _teacherMapper.Compile(query);
         ...
     }
 }
