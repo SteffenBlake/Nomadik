@@ -157,7 +157,7 @@ Schema:
 
 The And Filter supports from one to many "child" search filter objects in an array, and will perform an "And" operation union of each of their outputs.
 
-### And
+### Or
 
 Schema:
 ```
@@ -232,7 +232,47 @@ Further filters down the search to a paginated result. `num` specifies which pag
 
 ## Example Json Search Query
 
-For the above 
+For the above `TeacherDTO` that was described, the following would be a valid SearchQuery in Json format:
+```
+{
+    // Fetch results 11-20 (page 2, 10 per page)
+    "page": {
+        "num": 2,
+        "size": 10
+    },
+    // Order by FullName, then by Id
+    "order": {
+       "by": "FullName",
+       "dir": "Asc",
+       "then": {
+         "by": "Id",
+         "dir": "Asc"
+       }
+    },
+    // Get all teachers who's name starts with P, OR, Id is between the range of 0 to 100 (Greater than or equal to 0 AND less than or equal to 100)
+    "filter": {
+        "or": [
+            "where": {
+                "key": "FullName",
+                "operator": "like",
+                "value": "P%"
+            },
+            "and": [
+                "where": {
+                    "key": "Id",
+                    "operator": "GTE",
+                    "value": "0"
+                },
+                "where": {
+                    "key": "Id",
+                    "operator": "LTE",
+                    "value": "100"
+                }
+            ]
+        ]
+    }
+}
+```
 
 # How to install it
 
