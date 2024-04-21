@@ -83,6 +83,30 @@ So, the question is as such:
 # API Documentation
 https://steffenblake.github.io/Nomadik/api/Nomadik.Core.html
 
+# What is Nomadik?
+
+Nomadik is a Monadic (pun intended) Expression tree serializer that can take in a MemberInitExpression + Markup Serializable SearchQuery POCO, and compile the two together to produce a full featured Search/Filter/Sort/Pagination Fluent interface.
+
+![meme gif of a fat cat staring at the screen and going "huh?"](https://media1.tenor.com/m/vmSP8owuOYYAAAAC/huh-cat-huh-m4rtin.gif)
+
+Nomadik can take this:
+```
+m => new () { ... }
+```
++ this json (or any other markup)
+```
+{
+   filter: { where: { key: "foo", operator: EQ, value: "bar" }},
+   page: { num: 2, size: 10 },
+   order: { by: "baz", dir: "desc" }
+}
+```
+And lets you combine the two together to do this:
+```
+var fooResult = await dbContext.Foos.SearchAsync(compiledSearchQuery);
+```
+Without having to write the mountains of boilerplate code to define searching, filtering, sorting, and pagination!
+
 # What does it look like?
 
 Heres an example chunk of code below that will demonstrate the library in action:
